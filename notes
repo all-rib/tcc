@@ -1,0 +1,61 @@
+
+O que você fez?
+ - Resolvi monitorar uma colmeia
+
+	Problemas com I2C
+
+	Problemas com SPI e conexões num geral
+
+	Problemas com oxidação por mel
+
+	Problema de posicionamento de sensores
+
+Porquê?
+	- O crescimento da apicultura de precisão se evidencia em congresos, eventos,
+artigos e negócios.
+
+	- Por todo brasil, a apicultura é um negócio forte, mas em grande parte informal
+
+	- A superprodução está associada ao controle de variáveis essenciais da produção de
+mel ( matéria prima, saúde da colmédia, confições climáticas, entre outras coisas)
+
+	Montiorar permite o acompanhamento em tempo real destas variáveis para permitir
+observabilidade e intervenção sobre as variáveis que interferem na produção.
+
+	Controlar estas variáveis melhoram a produção
+
+Como você o fez?
+	Primeiro precisei de uma caixa de abelhas. Escolhi jataís, por serem a espécie
+mais disponível no meu entorno, e não possuirem ferrão. Existem diversas colmeias de boas saúde e oprudução
+na minha região.
+
+	Após analisar modelos de caixas, métodos de captura, tempo de crescimento e
+desenvolvimento, descobri que FAZER uma colméia demoraria demais. Mas tecnicamente
+seria melhor para condicionar um bom ambiente de monitoramento (crescer a colméia com
+os sensores já posicionados)
+
+	Então resovi pegar uma colméia já estabelecida e estável. Os critérios de escolha
+se seguiram conforme: tamanho, população estimada, produção de mel, níveis de
+sobreninho, histṕorico de doenças anteriores, etc.
+
+	Escolhida a caixa, fui escolher os sensores
+
+ - O que precisou?
+	A partir de outros trabalhos, vi que temmperatura, umidade, som e quantdade de
+abelçhas são boas variáveis a se medir
+
+	Então além dos sensores que medissem estas variáveis, precisaria de um
+controlador para medir e exterair os dados de maneira temporariamente precisa.
+
+	Também precisei determinar uma boa forma de posicionar os sensores na colméia,
+para que o sensoriamento fosse o melhor possível (colocar referências)
+
+	Não existiam bom dados sobre como fazer isso. Me baseei NESTA coleção de artigos
+
+	Decidi quais sensores usar Baseado na precisão, problemas possíveis, e preço.
+escolhi [Citar sensores aqui]. [Citar razão de cada um por tópico]
+
+Decidi qual microcontrolador usar
+Os resultados obtidos foram estes
+O que dá pra fazer a mais?
+

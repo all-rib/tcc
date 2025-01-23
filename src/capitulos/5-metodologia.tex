@@ -1,0 +1,122 @@
+%%%% CAPÍTULO 3 - MATERIAL E MÉTODOS
+
+\chapter{Materiais e Métodos}\label{cap:materialemetodos}
+
+Esta seção trata do relato de tarefas estabelecidas para cumprir o objetivo geral: Categorizar
+espectros de comportamento da T. angustula usando CNN, através da otimização dos métodos
+classificadoras utilizadas em _A. mellifera_ para o uso em T. angustula. Esse processo vai se
+dar através das seguintes tarefas:
+
+Busca ou criação de um banco de dados de A. mellifera, para que sejam feitos os devidos testes
+dos estudos já estabelecidos;
+
+Seleção dos algoritmos específicos de pré-processamento, extração de features, e inferências;
+
+Elaboração, padronização e gegistro do ambiente de amostragem: colméias de T. angustula;
+
+Elaboração e montagem do harware para captura de áudio, e outros dados importantes;
+
+Captura, amostragem dos dados, e separação de amostras para treino, e teste;
+
+Execução dos algoritmos selecionados nos dados amostrados;
+
+Análise e comparação dos resultados
+
+\section{Materiais}
+
+Microfone inmp441 \cite{Inmp441};
+
+ESP32 WROOM \cite{Esp32};
+
+Módulo ESPsd \cite{Espsd};
+
+Caixas de abelhas T. angustula, com colméia saudável;
+
+Computador robusto para execução dos algoritmos; % (ver hw da sala v107)
+
+Cartão de memória SD;
+
+Conexão com a internet;
+
+\section{Métodos}
+
+A primeira e mais importante etapa reside na busca de um banco de dados já existentes
+de A. mellifera. Existem projetos como \cite{Hiveeyes2023} e \cite{Osbeehive2023} que disponibilizaram dados em trabalhos
+como \cite{Zgank 2019} e \cite{Cecchi2018}.
+
+\iffalse Referências: Bases de dados
+
+[Osbeehive2023](https://www.osbeehives.com/)
+
+[Hiveeyes2023](https://hiveeyes.org/)
+
+[Zgank2019](Bee Swarm Activity Acoustic Classification for an IoT-Based Farm Service)
+
+[Cecchi2018](A Preliminary Study of Sounds Emitted by Honey Bees in a Beehive)
+
+\fi
+
+Após isso, serão implementados os algoritmos dos trabalhos anteriores, se atentando para a
+fidelidade dos métodos usados, na tentativa de obter o mesmo resultado, e estudar a eficácia
+dos respectivos. Essa etapa, no entanto, não exige hardware aplicado em campo, com a utilização
+dos bancos já existentes. Os resultados serão comparados e por consequência, calibrados para
+funcionar conforme os modelos originais.
+
+A próxima etapa consiste na elaboração de um sistema simples de captura de áudios, em
+://invensense.tdk.com/wp-content/uploads/2015/02/INMP441.pdf 
+um primeiro momento, fazendo uso de um microfone como o INMP441, capaz de capturar todo
+o espectro de audição humana, numa resolução de até 16kbps [achar datasheet do
+sujeito]. Detalhes da escolha explicados na seção de discuções. Para a interface e captura do áudio do
+microfone, será usado um ESP32 WROOM \cite{Esp32}, uma unidade bastante comum e
+extremamente barata, com capacidade de conversão AD, e expansão do armazenamento físico
+fazendo uso de um módulo expansor microSD. Serão usados cartões de memória para
+o armazenamento persistente, e uma pequena amostra será também elaborada para testar o
+procedimento de extração dos sons, que consiste:
+
+Captura do áudio em WAV;
+
+Conversão para formato compactado e sem perdas (FLAC) (opcional);
+
+Gravação em armazenamento físico;
+
+Visualização e validação dos dados em computador;
+
+Alimentação do dado nos algoritmos testados;
+
+Vale a pena ressaltar que as mesmas obras realizadas por \cite{Sendeske2022} realizam o
+primeiro e o terceiro sub-passo citado, e um projeto anterior de minha elaboração
+realiza segundo. Além disso, existe uma otimização a ser feita durante o processo de
+captura, ou de conversão: o espectro de frequência das abelhas, como citado, não é o
+mesmo da fala humana, mas chega próximo. Mas para aproveitar melhor o espaço de
+armazenamento, já não abundante nos cartões de memória, será feita captura de apenas um
+canal (o microfone captura em estéreo), e numa faixa de frequência menor que a nativa
+(para exclusão de faixas "inúteis". como acima dos 17kHz). Isso permite uma redução
+significativa no tamanho final do arquivo sem qualquer compressão, ou perda
+considerável. O uso do algoritmo FLAC para compactação vem do mesmo projeto pessoal,
+\cite{Ribeiro2023}, que demonstram estudos apontando que os métodos de compressão
+usados em algoritmos com perda (MP3 por exemplo), podem atenuar, e até remover.
+informações importantes. Além disso, aponta FLAC como a melhor taxa de compressão entre
+os algoritmos sem perda.
+
+Com os dados em mãos, o próximo passo é tratar e pré-processar os dados, aplicando
+algoritmos de transformação, como os já citados, afim de destacar informações
+importantes. Essa etapa envolverá, também, a separação das amostras em teste e treino,
+mantendo assim a confiabilidade do sistema.
+
+Por fim, resta a execução dos algoritmos à exaustão, fazendo as devidas comparações. O
+processo é iterativo, então, além da pesquisa de possíveis features, a otimização do
+método exige o reprocessamento dos dados, quando não a recaptura dos mesmos em
+condições diferentes.  Caso não surtam os resultados esperados, será feita ainda um
+registro do sensoriamento de umidade e temperatura, integrado os 2 simultaneamente no
+dht22 \cite{Dht22}.
+
+\iffalse Referências:datasheets
+
+[Esp32](https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32_datasheet_en.pdf)
+
+[Inmp441](https://invensense.tdk.com/wp-content/uploads/2015/02/INMP441.pdf)
+
+[Dht22](https://www.sparkfun.com/datasheets/Sensors/Temperature/DHT22.pdf)
+
+\fi
+

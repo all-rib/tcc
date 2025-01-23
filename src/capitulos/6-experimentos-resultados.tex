@@ -1,0 +1,33 @@
+%%%% CAPÍTULO 6 - DISCUSSÃO
+
+\chapter{Discussão}\label{cap:discussao}
+
+Primeiramente, existe a possibilidade de que os projetos citados como referência para
+banco de áudio desses animais não estejam mais funcionando, ou mesmo os dados estejam
+indisponíveis. Neste caso, existe um corpo de apoio, o projeto Amigos das Abelhas, na
+universidade, capazes de auxiliar com a elaboração do mesmo.
+
+Segundo, o processo de captura em WAV e gravação em armazenamento físico já foram
+elaborados e testados por \cite{Ribeiro2022}, se atentando para o uso do mesmo
+hardware. A ideia é evitar o retrabalho, além de otimizar o anterior.
+
+Terceiro: A escolha do microfone se dá em função do mesmo motivo: o uso deste em projetos
+anteriores realizados na matéria de Oficina de Integração, no final ano de 2022. além
+disso, quando comparado a outros do mercado, tem excelente custo benefício.
+
+Por fim, existe uma otimização impotante a ser feita caso a conversão para FLAC seja
+necessária: na falta de armazenamento, FLAC servirá como compressor, evitando perda de
+dados. No entanto, para uma maior redução, faixas de frequência acima de 17kHz podem
+ser excluidas, se for comprovado que esta faixa não contém dados importantes, conforme
+algumas referências já citadas. Também vale a pena citar que usei o mesmo procedimento
+em \cite{Ribeiro2023}, para a transmissão de áudios por LoRa, um protocolo extremamente
+econômico em taxa de tranferência. No artigo são discutidos o porquê do uso do FLAC, em
+detrimento de outros formatos como MP3, ou AAC.
+
+\iffalse
+
+[RibeiroAcco2022](Sistema de Monitoramento de Api{\' a}rios Utilizando Capta{\c c}{\~ a}o Sonora e LoRa)
+
+[Ribeiro2023](Compacta{\c c}{\~ a}o de {\' A}udio e Transmiss{\~ a}o por LoRa)
+
+\fi

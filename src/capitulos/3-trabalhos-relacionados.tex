@@ -1,0 +1,142 @@
+% ATENÇÃO - veja com o seu orientador se você vai ter este capítulo e se este vai ter nome!
+\chapter{Trabalhos Relacionados}
+\label{cap:trabalhos:relacionados}
+
+Essa seção faz uma breve revisão de trabalhos relacionados e semlhantes na área de Apicultura
+de precisão.
+
+Mundialmente, a maior parte da produção se dá em torno de abelhas com ferrão, refletida nos
+autores citados através de sua unanimidade na escolha de espécies para pesquisa: _Apis mellifera_. No
+Brasil, uma parte consideravelmente maior de produção existe graças a meliponicultura (cultura
+de abelhas sem ferrão), cuja principal especime é a _Tetragonisca angustula_. Essa,
+infelizmente, ainda não foi objeto de pesquisa de nenhuma referência apresentada.
+
+Para o assunto, \cite{Terenzi2020} é de extrema importância. Com o objetivo principal revisar abordagens usadas na captura e
+análise de áudios de melíferas, este cita alguns trabalhos importantes envolvendo a aquisição e armazenamento dos dados para
+servidores usando tecnologias sem fio. Um dos citedos, \cite{Ferarri2008}, estudou o fenômeno
+da **exameação**. Um total de 270h de áudio durante o acontecimento de 9 exameamentos foram
+estudados. Fizeram o uso de microfones omnidirecionais e sensores de umidade e temperatura.
+Após classificarem manualmente os trechos de sinais que representavam o evento de divisão, os
+sons foram analisados em tempo e frequência, com o objetivo de correlacionar ambos os sinais
+obtidos. A divisão altera os tons comuns reproduzidos dentro da colméia, de 150Hz para 500Hz
+durante o swarming, além de quedas em temperatura e umidade. Outro trabalho de peso é
+\cite{Papachristoforou2008}, que após inserir um dos predadores naturais de meliferas no
+ambiente, foi capaz de detectar uma faixa de frequência diferente de diversos outros padrões
+anteriores: 6kHz. Essa obra permitiu perceber a necessidade da captura de um espectro mais
+amplo de sons.
+
+**enxameação**: Processo de divisão da colméia, onde após o crescimento populacional da
+colméia, indivíduos formam um novo ninho, rainha, e consequentemente, colméia completamente
+independente.
+
+\iffalse Referências: Trabalhos relacionando aspectos importantes dos áudios
+[Terenzi2020](On the Importance of the sound emitted by Honney Bee hives)
+
+[Ferarri2008](detec enxam),
+
+[Papachristoforou2008](nova freq)
+\fi
+
+\cite{Eskov2011} por outro lado, fez uma análise estatística. Todos os sinais foram tratados
+como ruído contendo porções de dados com conteúdo espectral específico e detectável. Usando um
+banco de 36h/dia durante cerca de 6 meses (o equivalente a 2 estações), antes de qualquer análise, os dados foram
+separados em fragmentos de 1s, **normalizados** e pré-processados usando __Procedure of Optimal
+Linear Smoothing (POLS)__, através do método de Gauss. Por fim, as sequencias, com amplitudes
+processadas e suas flutuações, formam rankeadas usando um sistema estatístico. A conclusão foi
+a mesma: é possível a previsão do evento de swarming pela alteração nas flutuações.
+
+\iffalse Referências: Nova abordagem na análise de áudios
+
+[Eskov2011](noise with message)
+
+\fi
+
+\cite{Howard2013} trata de um problema já citado, a detecção de colônias sem rainhas, mas usa a
+**transformada S** para extração de features, e comparou o resultado com espectrogramas e
+transformada de Fourier. O resultado da análise considerando o uso de Self-Organizing Maps
+conseguiu calssificar as amostras em todos os casos, salvo falhas devido ao uso de espécies
+distintas.
+
+\iffalse Referências: Detecção de colônias sem rainhas
+
+[Howard2013](alg for quenless colonies)
+
+\fi
+
+Finalmente, \cite{Cejrowsi2018} fez a mesma detecção, dando atenção aos algoritmos de **Linear
+Predictive Coding** para extração de features. Então as estimações do LPC, **t-distributed
+stochastic neighbor embedding** para redução de dimensiionalidade, e SVM para classificação. As
+mudanças foram percebidas com sucesso, mas o ponto interessante reside na necessidade de um
+novo treinamento com a nova abelha rainha.
+
+\iffalse Detecção de abelhas raínhas em colméia
+
+[Cejrowsi2018](detection of a queen bee)
+
+O silêncio não dói
+o que dói é ficar quieto
+Ter todos os amores pre explicar
+Tantas histórias pra celebrar
+E enterrar com o peso da falta de palavras
+da desatenção
+Da falta de compaixão
+Todos os dias de minha vida
+\fi
+
+\cite{Nolasco2018} também é um trabalho de grande importância para a área, uma vez que este
+trata de anotações relacionando aspectos importantes para se considerar durante o
+desenvolvimento de sistemas de aprendizado de máquinas para reconhecimento de eventos sonoros
+em colméias. Os resultados não foram eficientes para CNN quando comparadas à de SVM, mas isso
+se deve, em parte, ao uso dos sistemas para leitura de sinais em ambientes diferentes dos
+treinados.
+
+\iffalse Referências: Investigação de métodos de machine learning para reconhecimento de sons
+
+[Nolasco2018](Bee or not bee: INVESTIGATING MACHINE LEARNING APPROACHES FOR BEEHIVE SOUND RECOGNITION)
+
+\fi
+			
+Por fim, \cite{Kilyukin2018} fez uma excelente comparação entre o trabalho com a engenharia de features
+e tempo de treino. enquanto CNN não precisaram de nenhum tipo de processamento para extrair
+features específicas, estas demoraram mais tempo de treino para funcionar de maneira eficaz.
+
+\iffalse Referências: Comparação entre deep learning e standard machine learning
+
+[Kilyukin2018](Toward Audio Beehive Monitoring: Deep Learning vs. Standard Machine Learning in Classifying Beehive Audio Samples)
+
+\fi
+
+\iffalse
+
+		https://web.archive.org/web/20181213122708/http://www.cs.tut.fi:80/sgn/arg/dcase2017/challenge/task-acoustic-scene-classification-results
+			Acoustuc scene classification competition: try to cassify test recording into one of 15
+			predefined classes.
+
+		Autores usaram "Mel Spectra", "Mel -frequency cepstral coefficients" e "Hilber Huang transform"
+
+	Bee swarm Activity Acoustic Classification for an IOT-Based Farm service
+
+		How to detect bee swarming from audio signal [9]
+
+		Dados em [10] e [11]
+
+		Possíveis features em [16] e [17]
+
+		Open Source Beehives project [23]
+
+		Features Extraction Applied to the Analysis of the Sounds Emitted by Honey Bees in a Beehive
+
+	Identificação de abelha órfã
+
+		Extr. de feat
+			Short Time Fourier Transform [16]
+			Mel-Frequency Cepstral coefficients [17]
+			Wavelet dec[18]
+			Hilbert-Huang transform[19]
+
+		Atenção especial para WT
+
+	Investigating machine learning approaches for beehive sound recognition
+
+\fi
+

@@ -1,0 +1,119 @@
+%%%% CAPÍTULO 1 - INTRODUÇÃO
+%%
+%% Deve apresentar uma visão global da pesquisa, incluindo: breve histórico, importância e justificativa da escolha do tema,
+%% delimitações do assunto, formulação de hipóteses e objetivos da pesquisa e estrutura do trabalho.
+
+%% Título e rótulo de capítulo (rótulos não devem conter caracteres especiais, acentuados ou cedilha)
+\chapter{Introdução}\label{cap:introducao}
+
+\section{Considerações iniciais}\label{sec:consideracoesIniciais}
+
+A apicultura no brasil teve inicio em [], e hoje o país representa cerca de []% da produção
+mundial, com expectativas de crescimento para []% até []. Parte deste crescimento se deve à
+informatização dos processos primários da indústria. Na apicultura, a informatização consiste
+na utilização de técnicas e tecnologias eletrônicas, de forma não invasiva, para o
+condicionamento da produção de mel, o que é chamado de Apicultura de precisão. Esse processo
+pode resultar num aumento de []% na produção deste de mel, utilizando técnicas de
+sensoriamento, bem como monitoramento, se corretamente aplicada.
+
+Dentre as diversas formas de condicionar a produção de mel, algumas delas envolvem o controle
+de variáveis de ambiente, como temperatura, umidade, posicionamento geográfico, flora
+disponível, etc. []. Todos estes fatores interferem diretamente o comportamento das abelhas [],
+acarretando numa relação direta entre ambiente e colméia. Estudos como [] e [] mostram que
+abelhas são capazes de comunicar mensagens e organizar indivíduos no comportamento de enxame
+usando o som das asas. Em outras palavras, padrões comportamentais são disseminados através de
+som, e a análise desses podem permitir identificar alterações de estados aos quais um enxame é
+exposto.
+
+No entanto, no Brasil, a existência de estudos no processamento destes dados é pouco e esparso.
+Logo, é interessante a elaboração de um banco de dados, para que se permitam maiores pesquisas
+sobre o condicionamento desses insetos, o desenvolvimento de novas técnicas para o manejo
+adequado, ou mesmo o aprimoramento de técnicas já existentes.
+
+Desta forma, o presente trabalho tem por objetivo o estudo do comportamento de abelhas
+nacionais (Tetragonisca angustula), através da coleta e amostragem de um banco de áudios; a
+extração e seleção de features do banco; a avaliação e comparação dos processos de extração de
+features de abelhas africanizadas (Apis mellifera); e a otimização dos mesmos métodos para uso
+em abelhas nacionais;
+
+Espera-se que as tarefas acima permitam a elaboração de um espectro rudimentar de comportamento
+natural desse animal, com o objetivo final de criar uma CNN capaz de identificar estados não
+ideais dentro de uma colméia.
+
+\section{Objetivos}\label{sec:objetivos}
+
+\subsection{Objetivo geral}\label{subsec:objetivoGeral}
+
+Categorização de espectros de comportamento da T. angustula por CNN, otimizando as features
+classificadoras de comportamento usados em A. mellifera para o uso em T. angustula
+
+\subsection{Objetivos específicos}\label{subsec:objetivosEspecificos}
+
+Captura remota do áudio
+
+(opcional) Criação de um banco de áudio de T. angustula
+
+(opcional) Criação de um banco de áudio de A. mellifera
+
+Compreender métodos para escolha de features (MFCC)
+
+Compreensão dos métodos de redução de dimensionalidade, e representação de dados
+
+\section{Justificativa}\label{sec:justificativa}
+
+A importância deste trabalho reside na necessidade de disseminar ideias que potencializem a
+sustentabilidade da produção de mel. Mundialmente, existem grupos interessados na
+especialização e fortalecimento das técnicas usadas, através de conferências e simpósios sobre
+assuntos relacionados \cite{Waset2023}. Conforme mostra \cite{Ribeiro2022}, a apicultura de precisão é um termo crescente
+de pesquisa. Os autores também apresentam uma visão geral das publicações relacionadas ao assunto, que
+posiciona o Brasil em segundo lugar, até o ano de 2022. Comparativamente, na produção mundial de mel \cite{Atlas2023}, o Brasil é o 11º produtor (2020), demonstrando a potencialidade do brasil, que cresce em produção cerca de 2 a 10\% ao ano, fazendo uso de técnicas manuais de monitoramento.
+
+Além disso, a aplicação de tecnologia na apicultura permite um desenvolvimento aliado ao
+equilíbrio ecológico, levando em consideração que o condicionamento da produção de mel não
+permite apenas a coleta abundante do recurso, mas também o fortalecimento das cadeias de
+polinização: cerca de 73\% das plantas cultivadas no mundo são polinizadas por abelhas, dando
+tração a mercados Canadenses e Americanos, como um exemplo[5]. As abelhas, portanto, além de
+garantirem sua própria sobrevivência, são essenciais para o mundo como um todo, e a otimização
+de seus processos significa trabalhar pelo equilíbrio natural da flora.
+
+Outro ponto importante é que a apicultura e meliponiocultura no Brasil se dão, em sua maioria,
+de forma manual. Produtores investem recursos na verificação in loco de apiários e
+meliponários , com frequência semanal, o que eleva custos de produção, e interfere no
+equilíbrio do enxame, expondo o produtor e a produção à riscos. De forma tangente, a otimização
+da produção, levando em conta a suficiência de variáveis como localização, clima, contato com
+outras espécies, etc., são reféns da experiência pessoal de cada produtor.
+
+Portanto, sistemas que preveem a condição da colméia mediante alteração destas variáveis
+diminuem o risco de erros. Em outras palavras, é possível otimizar o manejo usando técnicas
+simples de sensoriamento e monitoramento.
+
+Por fim, a cidade de Pato Branco possui seus próprios produtores, e projetos de extensão, como
+o "Amigos das Abelhas". A proposta é estudar o manejo destes animais, fazendo no processo um
+registro dos conhecimentos, e a disseminação da importância do mel para a região e a humanidade
+como um todo.
+
+```
+Eu deveria falar que faz parte de um produto comercial em elaboração?
+```
+
+\section{Estrutura do trabalho}\label{sec:estruturaTrabalho}
+
+Esta obra se organiza da seguinte maneira:
+
+- A seção de "Introdução", dá um panorama geral do problema, elencando tópicos marginais
+de importância, posição nacional e mundial no cenário da produção de mel e pesquisa,
+além de uma breve arguição sobre a importância do tema.
+
+- A seção de "Referencial teórico" compreende trabalhos tratando da fundamentação teórica do problema: a
+capacidade das abelhas de se comunicarem, e sua responsividade a mundanças no ambiente,
+simildaridade entre sons de diferentes espécies, uma coleção geral de referências tratando da
+captura e tratamento de áudio de Abelhas Africanizadas (Apis mellifera), além da eficácia
+destes métodos, e por fim, uma breve revisão de métodos de aprendizagem comumente utilizados
+para tal.
+
+- A seção de "Trabalhos relacionados" compreendem uma coleção de obras semelhantes à presente, abordando, quando não os mesmos tópicos, temas de
+importância imediata ára a área.
+
+- A seção de "Materiais e método" consiste numa visão geral da proposta, e quais serão os
+passos tomados na tentativa de estabelecer todos os objetivos
+
