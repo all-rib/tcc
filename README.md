@@ -1,5 +1,79 @@
 # Trabalho de Conclusão de Curso 2
 
+## Checklist de elementos
+
+[ ] 00-main.tex
+	[ ] modelo
+	[ ] texto
+[ ] 01-capa.tex
+	Esse, aparentemente, é um simples comando
+	[ ] modelo
+	[ ] texto
+[ ] 02-contracapa.tex
+	Esse, aparentemente, é um simples comando
+	[ ] modelo
+	[ ] texto
+[ ] 03-termo.tex
+	Esse, aparentemente, é um simples comando
+	[ ] modelo
+	[ ] texto
+[ ] 04-agradecimentos.tex
+	[x] modelo
+	[ ] texto
+[ ] 05-epigrafe.tex
+	[x] modelo
+	[ ] texto
+[ ] 06-resumo.tex
+	[x] modelo
+	[ ] texto
+[ ] 07-abstract.tex
+	[x] modelo
+	[ ] texto
+[ ] 08-ilustracoes.tex
+	[ ] modelo
+	[ ] texto
+[ ] 09-tabelas.tex
+	[ ] modelo
+	[ ] texto
+[ ] 10-acronimos.tex
+	[ ] modelo
+	[ ] texto
+[ ] 11-sumario.tex
+	[ ] modelo
+	[ ] texto
+[x]12-introducao.tex
+	[x] modelo
+	[x] texto
+[ ]13-referencial-teorico.md
+	[ ] modelo
+	[o] texto
+[ ] 14-materiais-e-metodos.tex
+	[ ] modelo
+	[ ] texto
+[ ] 15-desenvolvimento.tex
+	[ ] modelo
+	[ ] texto
+[ ] 16-conclusao.md
+	[ ] modelo
+	[ ] texto
+[ ] 16-resultados-e-discucao.tex
+	[ ] modelo
+	[ ] texto
+[ ] 17-referencias.tex
+	[ ] modelo
+	[ ] texto
+
+
+
+
+
+
+
+
+
+
+
+
 ## Objetivos
 
     - Construção do banco de dados
