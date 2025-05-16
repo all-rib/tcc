@@ -128,7 +128,6 @@ pode ditar o ritmo com que a produção é realizada, variando da saúde
 dos indivíduos, características climáticas, flora, aspectos
 geográficos e espaciais.
 
-
 Aquisição de dados e sensoriamento de colmeias
 
 O processo aquisitório de dados pode incluir métodos invasivos (como a
@@ -190,74 +189,37 @@ consegue entender o ritmo de produção e consumo da colméia[12],
 habilitando ações como alimentação artificial em épocas de escacez, ou
 mesmo a melhor época para colheitas.
 
+I2C e SPI
 
-Metodologias de sensoriamento
+	I2C, ou Inter-Integrated Circuit, é um barramento de comunicação serial, inventado pela Philips
+Semiconductors em 1980, para comunicar diversos dispositivos de
+maneira síncrona no esquema mestre-escravo.
 
-O sensoriamento de colméias é ainda deficiente de uma metodologia
-clara de inserção, posicionamento, e características técnicas para
-controlar 
-Limitando-se ao escopo deste trabalho, é importante estudar metologias
-da implementação de sensores, sejam eles de áudio, peso, temperatura, 
+	É utilizado em diversos dispositivos de sensoriamento devida à
+simplicidade das conexões, envolvendo 2 linhas de transmissão (SDA, ou
+Serial Data, e SCL ou Serial Clock), podento atingir velocidades de
+até 5Mbit/s. 
 
+	De maneira semelhante, SPI, ou Serial Peripheral Interface, também
+é um tipo de barramento, mas considerado por alguns autores como sendo
+um padrão-de-facto. SPI no entanto difere de I2C por sua capacidade
+full-duplex em suas linhas.
 
-Sensoriamentos externos
+	Diferententemente daquela, SPI possui 4 linhas de transmissão (CS,
+ou Chip Select, MISO, ou Master-In/Slave-Out, e MOSI, ou
+Master-Out/Slave-In, a SCK ou Serial-Clock).
 
-	Quais sensores?
+	Comparativamente, SPI tem vantagens sobre I2C por não possuir
+velocidade máxima de clock, o que em teoria permite velocidades
+ilimitadas de transmissão, uma garantia maior contra iterferências.
+No entanto, essa possui a necessidade de mais pinos, um a mais por
+dispositivo conectado, e possui problemas com longas distâncias quando
+comparado com RS-232, ou RS-485. 
 
-		Extração de audio pode automatizar a identificação de fatores
-de stress. Para isso é necessário analizar os audios sistematicamente.
-Existem modelos[Kulyukin, 2018] de redes neurais capazes classificar
-sons de abelhas dentre outros sons. O projeto faz uso de sensores como
-microfone, temperatura e câmera para tratar diferenciaçãode abelhas de
-outros insetos, detecção e previsão de eventos na colmeia, detecção de
-doenças, e associação de eventos à determinadas condições de produção
-
-	O sujeito utilizou uma caixa no padrão Langstroth, ideal para
-criação de abelhas por causa da modularidade das funções, e 
-
-	Como aplicar?
-
-	Quais os resultados?
-
-Sensoriamentos internos
-
-	Quais sensores?
-
-	
-
-	Como aplicar?
-
-	Quais os resultados?
-
-Pontos em comum
-
-
-Problema
-
-Objetivo
-
-Metodologia
-
-Resultados
-
-Conclusão
-
-
-
-
-
-
-
-
-
-
-
-O que é I2C
-
-O que é SPI
-
-Bufferização
-
+	Todos os sensores utilizados no projeto fazem uso desses dois
+protocolos individualmente, mas problemas na interação com a colméia
+serão demonstrados adiante. Infelizmente, não foram encontrados dados
+sobre a interação de nehum dos métodos de comunicação colméias.
 
 [1] https://www.grap.udl.cat/en/presentacio/que-fem/definicions-agricultura-de-precisio/
 23/01/2025, 00:38

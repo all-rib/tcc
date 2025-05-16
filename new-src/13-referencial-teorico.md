@@ -1,10 +1,27 @@
+ - O que é uma abelha?
+ - O que é uma colméia?
+ - O que é um apiário?
+
+ - O que é monitoramento?
+ - Porque o monitoramento funciona?
+
+ - No que consistem os sensores?
 
 
-Abelhas e apicultura
 
-As abelhas são insetos alados, responsáveis pelo processo da
-polinização e produção de mel. As diversas espécies, presentes em
-todos os continentes, com exceção da Antártida, se alimentan de pólen
+
+
+
+
+
+
+
+
+Abelhas, apicultura e apicultura de precisão
+
+As abelhas são insetos alados (clado Anthophila) responsáveis pelo processo da
+polinização e produção de mel. As mais de 20 mil espécies, presentes em
+todos os continentes com exceção da Antártida, se alimentan de pólen
 e nectar, dando origem ao processo de polinização, impotante não
 apenas para as plantas, mas para todo o ecossistema da produção de
 alimentos, e principalmente, para a apicultura, atividade existente
@@ -16,14 +33,23 @@ No Brasil, as espécies mais comuns compreendem a Apis mellifera
 interesse do mercado brasileiro em sua alta produtividade para o
 mercado apícola[10].
 
-É importante diferenciar duas facetas do mercado apícola: a
-apicultura, e a meliponicultura. A apicultura trata da produção de mel
-exclusivamente por abelhas do genero Apis (abelhas com ferrão), ou
-tribo Apini, sendo sua maior representante a A.  mellifera. Já a
-meliponicultura trata da produção pela tribo Meliponini (popularmente
-chamadas de abelhas sem ferrão). 
+A domesticação do processo de produção de mel recebe o nome de
+apicultura. É um processo milenar, praticado deste o
+Egito antigo, que consiste em alocar as abelhas em uma região
+arbitária, proporcionar à colmeia condições de crescimento (disponibilidade de alimento, água, e condições climáticas adequadas), e extrair o mel periódicamente, administrando também a criação de outras colméias, e competição entre espécies.
 
-A apicultura teve início no Brasil na década de 1830, através da
+É importante destacar que a apicultura geralmente se refere à produção
+de mel num panorama geral, mas também pode significar a produção de
+mel exclusivamente por abelhas do genero Apis (abelhas com ferrão), ou
+tribo Apini, sendo sua maior representante a A. mellifera. Surge então
+a meliponicultura, que trata da produção pela tribo Meliponini
+(popularmente chamadas de abelhas sem ferrão). Para facilidade de
+entendimento, tomar-se-à apicultura geral (APG) como sendo todo o processo
+apícola, indistinto de espécies, e apicultura específica (APE), ou
+simplesmente apicultuta como a produção de mel por abelhas do genero
+Apis.
+
+A APG teve início no Brasil na década de 1830, através da
 importações de espécimes da Europa, a pedido do Pe. Antonio Pinto
 Carneiro. A prática não era rentável, além de perigosa, e por algum
 tempo foi considerada inviável, sendo retomada apenas em 1970, graças
@@ -42,8 +68,9 @@ Pode-se definir a APP considerando-se alguns princípios da AGP: essa
 trata da aquisição, processamento e análise de dados para permitir
 otimizações no gerenciamento e na tomada de decisões do processo
 agrícola. De maneira análoga, os mesmos estudos podem ser inseridos na
-apicultura.
-
+apicultura, se tornando então um processo de aquisição, processamento
+e análise de dados afim de otimizar o gerenciamento e a tomada de
+decisões no processo apícola.
 
 Técnicas rudimentares para otimização produtiva
 
@@ -96,12 +123,14 @@ para mais facil transporte ao umidecer o pólen. Lagstroth resolveu
 também este problema em grande parte, através da mobilidade que sua
 arquitetura entrega. 
 
-O mel por sua vez, é produzido a partir da extração do néctar, coletado na flora
-disponível, armazenado na colméia, regurgitado, processado pelas
-enzimas presentes no corpo da abelha, e finalmente desidratado
-(maturado) pelos próprios individuos. Quando a substância alcança
-certo nível de umidade (em torno de 20\%), é considerada mel, e é
-então é tampado para armazenamento. A célula, agora fechada e
+
+% \begin{drop 1}
+O mel por sua vez, é produzido a partir da extração do néctar,
+coletado na flora disponível, armazenado na colméia, regurgitado,
+processado pelas enzimas presentes no corpo da abelha, e finalmente
+desidratado (maturado) pelos próprios individuos. Quando a substância
+alcança certo nível de umidade (em torno de 20\%), é considerada mel,
+e é então é tampado para armazenamento. A célula, agora fechada e
 preenchida de mel, recebe o adjetivo de operculada.
 
 Observa-se aqui uma variação em características físicas da colméia
@@ -130,7 +159,14 @@ dos indivíduos, características climáticas, flora, aspectos
 geográficos e espaciais.
 
 
+% \end{drop 1}
+
 Aquisição de dados e sensoriamento de colmeias
+
+Sensores são dispositivos capazes de detectar mudanças no ambiente, e
+gerar eventos sobre estas mudanças para um sistema. No meio apícola,
+sensores tem ampla aplicação afim de detectar a maioria dos eventos
+pertinentes para a colméia,
 
 O processo aquisitório de dados pode incluir métodos invasivos (como a
 inserção de sensores diretamente dentro da colméia, captura de
@@ -149,22 +185,24 @@ A ideia de sensoriar as colméias diretamente não é nova. Alguns
 trabalhos demonstram que a ideia intriga pesquisadores à cerca de 20
 anos.[?] No Brasil, apesar de recente, a ideia também tem se difundido
 bastante, com o surgimento de pesquisas e soluções comerciais para
- auxiliar a tomada de decisões.[?]
+auxiliar a tomada de decisões.[?]
 
 Dentre a enorme gama de aplicações, quatro análises se destacam:
 sensoriamento de temperatura, umidade, peso e som.
 
-A temperatura, bem como a umidade, como fator decisivo para o ritmo de trabalho de todas
-as espécies, possui adoção quase que unanime entre outros trabalhos.[?] A facilidade de
-implantação dos sensores, processamento, e intepretação, permite
-extrair uma relação direta entre a termorregulação da colmeia, ciclo
-de trabalho e eficiência produtiva.[?]
+A temperatura, bem como a umidade, como fator decisivo para o ritmo de
+trabalho de todas as espécies, possui adoção quase que unanime entre
+outros trabalhos.[?] A facilidade de implantação dos sensores,
+processamento, e intepretação, permite extrair uma relação direta
+entre a termorregulação da colmeia, ciclo de trabalho e eficiência
+produtiva.[?]
 
 Sua aplicação, no entanto, não tem uma discução direta em se tratando
-da metodolgia: onde posicionar os sensores? Dentro, ou fora? o mel
-interfere? pode, ser colocados em contato com a cera de abelha? Os
-sensores interferem no comportamento dos indivíduos? Um estudo
-especializado é necessário
+da metodolgia. Simples variáveis, como por exemplo o posicionamento
+dos sensores, podem alterar drasticamente as medidas. E os tipos de
+interferências possíveis também pode ser um fator crucial.
+
+Traba
 
 O som, advindo do comportamento de enxame dessas criaturas, também
 descreve um espectro de comportamento. É sabido que o som composto
@@ -191,20 +229,7 @@ consegue entender o ritmo de produção e consumo da colméia[12],
 habilitando ações como alimentação artificial em épocas de escacez, ou
 mesmo a melhor época para colheitas.
 
-
-Metodologias de sensoriamento
-
-O sensoriamento de colméias é ainda deficiente de uma metodologia
-clara de inserção, posicionamento, e características técnicas para
-controlar 
-Limitando-se ao escopo deste trabalho, é importante estudar metologias
-da implementação de sensores, sejam eles de áudio, peso, temperatura, 
-
-
-Sensoriamentos externos
-
-	Quais sensores?
-
+ 
 		Extração de audio pode automatizar a identificação de fatores
 de stress. Para isso é necessário analizar os audios sistematicamente.
 Existem modelos[Kulyukin, 2018] de redes neurais capazes classificar
@@ -213,8 +238,8 @@ microfone, temperatura e câmera para tratar diferenciaçãode abelhas de
 outros insetos, detecção e previsão de eventos na colmeia, detecção de
 doenças, e associação de eventos à determinadas condições de produção
 
-	O sujeito utilizou uma caixa no padrão Langstroth, ideal para
-criação de abelhas por causa da modularidade das funções, e 
+	Utilizando-se de caixas no padrão Langstroth, o estudo foi capaz
+de e 
 
 	Como aplicar?
 
@@ -233,24 +258,6 @@ Sensoriamentos internos
 Pontos em comum
 
 
-Problema
-
-Objetivo
-
-Metodologia
-
-Resultados
-
-Conclusão
-
-
-
-
-
-
-
-
-
 
 
 O que é I2C
@@ -258,9 +265,3 @@ O que é I2C
 O que é SPI
 
 Bufferização
-
-
-[1] https://www.grap.udl.cat/en/presentacio/que-fem/definicions-agricultura-de-precisio/
-23/01/2025, 00:38
-
-
