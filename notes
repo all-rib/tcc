@@ -64,23 +64,21 @@ O que dá pra fazer a mais?
 
 15/05
 
-Artigo muito bom em referencial teorico - [trindade, 2018](/home/lab/std/tcc/tcc2/articles/trindade-2018.pdf)
+# trindade, 2018
+# (/home/lab/std/tcc/tcc2/articles/trindade-2018.pdf)
+
 	Utilizou um sensor externo, e interno, mas n'ao descreveu como foi colocado
 internamente
 
-	Serve de referencia
-
 	coletou temperatura, peso e umidade utilizando arduino e xbee
 
-
-
-russel-2013
+# russel-2013
 	Modelagem matematica de uma colonia de abelhas
 
 	Existem outros modelos no qual este se baseia, 
 
 
-goncalves-2024
+# goncalves-2024
 	Projeto de extensao de uma escola
 
 	Utiliza alguns sensores e um sistema relativamente completo para monitorar
@@ -92,7 +90,7 @@ registro de funcionamento do sistema
 
  
 
-ferrari-2008
+# ferrari-2008
 	EXCELENTE artigo sobre o uso de microfones para deteccao de enxameacao
 	Utiliza microfone, temp e umid.
 	Os microfones e sensores foram cobertos com uma rede antipolinizacao, o que
@@ -102,7 +100,7 @@ impediu que os sensores fossem cobertos
 vezes mais agundo.
 
 
-Danielli-2023
+# Danielli-2023
 	Faz uma revisao SWOT (Strengths, Weaknesses, Oportunities and threats) sobre o
 uso de apicultura de precisao\
 
@@ -113,7 +111,7 @@ uso de apicultura de precisao\
 	Cita que exitem sistemas comerciais implementando isso
 
 
-abu-2020
+# abu-2020
 	Faz uma comparacao de diferentes sistems comerciais com metodologias diferentes
 de implementacao
 
