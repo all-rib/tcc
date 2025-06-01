@@ -386,15 +386,96 @@ atividade científica e econômica.
 
 Colmeias Langstroth e jatai
 
+    A criação de ambas abelhas exigem a utilização de caixas
+pré-montadas que permitem a modularização da coleta de mel. Com
+modelos diferentes para cada uma das especies, o modelo ideal para as
+abelhas européias seguem o padrão de Langstroth, e para as
+abelhas-sem-ferrão, o modelo INPA, a saber
 
+As caixas Langstroth são o modelo de colmeia racional mais amplamente
+utilizado na apicultura moderna, especialmente para a criação de
+abelhas do gênero Apis, como a Apis mellifera. Desenvolvidas em 1852
+pelo pastor e apicultor norte-americano Lorenzo Lorraine Langstroth,
+elas introduziram um princípio revolucionário: o “espaço de abelha”
+(bee space), ou seja, um intervalo de aproximadamente 6 a 9 mm entre
+os elementos internos da colmeia, suficiente para permitir a
+movimentação das abelhas sem induzi-las a preencher o espaço com cera
+ou própolis.
 
+Esse conceito permitiu a criação de quadros móveis, que podem ser
+retirados individualmente para inspeção, manejo ou extração de mel,
+sem destruir a estrutura do ninho. Isso representou uma transformação
+radical na apicultura, permitindo que os apicultores manejassem
+colmeias com eficiência, mantivessem a saúde das abelhas sob controle
+e extraíssem o mel sem matar a colônia, como ocorria em métodos mais
+antigos.
 
+Possui as seguintes partes
 
+Ninho (corpo da colmeia):
+Módulo inferior, onde a rainha deposita os ovos e se formam as crias. Contém geralmente de 8 a 10 quadros móveis, que as abelhas utilizam para criar favos de cria e armazenar pólen.
 
+Melgueiras:
+Módulos superiores semelhantes ao ninho, mas utilizados principalmente para armazenamento de mel. O apicultor pode empilhar duas ou mais melgueiras durante uma florada, aumentando a capacidade de produção sem perturbar a criação.
 
+Quadros móveis:
+São estruturas retangulares de madeira ou plástico, que podem conter cera alveolada pré-fabricada. As abelhas constroem seus favos sobre esses quadros, que podem ser facilmente removidos para colheita e revisão.
 
+Fundo sanitário:
+Base da colmeia, às vezes com tela para ventilação e controle de pragas como o ácaro Varroa.
 
+Tampa interna e externa:
+Ajudam a proteger a colmeia contra intempéries e controlar a temperatura interna.
 
+Apesar de suas inúmeras vantagens, o modelo Langstroth é incompatível
+com abelhas nativas sem ferrão, que têm comportamento e arquitetura de
+ninho diferentes, como a formação de discos horizontais de cria. Isso
+exige outros modelos, como a caixa modelo INPA, desenvolvida
+especificamente para essas espécies.
 
+[Imagem colmeia langstroth]
+
+As caixas modelo INPA são colmeias racionais desenvolvidas no Brasil
+para a criação de abelhas nativas sem ferrão, conhecidas como
+meliponíneos. O nome “INPA” refere-se ao Instituto Nacional de
+Pesquisas da Amazônia, onde esse modelo começou a ser utilizado e
+disseminado, especialmente nas décadas de 1980 e 1990, como parte dos
+esforços para promover a meliponicultura racional, ecológica e
+adaptada às espécies nativas.
+
+Diferentemente das caixas utilizadas na apicultura com Apis mellifera,
+que adotam quadros verticais móveis, o modelo INPA respeita a
+arquitetura natural dos ninhos das abelhas sem ferrão, que constroem
+discos horizontais de cria empilhados, cercados por potes de mel e
+pólen em estruturas orgânicas. As caixas INPA reproduzem essas
+condições em um ambiente controlado e modular, permitindo o manejo
+sustentável sem desorganizar o ninho.
+
+As caixas INPA são compostas por módulos empilháveis, cada um com função distinta e dimensões adaptadas ao porte da espécie criada. Para a abelha Jataí, uma das menores espécies de meliponíneos, as medidas são reduzidas e delicadas. A estrutura básica inclui:
+
+    Módulo de ninho: É o coração da colônia, onde são depositados os
+ovos e construídos os discos de cria. Para Jataí, o módulo costuma
+medir cerca de 15x15x9, considerando-se as paredes internas, com cerca
+de 3cm de espessura. O espaço interno é fixo, sem divisórias móveis,
+permitindo que as abelhas organizem o ninho de forma natural.
+
+    Sobreninho (ou extensão do ninho): Módulo adicional posicionado
+acima do ninho. Permite o crescimento da área de postura e
+armazenamento, acomodando a expansão natural da colônia com o tempo.
+
+    Melgueira: Espaço dedicado ao armazenamento de mel. Nela as
+abelhas constroem pequenos potes de cera onde depositam o mel. A
+extração é feita manualmente, com seringas ou espátulas, respeitando a
+integridade da colônia.
+
+    Fundo (com ou sem lixeira): Parte inferior da caixa. Pode ter um
+espaço adicional para acumular resíduos (a chamada "lixeira"), que
+facilita a limpeza periódica e o controle de pragas.
+
+    Tampa e cobertura externa: Fecham a caixa superiormente, ajudando
+a manter o microclima interno, protegendo contra luz, calor excessivo
+e umidade.
+
+[Fotografia colmeia jatai INPA]
 
 Bufferização
