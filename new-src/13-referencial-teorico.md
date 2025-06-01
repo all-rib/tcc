@@ -264,4 +264,137 @@ O que é I2C
 
 O que é SPI
 
+
+
+
+
+Apis melifera
+
+A Apis mellifera, conhecida como abelha-europeia ou
+abelha-africanizada no contexto brasileiro, é uma espécie exótica
+amplamente distribuída e uma das mais estudadas do mundo. Pertencente
+à ordem Hymenoptera e à família Apidae, essa abelha é reconhecida por
+sua alta relevância ecológica e econômica, principalmente na
+polinização de culturas agrícolas e na produção de mel, cera, própolis
+e geleia real.[15]
+
+Morfologicamente, a Apis mellifera distingue-se de muitas espécies
+nativas por seu tamanho relativamente grande, variando entre 12 a 15
+mm de comprimento, o que a torna significativamente maior do que a
+maioria das abelhas sem ferrão (Meliponini), comuns no Brasil, que
+geralmente medem entre 3 a 7 mm. Seu corpo é robusto, de coloração
+predominantemente castanho-escura com listras abdominais amareladas ou
+alaranjadas bem definidas, coberto por finos pelos que facilitam o
+transporte de pólen. Suas asas são proporcionais ao corpo,
+transparentes e com veias bem marcadas.
+
+[Imagem apis mellifera]
+
+Outro aspecto marcante é o ferrão funcional das operárias de Apis
+mellifera, usado para defesa da colônia, ao contrário das espécies de
+belhas sem ferrão, que evoluíram com mecanismos defensivos diferentes
+e menos agressivos. Além disso, essa espécie apresenta um
+comportamento defensivo mais intenso, principalmente em linhagens
+africanizadas, o que facilita sua identificação comportamental em
+campo.
+
+A organização social da colônia é altamente complexa, composta por
+três castas: uma rainha fértil, milhares de operárias estéreis e um
+número reduzido de zangões. As colônias são perenes, podendo conter de
+20 a 80 mil indivíduos, abrigadas geralmente em cavidades protegidas.
+Esse nível de socialidade, aliado à sua capacidade de adaptação a
+diferentes ambientes, contribuiu para sua expansão global e
+consolidação como espécie dominante em apicultura.
+
+Em contraste com muitas espécies nativas brasileiras, que são
+frequentemente mais especializadas e sensíveis a distúrbios
+ambientais, a Apis mellifera mostra-se generalista e resistente, o que
+também levanta preocupações quanto ao seu impacto ecológico, sobretudo
+em áreas de alta biodiversidade.
+
+
+Tetragonisca angustula
+
+A Tetragonisca angustula, popularmente conhecida como jataí, é uma
+abelha social da tribo Meliponini, amplamente distribuída nas regiões
+tropicais e subtropicais da América Latina, incluindo o Brasil.
+Trata-se de uma das espécies de abelhas sem ferrão mais estudadas e
+manejadas na meliponicultura, destacando-se por sua docilidade,
+adaptabilidade e importância ecológica como polinizadora generalista .
+
+Morfologicamente, a jataí é uma abelha de pequeno porte, medindo entre
+4 a 5 mm de comprimento. Apresenta cabeça e tórax de coloração escura,
+com abdômen mais claro e pernas pardacentas. Uma característica
+distintiva é a ausência de ferrão funcional, comum a todas as abelhas
+da tribo Meliponini, o que a torna incapaz de ferroar. Suas asas
+possuem venação reduzida, e as operárias apresentam cerdas nas pernas
+posteriores, adaptadas para o transporte de pólen .
+
+[imagem jatai]
+
+A entrada do ninho da T. angustula é notável, geralmente construída
+com cera em forma de tubo, lembrando um dedo de luva, e pode
+apresentar ramificações. Essa estrutura é utilizada na defesa da
+colônia, sendo fechada quando há ameaça de invasores, como formigas ou
+outras abelhas. As abelhas guardas, que representam cerca de 1 a 6% da
+colônia, posicionam-se na entrada do ninho para monitorar e defender
+contra intrusos .  
+
+Ecologicamente, a jataí é uma espécie generalista, visitando uma ampla
+variedade de plantas para coleta de néctar e pólen. Estudos indicam
+que ela visita diversas famílias vegetais, como Asteraceae,
+Euphorbiaceae, Moraceae, Fabaceae e Anacardiaceae, desempenhando papel
+crucial na polinização de ecossistemas tropicais . 
+
+A T. angustula é altamente adaptável, nidificando em cavidades
+naturais, como ocos de árvores, e em ambientes urbanos, como paredes e
+estruturas humanas. Sua ampla distribuição geográfica e capacidade de
+adaptação a diferentes habitats contribuem para seu sucesso ecológico
+e importância na conservação da biodiversidade . 
+
+Fisicamente, Apis mellifera e Tetragonisca angustula apresentam
+diferenças morfológicas nítidas e facilmente observáveis. A. mellifera
+é uma abelha é maior. Seu tórax e abdômen são densamente recobertos
+por pelos, o que contribui para a coleta de pólen, e suas asas são
+proporcionalmente grandes, com venação bem marcada. Em contraste, T.
+angustula é uma abelha de pequeno porte, com corpo mais delicado, e
+menor quantidade de pelos. Suas asas são curtas e apresentam venação
+reduzida, compatível com o seu tamanho corporal. Além disso, enquanto
+A. mellifera possui ferrão funcional e estrutura física voltada para
+defesa ativa, T. angustula não possui ferrão funcional, apresentando
+comportamento defensivo passivo, compatível com sua anatomia menos
+agressiva.
+
+Apesar de sua ampla distribuição e relevância ecológica, T. angustula
+ainda carece de uma base técnica consolidada na literatura científica,
+especialmente no que diz respeito a parâmetros biométricos
+padronizados, dados sobre produtividade, comportamento reprodutivo, e
+manejo racional. Enquanto A. mellifera é alvo de centenas de estudos
+experimentais e revisões sistemáticas, grande parte das informações
+sobre a jataí encontra-se dispersa, muitas vezes restrita a fontes
+regionais, relatos etnográficos ou experiências empíricas de
+meliponicultores.
+
+Assim, a comparação entre essas duas espécies não se limita ao campo
+morfológico, mas serve também como alerta para a carência de dados
+técnicos robustos sobre as abelhas nativas, o que limita seu uso
+sustentável e sua conservação baseada em evidências científicas.
+Investir na documentação sistemática de características como
+morfologia, biometria, e comportamento de espécies como T. angustula é
+um passo essencial para o fortalecimento da meliponicultura como
+atividade científica e econômica.
+
+Colmeias Langstroth e jatai
+
+
+
+
+
+
+
+
+
+
+
+
 Bufferização
