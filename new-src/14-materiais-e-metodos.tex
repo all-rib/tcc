@@ -75,21 +75,81 @@ Análise de temperatura
 
 
 
-Descrição da caixa de abelha
-
-
-
-
 
 	Os sistemas idealmente precisam sensoriar ao menos um ponto
 dentro, e um ponto fora da colmeia, permitindo assim observar a
-diferen;a de temperatura.
+diferen;a de temperatura. Isso se deve ao fato de que a variação de
+temperatura do ambiente como um todo provoca alterações de
+comportamento. Para manutenção da colméia, as abelhas fazem movimentos
+para controle de umidade e temperatura, reduzindo assim efeitos desses
+agentes sobre o ecossistema. Alterações no comportamento podem ser
+observadas através da observação destes fenômenos, além de permitir a
+identificação de fenômenos que provoquem estes comportamentos.
 
-	Os sensores utilizados foram os sht30
+	Os sensores utilizados foram os sht30 para os ambientes externos.
+
+O SHT30, desenvolvido pela Sensirion, é um sensor digital de
+temperatura e umidade relativa altamente integrado, ideal para
+aplicações em sistemas embarcados. Ele utiliza comunicação via I²C com
+suporte a verificação de integridade CRC, o que o torna confiável
+mesmo em ambientes com interferência elétrica. Possui calibração de
+fábrica, o que elimina a necessidade de ajustes manuais, e oferece
+alta precisão, com erro típico de ±2\% para umidade relativa e ±0,3 °C
+para temperatura. Com baixo consumo de energia e encapsulamento
+compacto (DFN-6), o SHT30 é amplamente utilizado em aplicações
+industriais, automação residencial, dispositivos IoT e monitoramento
+ambiental. Sua combinação de precisão, estabilidade e facilidade de
+integração o torna uma escolha robusta e eficiente para projetos que
+exigem sensoriamento ambiental confiável.
 
 	Escolhidos pela disponibilidade e precisao, alem de possuírem um
 sensor de umidade embarcado. seu tambanho também facilita o
-posicitionamento em qualquer local da colmeia
+posicitionamento em qualquer local da colmeia. O sensor possui
+interface I2C, com velocidades de ate 1MHz, com acuracia de 1.5\% de
+umidade relativa, e 0.1oc. Seu baixo consumo (1.5mA durante medicao, e
+0.5uA em idle-mode) tambem e um fator
+importante para a aplicacao, considerando que o dispositivo deve rodar
+sem supervisao durante um grande periodo, utilizando baterias. Por
+fim, o dispositivo nao necessita de calibracao.
+
+No entanto, sua breakout board possui um circuito pequeno que pode
+atrabalhar a insercao direta do sensor dentro da colmeia. Em
+decorrencia de eventuais falhas, um foi posto do lado de fora, outro
+do lado de dentro.
+
+%TODO: revisar isso segundo datasheet()
+
+	Para comparacao. e possibilidade de contato direto com o mel,
+escolheu-se o DS18b20 por sua versatilivdade de encapsulamentos.
+
+O DS18B20 é um sensor digital de temperatura fabricado pela Maxim Integrated (atualmente parte da Texas Instruments), amplamente utilizado em sistemas embarcados e aplicações industriais. Seu destaque está na comunicação via 1-Wire, que permite a transmissão de dados e alimentação por um único fio, simplificando o cabeamento em sistemas distribuídos. O sensor oferece uma faixa de medição de -55 °C a +125 °C, com precisão típica de ±0,5 °C na faixa entre -10 °C e +85 °C, e resolução configurável de 9 a 12 bits. Além disso, cada unidade possui um código único de 64 bits gravado de fábrica, permitindo a identificação individual de múltiplos sensores conectados em paralelo no mesmo barramento. Seu encapsulamento compacto (TO-92 ou versões estanques em aço inox) e sua robustez tornam o DS18B20 ideal para uso em ambientes externos, automação residencial, agricultura de precisão e sistemas de monitoramento térmico distribuído.
+
+	Para microfone, foi usado o INMP441, devido a disponibilidade,
+familiaridade, e aplicacoes ja implementadas com esse mesmo
+dispositivo. 
+
+O INMP441 é um microfone digital do tipo MEMS
+(Micro-Electro-Mechanical Systems), projetado para capturar sinais
+acústicos com alta fidelidade e baixo ruído. Ele integra internamente
+um conversor ADC de 24 bits e se comunica por meio da interface
+digital I²S, permitindo a transmissão direta de áudio para
+microcontroladores ou processadores de sinal sem a necessidade de
+circuitos analógicos externos. O INMP441 apresenta uma faixa dinâmica
+ampla e resposta em frequência plana, sendo capaz de captar sons entre
+60 Hz e 15 kHz com boa sensibilidade. Sua arquitetura digital elimina
+interferências comuns a microfones analógicos, tornando-o ideal para
+aplicações como reconhecimento de voz, gravação de áudio embarcada,
+sistemas de monitoramento acústico e dispositivos IoT com entrada
+sonora. Com encapsulamento compacto e fácil integração em placas de
+circuito impresso, o INMP441 oferece uma solução prática e robusta
+para projetos embarcados que exigem captura de áudio de forma precisa
+e eficiente.
+
+	Para processamento e armazenamento das informacoes, foi utilizado
+uma placa LORA32 da LILYGO, devida ao seu hardware integrado para uso
+de cartoes SD. isso permite a gravacao dos dados durante um grande
+periodo, se considerar a disponibilidade de armazenamento no que tange
+cartoes de memoria do tipo microSD
 
 I2C
 
