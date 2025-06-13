@@ -147,11 +147,99 @@ e eficiente.
 
 	Para processamento e armazenamento das informacoes, foi utilizado
 uma placa LORA32 da LILYGO, devida ao seu hardware integrado para uso
-de cartoes SD. isso permite a gravacao dos dados durante um grande
+de cartoes SD. Isso permite a gravacao dos dados durante um grande
 periodo, se considerar a disponibilidade de armazenamento no que tange
-cartoes de memoria do tipo microSD
+cartoes de memoria do tipo microSD.
+
+
+
+[imagem lilygo]
+
+Para integração dos sensores, cabeamento de rede do tipo cat6 foi
+utilizado afim de reduzir possiveis efeitos de interferencia externa.
+Esse cabo foi escolhido pela especificidade de nao interferencia de
+crosstalk, um problema comum na utilizacao de conectores[15].
+
+	Para adaptação dos cabos CAT6, foi adaptado uma pequena topologia
+para interligar os sensores à placa. A exposição às intempéries me
+impede de utilizar um conector que unificasse todos os sensores,
+obrigando a utilizar uma conexão dedicada à cada um dos sinais: VCC,
+GND, SDA e SCL.
+
+	Um total de 4 sensores foram conectados, dois do tipo SHT30, e
+dois BME280, afim 
+
+[imagem topologia]
+
+[imagem conectores]
+
+	Outro aspecto importante de pensar foi a forma de posicionar os
+sensores.
+
+	Os sensores, interligados entre si, em um primeiro teste foram
+posicionados fora do mel, no sobreninho mais superior, o mais distante
+do contato com o mel, prevendo possiveis problemas de funcionamento
+dos sensores devido exposição ao mel e à cera.
+
+	
+
+Lembrar de falar que nao possuir osciloscopio disponivel em campo
+dificultou muita coisa
+
+Possivel efeito capacitivo do contato de circuito i2c com umidade
+
+falar sobre hard-fault que engole energia no esp
+
+falar sobre a necessidade de um debug remoto
+
+
+
+
+
+
+% Achar um argumento melhor pra essa porra.
+
+
+	Alem disso, a exposicao de eletronicos no mel é um assunto sem
+publicações. No entanto, estende-se parte das implicações da presença
+de umidade nessas aplicações.
+
+	Um problema comum em I2C é sua sensibilidade a efeitos capacitivos
+na linha
+
+% https://www.eevblog.com/forum/projects/i2c-pcb-design-trace-length-and-interference/
+%
+% descobrir como a resistencia afeta o efeito de bordas na i2c
+
+%Lembrar de falar que nao possuir osciloscopio disponivel em campo
+%dificultou muita coisa
+
+% Possivel efeito capacitivo do contato de circuito i2c com umidade
+
+% falar sobre hard-fault que engole energia no esp
+
+% falar sobre a necessidade de um debug remoto
+
+
+
+
+
+[fotografia cabo de rede]
+
+	
+
+	A comunicação funciona no modelo mestre-escravo, destacando o
+controlador no papel de mestre, responsável por fornecer o clock (SCL)
+principal, bem como transmitir a requisiçaõ de um dispositivo por seu
+respectivo endereço, e receber a sequencia de respostas.
+
+[Imagem de topologia de rede]
+
+	Para consulta dos sensores, 
 
 I2C
+
+
 
 \subsection{Estudos}
 
@@ -161,6 +249,18 @@ I2C
 
 \subsection{Aplicação e registro}
 \subsection{Análise Comparativa}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
