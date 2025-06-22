@@ -156,16 +156,18 @@ cartoes de memoria do tipo microSD.
 [imagem lilygo]
 
 Para integração dos sensores, cabeamento de rede do tipo cat6 foi
-utilizado afim de reduzir possiveis efeitos de interferencia externa,
-graças à sua resiliência à crosstalk.
-O uso de conectores RJ45 não é possivel, uma vez que a exposição à
-chuva ou umidade danifica e provoca curto entre os terminais;
-Pensando na possibilidade de falhas semelhantes, como oxidação, foi
-utilizado um soquete provisório para interligar terminais comuns entre
-sí (todos os terminais SCL, todos os SDA, GND's e VCC's), afim de permitir a remoção destes quando necessário. Além disso,
-para evitar a necessidade de abrir a caixa para desconectar algum
-sensor, outro conector foi feito na extensão dos fios entre a colméia,
-e o controlador.
+utilizado afim de reduzir possiveis efeitos de interferencia externa.
+Esse cabo foi escolhido pela especificidade de nao interferencia de
+crosstalk, um problema comum na utilizacao de conectores[15].
+
+	Para adaptação dos cabos CAT6, foi adaptado uma pequena topologia
+para interligar os sensores à placa. A exposição às intempéries me
+impede de utilizar um conector que unificasse todos os sensores (como
+o RJ45), obrigando a utilizar uma conexão dedicada à cada um dos
+sinais: VCC, GND, SDA e SCL.
+
+	Um total de 4 sensores foram conectados, dois do tipo SHT30, e
+dois BME280, afim 
 
 [imagem topologia]
 
@@ -187,8 +189,6 @@ arquivo de texto, seguindo um padrão de time-stamp:
 [#n][Nome]([medida][unidade])\\+
 
 Esse padrão 
-
-
 
 
 
