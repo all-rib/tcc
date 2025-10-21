@@ -1,3 +1,24 @@
+# TODO
+
+	[] Reinstalar ESP-IDF
+
+	[] Criar um novo projeto teste e compilar
+
+	[] Compilar pelo menos uma versão funcional do teu projeto
+
+		[] Funcionar log
+
+		[] Funcionar bluetooth
+
+		[] Funcionar sensor
+
+	[] Reescrever hard fault
+
+	[] Unificar tuas branches
+
+	[] Unificar tuas bibliotecas
+
+	[] Versionar e documentar tudo
 
 O que você fez?
  - Resolvi monitorar uma colmeia
@@ -121,3 +142,12 @@ de recursos naturais, variabilidade de manuseio, zona de manuseio, impacto da
 tecnologia na lucratividade dos processos rurais, engenharia de sensores, controles e
 sensoriamento remoto, entre outras coisas. Principalmente materias chinesas
 
+
+
+# Coisas para lembrar
+
+Existem diversos repositórios para esse TCC. [Melissa]() é o mais importante, que é o
+sistema inteiro, inserido na colméia.
+
+Hermes é uma biblioteca de logging que tu criou, que supostamente deveria ser
+ultrakill para qualquer problema no micro

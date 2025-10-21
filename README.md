@@ -58,9 +58,9 @@ Extrair usando raspberry pi
 
 ## Checklist de elementos
 
-[ ] 00-main.tex
-	[ ] modelo
-	[ ] texto
+- [ ] 00-main.tex
+	- [ ] modelo
+	- [ ] texto
 	[ ] formatação
 [ ] 01-capa.tex
 	[ ] modelo

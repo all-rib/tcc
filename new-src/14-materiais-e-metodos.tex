@@ -164,7 +164,10 @@ de cartoes SD. Isso permite a gravacao dos dados durante um grande
 periodo, se considerar a disponibilidade de armazenamento no que tange
 cartoes de memoria do tipo microSD.
 
-
+	O dispositivo possui recomendações de alimentação de 5V pela porta
+USB [17], mas durante erros de conexão, o controlador foi alimentado
+com 8.1 volts em sua porta USB, continuando a operar sem problemas
+aparentes.
 
 [imagem lilygo]
 
@@ -173,47 +176,204 @@ utilizado afim de reduzir possiveis efeitos de interferencia externa.
 Esse cabo foi escolhido pela especificidade de nao interferencia de
 crosstalk, um problema comum na utilizacao de conectores[15].
 
-	Para adaptação dos cabos CAT6, foi adaptado uma pequena topologia
+	Para adaptação dos cabos CAT6, foi necessario uma pequena topologia
 para interligar os sensores à placa. A exposição às intempéries me
 impede de utilizar um conector que unificasse todos os sensores (como
 o RJ45), obrigando a utilizar uma conexão dedicada à cada um dos
 sinais: VCC, GND, SDA e SCL.
-
-	Um total de 4 sensores foram conectados, dois do tipo SHT30, e
-dois BME280, afim 
 
 [imagem topologia]
 
 [imagem conectores]
 
 	Um total de 4 sensores foram conectados, dois do tipo SHT30, e
-dois BME280, afim de observar possíveis derivas dos modelos, e obter
-dados de desvios dos sensores.
+dois BME280. Os sensores, quando utilizados em par, permitem obter
+dados de desvios entre os sensores sensores.
+
+	Os sensores foram conectados em paralelo, permitindo que
+sejam consultados sob demanda. Graças à arquitetura i2c, mais de um sensor do mesmo
+tipo pode ser utilizado na mesma linha: Os dispositivos são
+endereçados de fábrica, e um ou mais bits podem ser alterados
+manualmente. O endereçamento é determinado por 7 bits (0b111011x),
+sendo os 6 MSB (most-significant-bits) constantes, e o menos
+significativo controlado pelo nivel lógico da porta SDO. A conexão
+entre SDO e GND força o endereço 0b1110110 (0x76), e a conexão com
+VDDIO resulta em 0b1110111 (0x77). O pino não pode flutuar.
+
+	Se necessário, em um trabalho futuro, mais de dois dispositivos do
+mesmo tipo poderão ser conectados, aproveitando um detalhe da
+arquitetura SPI, que utiliza um terceiro sinal (denominado CS, ou
+chip-select) para controlar a seleção de um dispositivo. Neste caso, o
+sinal SDO tem a mesma função do CS, mantendo todos os dispositivos com
+o mesmo endereço (0x76). Quando for necessário consulta, a linha SDO
+deve sofrer pull-up, alterando o endereço para 0x77, destacando-o como
+tendo um endereço exclusivo, e portanto responderá individualmente. Ao
+final da operação, a linha deve novamente sofrer pull-down, liberando
+o canal.
 
 	Os sensores, interligados entre si, em um primeiro teste foram
 posicionados fora do mel, no sobreninho mais superior, o mais distante
 do contato com os favos, prevendo possiveis problemas de funcionamento
 dos sensores devido exposição ao mel e a cera.
 
-A captura e gravação dos dados foram feitas através de consulta, e em
+%% Falar sobre o teste de mergulhar o sensor no mel.
+
+	O canal para transposição dos fios foi selado utilizando-se uma
+mistura de cera de abelha derretida com própolis, extraído a partir de
+outras colméias da mesma espécie. A selagem é necessária devido ao
+ataque de outros insetos, em especial formigas e fungos, que se
+aproveitam do ponto de abertura que os cabos provocam. A cera, quando
+semi-derretida e maleável é capaz de selar a entrada dos fios, por se
+moldar naturalmente à passagem de cabos, criando um canal justo, e
+facilmente renovável, além de ser familiar para os indivíduos da
+colônia. O própolis, por sua vez, é um poderoso antiséptico natual, o
+que evita a proliferação de fungos e bactérias na região. O selamento
+da entrada também pode ser feita com fita, mas esta se degrada com a
+chuva e umidade, e as abelhas ainda terão o trabalho de selar a caixa
+internamente com cera e própolis.
+
+	Finalmente, o microcontrolador, bem como uma bateria de
+alimentação, foram isolados entre sí, e inseridos em frascos de
+conserva. Isso foi necessário devido exposição à umidade. Os buracos
+na tampa foram selados com cola-quente, e os frascos dispostos de
+ponta cabeça, de forma que a tampa ficasse embaixo, evitando que água
+acumulasse proximos aos conectores.
+
+	Um conector foi deixado do lado de fora, para facilitar a troca de
+bateria, caso necessário. Eventualmente, problemas na rotina do
+microcontrolador drenaram a bateria completamente. Isso deu origem à
+necessidade de criar um sistema robusto de detecção de erros, uma vez
+que erros do tipo hard-fault, por padrão, resultam num loop infinito
+em determinado ponto do programa. A ideia original, é que o usuário
+seja capaz de debuggar e verificar o sistema neste ponto, seja rodando
+o programa de trás pra frente, inspecionando a memória, stack, entre
+outros recursos.
+
+	Uma solução é o registro de alguns pontos para futura
+correção: conjunto subsequente de chamadas que levou à execução até a
+instrução fatal (stack), um snapshot de pontos importantes da memória,
+memory-dump, eventos ocorridos, que possam ter provocado o erro,
+event-log, e por fim, características físicas do dispositivo, como
+temperatura, níveis de tensão e corrente, quando possível. Mas além de
+tudo isso, a função original de hard-fault precisa ser reescrita, de
+preferência a resetar o dispositivo.
+
+	A captura e gravação dos dados foram feitas através de consulta, e em
 seguida armazenadas através de uma função atômica de escrita, em um
 arquivo de texto, seguindo um padrão de time-stamp:
 
 [#n][Nome]([medida][unidade])\\+
 
-Esse padrão 
+Esse padrão, posteriormente implementado atraves da biblioteca hermes [16], foi
+utilizado por fornecer contexto de origem, instante e leitura de um
+sensor, consideradas suficientes para a naturza desta aplicação.
+
+	No decorrer do trabalho, problemas de debug in-loco firmaram a
+necessidade de reformular o processo, como será explicado mais
+adiante.
+
+	Além disso, a biblioteca foi implementada com uma análise de
+requisitos, a saber
+
+'''
+* - Only it can write. Other actors must rely on this to write.
+* 
+* - Must write, no matter what happens (i.e. write must always
+* succeed);
+* 
+* This means that if for any reason, the media fails to be written to,
+* the actor must be able to hold-on information for long enough, or
+* provide necessary means to easy the load of current write, until the
+* write media goes back to normal;
+* 
+* This is intended, of course, to guarantee every information will be
+* kept.
+* 
+* - Must, while writing, lock any actor from reading it;
+* 
+* This is to prevent incomplete/inaccurate info retrieval (i.e. atomic
+* write/read operations)
+* 
+* - Must, while reading, lock any actor from writing it;
+* 
+* - Must handle parallel writes/reads;
+* 
+* - Must generate its own events (be able to log itself in event-driven
+* manner);
+'''
+
+	Dentre os requisitos, destacam se dois importantes: "Must write,
+no matter what happens", essencial para a garantia de telemetria dos
+sensores, e "must handle parallel writes/reads", conveniente à
+implementação de diversos sensores para escrita e leitura simultânea.
+
+	Para tratar do primeiro requisito, foi desenvolvida uma nova
+biblioteca, afim de lidar com o problema de pouca memória presente no
+micro, prevendo a possivel falha de todos os canais de comunicacoes do
+sistema, por diversas razões.
+
+	Para métodos de lidar com dados seriais, pode-se citar fila como
+sendo a mais comum. A fila possui um modelo first-in, first out (FIFO)
+de consulta, permitindo que n séries s de dados sejam capturados, e para
+amostragem ser uniforme, os dados são amostrados numa frequencia f.
+
+	No entanto, a lotação da memória por outros processos pode fazer
+com que dados sejam perdidos, de forma que alguma série pode não ser
+subsequente à outra. Para corrigir isso, uma opção é reduzir a
+frequência de captura, por consequência diminuindo sua resolução, em
+detrimento da garantia de captura de pelo menos um dado durante o
+período em que a memória ficou lotada.
+
+	Além disso, também é possivel o agrupamento dos dados em séries,
+dado que os dados tem um intervalo bem definido de possilibdades,
+bastando apenas guardar os instantes de tempo no qual o mesmo ocorre.
+
+	Outro auxílio é possivel através do uso de média movel, para
+garantia que os dados, ainda que esparços, sejam capazes de
+representar a média de valores de um intervalo.
+
+	Por fim, pode-se ainda compactar os valores, procedendo para
+escrita numa mídia de armazenamento em massa, ou transmissão para
+posterior consulta.
+
+	A biblioteca, nomeada de Sparse-Buffer, possui todas as
+funcionalidades citadas a cima, utilizada
+	
+
+
+
+A bateria acabar
+
+Algum cabo falhar
+
+Algum sensor falhar
+
+	- como descobrir a diferença de falha do sensor, ou falha do cabo?
+talvez testar um curto local
+
+a rede falhar
+
+ - como unificar os canais de rede em uma biblioteca só?
+
+o armazenamento falhar
+
+
+
+
+
+
+
+
 
 
 
 	Outro aspecto importante de pensar foi a forma de posicionar os
 sensores.
 
-	Os sensores, interligados entre si, em um primeiro teste foram
-posicionados fora do mel, no sobreninho mais superior, o mais distante
-do contato com o mel, prevendo possiveis problemas de funcionamento
-dos sensores devido exposição ao mel e à cera.
 
-	
+
+
+
 
 Lembrar de falar que nao possuir osciloscopio disponivel em campo
 dificultou muita coisa
