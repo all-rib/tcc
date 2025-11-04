@@ -279,15 +279,37 @@ None.  Caso alguma mensagem seja configurada com uma verbosidade maior
 que Maximum Log Level, a mesma não constará no binário final.
 
 Essa habilidade, no entanto, exige uma tomada de decisão. A escrita
-dos eventos pode ser feita de maneira
-remediativa, isto é, após algum evento pré-determinado, ou
-preventiva, à todo e qualquer 
+dos eventos pode ser feita de duas maneiras: preditiva, isto é, nos possíveis
+pontos de problemas, sempre exportar mensagens; Ou remediativa, que é
+verificar o código por problemas, e caso encontrado, exportar a
+respectiva mensagem. O primeiro método possui o malefício de gerar
+mensagens desnecessárias e exigir muitos recursos dedicados ao log. A
+segunda opção, no entanto, possui a possibilidade de que um erro fatal
+impeça o dispositivo de continuar funcionando, e mensagem nenhuma ser
+registrada. 
+
+TODO: Deveria usar a ideia do Denardim, e criar uma região reservada
+para registro de logs?
 
 TODO: Ver como funciona o debug de um hard-fault dentro de um RTOS
 
+	Para efeitos práticos, um wrapper foi criado para automatizar a
+geração das mensagens de log, dando origem à uma biblioteca denominada
+HERMES. Esse wrapper foi escrito de maneira que quaisquer ações
+direcionadas a um sensor gerasse eventos, e os registrasse em
+armazenamento de massa.
+
+	A biblioteca possui o conceito de "object", ou "objeto", onde um objeto é
+capaz de realizar determinadas tarefas, classificadas em inicializar,
+configurar, consultar, e desinicializar. Essas tarefas são abstraídas
+no conceito de "taskchain", ou "corrente de tarefas", onde um ou mais
+métodos, ou funções, podem ser cadastradas na chain para realizar
+chamadas subsequentes na ordem em que foram cadastradas. E para cada
+nova chamada, um evento é gerado e armazenado.
+
 	A captura dos dados foram feitas através de consulta sob demanda
 de cada sensor, e gravação através do armazenamento utilizando uma função atômica de escrita, em um
-arquivo de texto, seguindo um padrão de time-stamp:
+arquivo de texto, seguindo um padrão de time-stamp
 
 [#n][Nome]([medida][unidade])\\+
 
