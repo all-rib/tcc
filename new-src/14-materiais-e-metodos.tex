@@ -216,7 +216,7 @@ posicionados fora do mel, no sobreninho mais superior, o mais distante
 do contato com os favos, prevendo possiveis problemas de funcionamento
 dos sensores devido exposição ao mel e a cera.
 
-%% Falar sobre o teste de mergulhar o sensor no mel.
+% TODO: Falar sobre o teste de mergulhar o sensor no mel.
 
 	O canal para transposição dos fios foi selado utilizando-se,
 primeiramente, um composto de [isolante
@@ -288,11 +288,11 @@ segunda opção, no entanto, possui a possibilidade de que um erro fatal
 impeça o dispositivo de continuar funcionando, e mensagem nenhuma ser
 registrada. 
 
-TODO: Deveria usar a ideia do Denardim, e criar uma região reservada
-para registro de logs?
+% TODO: Deveria usar a ideia do Denardim, e criar uma região reservada
+% para registro de logs?
 
-TODO: Ver como funciona o debug de um hard-fault dentro de um RTOS
-
+% TODO: Ver como funciona o debug de um hard-fault dentro de um RTOS
+ 
 	Para efeitos práticos, um wrapper foi criado para automatizar a
 geração das mensagens de log, dando origem à uma biblioteca denominada
 HERMES. Esse wrapper foi escrito de maneira que quaisquer ações
@@ -313,13 +313,9 @@ arquivo de texto, seguindo um padrão de time-stamp
 
 [#n][Nome]([medida][unidade])\\+
 
-Esse padrão, posteriormente implementado atraves da biblioteca hermes [16], foi
+Esse padrão foi
 utilizado por fornecer contexto de origem, instante e leitura de um
 sensor, consideradas suficientes para a naturza desta aplicação.
-
-	No decorrer do trabalho, problemas de debug in-loco firmaram a
-necessidade de reformular o processo, como será explicado mais
-adiante.
 
 	Além disso, a biblioteca foi implementada com uma análise de
 requisitos, a saber
@@ -334,18 +330,6 @@ requisitos, a saber
 * the actor must be able to hold-on information for long enough, or
 * provide necessary means to easy the load of current write, until the
 * write media goes back to normal;
-* 
-* This is intended, of course, to guarantee every information will be
-* kept.
-* 
-* - Must, while writing, lock any actor from reading it;
-* 
-* This is to prevent incomplete/inaccurate info retrieval (i.e. atomic
-* write/read operations)
-* 
-* - Must, while reading, lock any actor from writing it;
-* 
-* - Must handle parallel writes/reads;
 * 
 * - Must, while writing, lock any actor from reading it;
 * 
@@ -364,6 +348,13 @@ requisitos, a saber
 no matter what happens", essencial para a garantia de telemetria dos
 sensores, e "must handle parallel writes/reads", conveniente à
 implementação de diversos sensores para escrita e leitura simultânea.
+
+
+
+
+
+% NOTE: Acho que não precisa da biblioteca de compactação, mas seria
+% interessante falar que ela foi criada
 
 	Para tratar do primeiro requisito, foi desenvolvida uma nova
 biblioteca, afim de lidar com o problema de pouca memória presente no
