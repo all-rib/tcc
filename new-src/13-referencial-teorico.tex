@@ -14,16 +14,6 @@ No Brasil, as espécies mais comuns compreendem a Apis mellifera
 interesse do mercado brasileiro em sua alta produtividade para o
 mercado apícola[10].
 
-
-
-
-
-
-
-
-
-
-
 A domesticação do processo de produção de mel recebe o nome de
 apicultura. É um processo milenar, praticado deste o Egito antigo, que
 consiste em alocar as abelhas em uma região arbitária, proporcionar à
@@ -66,7 +56,7 @@ apicultura, se tornando então um processo de aquisição, processamento
 e análise de dados afim de otimizar o gerenciamento e a tomada de
 decisões no processo apícola.
 
-Tetragonisca angustula
+\subsection{Tetragonisca angustula}
 
 A Tetragonisca angustula, popularmente conhecida como jataí, é uma
 abelha social da tribo Meliponini, amplamente distribuída nas regiões
@@ -95,7 +85,7 @@ A organização social da colônia é altamente complexa, composta por
 várias castas, incluindo rainha, operárias e zangões. As colônias são perenes, podendo conter de
 20 a 80 mil indivíduos, abrigadas geralmente em cavidades protegidas.
 
-Colmeias jatai
+\subsection {Colmeias jatai}
 
 A criação de ambas abelhas exigem a utilização de caixas pré-montadas
 que permitem a modularização da coleta de mel. Com modelos diferentes
@@ -146,19 +136,7 @@ umidade.
 
 [Fotografia colmeia jatai INPA]
 
-\Section{Microcontrolador}
-
-Um microcontrolador é um circuito integrado que reúne os principais
-componentes de um sistema computacional, incluindo uma unicade central
-de processamento (CPU), memória e periféricos de
-entrada e saída. É utilizado para executar tarefas específicas de
-controle em sistemas embarcados. Diferentemente dos microprocessadores
-de uso geral, que dependem de circuitos externos para realizar
-operações de entrada, saída e armazenamento, o microcontrolador
-integra esses recursos internamente, possibilitando a implementação de
-sistemas autônomos, compactos e de baixo custo.
-
-\Section{Sensores e aquisição de dados}
+\Section{Sesnores}
 
 Sensores são dispositivos capazes de detectar mudanças no ambiente, e
 gerar eventos sobre estas mudanças para um sistema. No meio apícola,
@@ -181,6 +159,77 @@ ao sol, esparcidade dos insetos, etc.
 Dentre a enorme gama de aplicações, quatro análises se destacam:
 sensoriamento de temperatura, umidade, peso e som.
 
+Entre os muitos, cita-se especialmente BME280, DHT11, DS18B20, SHT30,
+INMP441. Esses sensores cobrem a maior parte do escopo deste projeto,
+a saber:
+o
+
+O BME280 é um sensor Bosch que combina sesnores digitais de umidade,
+temperatura, e pressão. Possui um encaplulamento LGA compacto de
+2.5x2.5mm², e espessura de 0.93mm.
+
+O DHT11 é um sensor de umidade e temperatura, digital, de baixo custo,
+mas atualmente baixa confiabilidade. é Utilizado na maioria dos
+projetos hobbystas, devido sua disponibilidade. O fornecedor original
+é desconhecido, mas a sua grande maioria é importada sob a marca
+AOSONG.
+
+O DS18B20 é um sensor digital de temperatura fabricado pela Maxim
+Integrated (atualmente parte da Texas Instruments), amplamente
+utilizado em sistemas embarcados e aplicações industriais. Seu
+destaque está na comunicação via 1-Wire, que permite a transmissão de
+dados e alimentação por um único fio, simplificando o cabeamento em
+sistemas distribuídos. O sensor oferece uma faixa de medição de -55 °C
+a +125 °C, com precisão típica de ±0,5 °C na faixa entre -10 °C e
++85 °C, e resolução configurável de 9 a 12 bits. Além disso, cada
+unidade possui um código único de 64 bits gravado de fábrica,
+permitindo a identificação individual de múltiplos sensores conectados
+em paralelo no mesmo barramento. Seu encapsulamento compacto (TO-92 ou
+versões estanques em aço inox) e sua robustez tornam o DS18B20 ideal
+para uso em ambientes externos, automação residencial, agricultura de
+precisão e sistemas de monitoramento térmico distribuído.
+
+O SHT30, desenvolvido pela Sensirion, é um
+sensor digital de temperatura e umidade relativa, ideal para
+aplicações em sistemas embarcados. Ele utiliza comunicação via I²C com
+suporte a verificação de integridade CRC, o que o torna confiável
+mesmo em ambientes com interferência elétrica. Possui calibração de
+fábrica, o que elimina a necessidade de ajustes manuais, e oferece
+alta precisão, com erro típico de ±2\% para umidade relativa e ±0,3 °C
+para temperatura. Com baixo consumo de energia e encapsulamento
+compacto (DFN-6), o mesmo é amplamente utilizado em aplicações
+industriais, automação residencial, dispositivos IoT e monitoramento
+ambiental. Sua combinação de precisão, estabilidade e facilidade de
+integração o torna uma escolha robusta e eficiente para projetos que
+exigem sensoriamento ambiental confiável.
+
+Escolhidos pela disponibilidade e precisao, alem de possuírem um
+sensor de umidade embarcado. seu tambanho também facilita o
+posicitionamento em qualquer local da colmeia. O sensor possui
+interface I2C, com velocidades de ate 1MHz, com acuracia de 1.5\% de
+umidade relativa, e 0.1oc. Seu baixo consumo (1.5mA durante medicao, e
+0.5uA em idle-mode) tambem e um fator importante para a aplicacao,
+considerando que o dispositivo deve rodar sem supervisao durante um
+grande periodo, utilizando baterias. Por fim, o dispositivo nao
+necessita de calibracao.
+
+O INMP441 é um microfone digital do tipo MEMS
+(Micro-Electro-Mechanical Systems), projetado para capturar sinais
+acústicos com alta fidelidade e baixo ruído. Ele integra internamente
+um conversor ADC de 24 bits e se comunica por meio da interface
+digital I²S, permitindo a transmissão direta de áudio para
+microcontroladores ou processadores de sinal sem a necessidade de
+circuitos analógicos externos. O INMP441 apresenta uma faixa dinâmica
+ampla e resposta em frequência plana, sendo capaz de captar sons entre
+60 Hz e 15 kHz com boa sensibilidade. Sua arquitetura digital elimina
+interferências comuns a microfones analógicos, tornando-o ideal para
+aplicações como reconhecimento de voz, gravação de áudio embarcada,
+sistemas de monitoramento acústico e dispositivos IoT com entrada
+sonora. Com encapsulamento compacto e fácil integração em placas de
+circuito impresso, o INMP441 oferece uma solução prática e robusta
+para projetos embarcados que exigem captura de áudio de forma precisa
+e eficiente.
+
 \Section{I2C}
 
 O I²C (Inter-Integrated Circuit), também conhecido como I2C, é um
@@ -196,72 +245,59 @@ outra de clock (SCL – Serial Clock).
 
 
 
+% TODO: Rever abaixo o que jogar fora e o que manter
 
 
 
-
-
-
-
-
-
-
-
-
-
-% Rever abaixo o que jogar fora e o que manter
-
-
-
-A ideia de sensoriar as colméias diretamente não é nova. Alguns
-trabalhos demonstram que a ideia intriga pesquisadores à cerca de 20
-anos.[?] No Brasil, apesar de recente, a ideia também tem se difundido
-bastante, com o surgimento de pesquisas e soluções comerciais para
-auxiliar a tomada de decisões.[?]
-
-A temperatura, bem como a umidade, como fator decisivo para o ritmo de
-trabalho de todas as espécies, possui adoção quase que unanime entre
-outros trabalhos.[?] A facilidade de implantação dos sensores,
-processamento, e intepretação, permite extrair uma relação direta
-entre a termorregulação da colmeia, ciclo de trabalho e eficiência
-produtiva.[?]
-
-Sua aplicação, no entanto, não tem uma discução direta em se tratando
-da metodolgia. Simples variáveis, como por exemplo o posicionamento
-dos sensores, podem alterar drasticamente as medidas. E os tipos de
-interferências possíveis também pode ser um fator crucial.
-
-O som, advindo do comportamento de enxame dessas criaturas, também
-descreve um espectro de comportamento. É sabido que o som composto
-pela colméia reflete tanto o estado atual, seja este fome, doença,
-ameaça, quanto uma breve previsão de eventos, como enxameação, mudança
-de ritmo produtivo, ou mesmo o compartilhamento de informações,
-através do comportamento de "dança".[?]
-
-Aplicações práticas demonstram a possibilidade de induzir certos
-comportamentos, condicionando enxames inteiros à serem dóceis,
-permitindo assim a coleta de mel sem a presença de riscos, sejam para
-os coletores, quanto para a própria abelha.[?]
-
-De maneira semelhante, os mesmos estudos no entanto, não analisam o
-espectro das posiçções possíveis, bem como da diferença de som entre
-as diversas espécies, ou o tipo de microfone. é conhecido que
-diferentes espécies geram diferentes espectros de ruídos, de forma que
-pode haver mais de uma forma de analizar determinada espécie através
-do áudio.
-
-E por fim, o peso evidencia a evolução da produção de alimentos e
-indivíduos dentro da colmeia. Através da sua medida, o apicultor
-consegue entender o ritmo de produção e consumo da colméia[12],
-habilitando ações como alimentação artificial em épocas de escacez, ou
-mesmo a melhor época para colheitas.
-
-Extração de audio pode automatizar a identificação de fatores
-de stress. Para isso é necessário analizar os audios sistematicamente.
-Existem modelos[Kulyukin, 2018] de redes neurais capazes classificar
-sons de abelhas dentre outros sons. O projeto faz uso de sensores como
-microfone, temperatura e câmera para tratar diferenciaçãode abelhas de
-outros insetos, detecção e previsão de eventos na colmeia, detecção de
-doenças, e associação de eventos à determinadas condições de produção
-
-	Utilizando-se de caixas no padrão Langstroth, o estudo foi capaz
+%A ideia de sensoriar as colméias diretamente não é nova. Alguns
+%trabalhos demonstram que a ideia intriga pesquisadores à cerca de 20
+%anos.[?] No Brasil, apesar de recente, a ideia também tem se difundido
+%bastante, com o surgimento de pesquisas e soluções comerciais para
+%auxiliar a tomada de decisões.[?]
+%
+%A temperatura, bem como a umidade, como fator decisivo para o ritmo de
+%trabalho de todas as espécies, possui adoção quase que unanime entre
+%outros trabalhos.[?] A facilidade de implantação dos sensores,
+%processamento, e intepretação, permite extrair uma relação direta
+%entre a termorregulação da colmeia, ciclo de trabalho e eficiência
+%produtiva.[?]
+%
+%Sua aplicação, no entanto, não tem uma discução direta em se tratando
+%da metodolgia. Simples variáveis, como por exemplo o posicionamento
+%dos sensores, podem alterar drasticamente as medidas. E os tipos de
+%interferências possíveis também pode ser um fator crucial.
+%
+%O som, advindo do comportamento de enxame dessas criaturas, também
+%descreve um espectro de comportamento. É sabido que o som composto
+%pela colméia reflete tanto o estado atual, seja este fome, doença,
+%ameaça, quanto uma breve previsão de eventos, como enxameação, mudança
+%de ritmo produtivo, ou mesmo o compartilhamento de informações,
+%através do comportamento de "dança".[?]
+%
+%Aplicações práticas demonstram a possibilidade de induzir certos
+%comportamentos, condicionando enxames inteiros à serem dóceis,
+%permitindo assim a coleta de mel sem a presença de riscos, sejam para
+%os coletores, quanto para a própria abelha.[?]
+%
+%De maneira semelhante, os mesmos estudos no entanto, não analisam o
+%espectro das posiçções possíveis, bem como da diferença de som entre
+%as diversas espécies, ou o tipo de microfone. é conhecido que
+%diferentes espécies geram diferentes espectros de ruídos, de forma que
+%pode haver mais de uma forma de analizar determinada espécie através
+%do áudio.
+%
+%E por fim, o peso evidencia a evolução da produção de alimentos e
+%indivíduos dentro da colmeia. Através da sua medida, o apicultor
+%consegue entender o ritmo de produção e consumo da colméia[12],
+%habilitando ações como alimentação artificial em épocas de escacez, ou
+%mesmo a melhor época para colheitas.
+%
+%Extração de audio pode automatizar a identificação de fatores
+%de stress. Para isso é necessário analizar os audios sistematicamente.
+%Existem modelos[Kulyukin, 2018] de redes neurais capazes classificar
+%sons de abelhas dentre outros sons. O projeto faz uso de sensores como
+%microfone, temperatura e câmera para tratar diferenciaçãode abelhas de
+%outros insetos, detecção e previsão de eventos na colmeia, detecção de
+%doenças, e associação de eventos à determinadas condições de produção
+%
+%	Utilizando-se de caixas no padrão Langstroth, o estudo foi capaz
