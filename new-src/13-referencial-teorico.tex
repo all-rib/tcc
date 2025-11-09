@@ -162,73 +162,137 @@ sensoriamento de temperatura, umidade, peso e som.
 Entre os muitos, cita-se especialmente BME280, DHT11, DS18B20, SHT30,
 INMP441. Esses sensores cobrem a maior parte do escopo deste projeto,
 a saber:
-o
 
-O BME280 é um sensor Bosch que combina sesnores digitais de umidade,
-temperatura, e pressão. Possui um encaplulamento LGA compacto de
-2.5x2.5mm², e espessura de 0.93mm.
+O sensor BME280, desenvolvido pela Bosch, é um dispositivo
+ambiental de alta precisão projetado para medir pressão atmosférica,
+temperatura e umidade relativa, integrando essas três
+funcionalidades em um encapsulamento compacto do tipo LGA com
+dimensões típicas de 2,5 x 2,5 x 0,93 mm. Baseado em tecnologia MEMS
+(Micro-Electro-Mechanical Systems), o BME280 utiliza um princípio
+piezoresistivo para detecção de pressão, um sensor capacitivo para
+umidade e um sensor de banda de energia para temperatura,
+proporcionando medições altamente estáveis e com baixo ruído. O
+dispositivo suporta interfaces de comunicação digitais I2C e SPI,
+permitindo fácil integração com microcontroladores e sistemas
+embarcados. Seu intervalo operacional abrange temperaturas de -40 °C a
++85 °C, umidades de 0 a 100\% UR e pressões de 300 a 1100 hPa,
+possibilitando o uso em aplicações meteorológicas, dispositivos IoT,
+altímetros, estações ambientais e wearables. O consumo de energia é
+otimizado por meio de modos de operação configuráveis (sleep, forced e
+normal), o que o torna adequado para sistemas alimentados por bateria.
+A compensação interna de temperatura e a calibração de fábrica
+garantem a precisão das medições, que tipicamente alcançam ±1\% UR para
+umidade absoluta, ±1 Pa para pressão absoluta e ±0,5 °C para temperatura.
 
-O DHT11 é um sensor de umidade e temperatura, digital, de baixo custo,
-mas atualmente baixa confiabilidade. é Utilizado na maioria dos
-projetos hobbystas, devido sua disponibilidade. O fornecedor original
-é desconhecido, mas a sua grande maioria é importada sob a marca
-AOSONG.
+[Imagem BME280]
 
-O DS18B20 é um sensor digital de temperatura fabricado pela Maxim
-Integrated (atualmente parte da Texas Instruments), amplamente
-utilizado em sistemas embarcados e aplicações industriais. Seu
-destaque está na comunicação via 1-Wire, que permite a transmissão de
-dados e alimentação por um único fio, simplificando o cabeamento em
-sistemas distribuídos. O sensor oferece uma faixa de medição de -55 °C
-a +125 °C, com precisão típica de ±0,5 °C na faixa entre -10 °C e
-+85 °C, e resolução configurável de 9 a 12 bits. Além disso, cada
-unidade possui um código único de 64 bits gravado de fábrica,
-permitindo a identificação individual de múltiplos sensores conectados
-em paralelo no mesmo barramento. Seu encapsulamento compacto (TO-92 ou
-versões estanques em aço inox) e sua robustez tornam o DS18B20 ideal
-para uso em ambientes externos, automação residencial, agricultura de
-precisão e sistemas de monitoramento térmico distribuído.
+O DHT11 é um sensor digital amplamente utilizado para medições básicas
+de temperatura e umidade relativa do ar, composto por um elemento
+resistivo de detecção de umidade e um termistor NTC encapsulados em
+uma estrutura plástica com circuito de conversão analógico-digital
+integrado. Seu princípio de funcionamento baseia-se na variação da
+resistência elétrica do material sensível à umidade e na variação de
+tensão do termistor em função da temperatura, sendo os sinais
+convertidos e transmitidos por meio de uma interface digital de fio
+único (single-wire) com protocolo proprietário, o que simplifica a
+integração com microcontroladores de baixo custo. O dispositivo opera
+em faixa de tensão típica de 3,3 V a 5,5 V, com corrente de repouso
+inferior a 2,5 mA e tempo de amostragem mínimo de 1 segundo,
+apresentando resolução de 1°C para temperatura e 1\% UR para umidade,
+embora com precisão limitada (±2°C e ±5\% UR, respectivamente).
+Contudo, é importante ressaltar que o DHT11 sofre com ampla incidência
+de falsificações e variantes não oficiais, frequentemente vendidas sob
+o mesmo nome mas com comportamento elétrico e características de
+medição divergentes, o que dificulta a padronização e a confiabilidade
+de resultados. Além disso, não há um fabricante claramente
+identificado, e múltiplos datasheets circulam com especificações
+ligeiramente diferentes, tornando essencial a verificação experimental
+e a calibração manual para aplicações que exijam consistência ou
+precisão. De maneira que este dispositivo, apesar de testado durante o
+projeto, não será utilizado para resultados finais.
 
-O SHT30, desenvolvido pela Sensirion, é um
-sensor digital de temperatura e umidade relativa, ideal para
-aplicações em sistemas embarcados. Ele utiliza comunicação via I²C com
-suporte a verificação de integridade CRC, o que o torna confiável
-mesmo em ambientes com interferência elétrica. Possui calibração de
-fábrica, o que elimina a necessidade de ajustes manuais, e oferece
-alta precisão, com erro típico de ±2\% para umidade relativa e ±0,3 °C
-para temperatura. Com baixo consumo de energia e encapsulamento
-compacto (DFN-6), o mesmo é amplamente utilizado em aplicações
-industriais, automação residencial, dispositivos IoT e monitoramento
-ambiental. Sua combinação de precisão, estabilidade e facilidade de
-integração o torna uma escolha robusta e eficiente para projetos que
-exigem sensoriamento ambiental confiável.
+[Imagem DHT11]
 
-Escolhidos pela disponibilidade e precisao, alem de possuírem um
-sensor de umidade embarcado. seu tambanho também facilita o
-posicitionamento em qualquer local da colmeia. O sensor possui
-interface I2C, com velocidades de ate 1MHz, com acuracia de 1.5\% de
-umidade relativa, e 0.1oc. Seu baixo consumo (1.5mA durante medicao, e
-0.5uA em idle-mode) tambem e um fator importante para a aplicacao,
-considerando que o dispositivo deve rodar sem supervisao durante um
-grande periodo, utilizando baterias. Por fim, o dispositivo nao
-necessita de calibracao.
+O DS18B20 é um sensor digital de temperatura fabricado originalmente
+pela Maxim Integrated, amplamente utilizado em aplicações de
+monitoramento térmico devido à sua alta precisão, simplicidade de
+interface e ampla faixa operacional. Baseado em tecnologia de
+semicondutores, o DS18B20 mede temperatura através de um diodo
+sensível integrado cujo coeficiente de variação de tensão é convertido
+internamente em um valor digital, eliminando a necessidade de
+conversão analógico-digital externa. O sensor utiliza o protocolo de
+comunicação 1-Wire, permitindo a ligação de múltiplos dispositivos em
+paralelo em um único barramento de dados, com cada unidade possuindo
+um código serial único de 64 bits que facilita sua identificação e
+endereçamento individual. Opera com alimentação entre 3,0 V e 5,5 V e
+também suporta modo de alimentação parasita, no qual a energia é
+derivada da linha de dados. Sua faixa de medição é de -55 °C a +125
+°C, com precisão típica de ±0,5 °C no intervalo de -10 °C a +85 °C e
+resolução configurável entre 9 e 12 bits, correspondendo a incrementos
+mínimos de 0,0625 °C. O tempo de conversão depende da resolução
+escolhida, variando de 93,75 ms a 750 ms. O encapsulamento mais comum
+é o TO-92, embora existam versões em cápsulas estanques de aço
+inoxidável para aplicações em líquidos e ambientes agressivos.  Graças
+à sua robustez, baixo custo e facilidade de uso, o DS18B20 é
+amplamente empregado em sistemas de controle ambiental, data loggers,
+automação residencial e dispositivos IoT, sendo considerado uma das
+soluções digitais mais confiáveis para medição de temperatura ponto a
+ponto.
 
-O INMP441 é um microfone digital do tipo MEMS
-(Micro-Electro-Mechanical Systems), projetado para capturar sinais
-acústicos com alta fidelidade e baixo ruído. Ele integra internamente
-um conversor ADC de 24 bits e se comunica por meio da interface
-digital I²S, permitindo a transmissão direta de áudio para
-microcontroladores ou processadores de sinal sem a necessidade de
-circuitos analógicos externos. O INMP441 apresenta uma faixa dinâmica
-ampla e resposta em frequência plana, sendo capaz de captar sons entre
-60 Hz e 15 kHz com boa sensibilidade. Sua arquitetura digital elimina
-interferências comuns a microfones analógicos, tornando-o ideal para
-aplicações como reconhecimento de voz, gravação de áudio embarcada,
-sistemas de monitoramento acústico e dispositivos IoT com entrada
-sonora. Com encapsulamento compacto e fácil integração em placas de
-circuito impresso, o INMP441 oferece uma solução prática e robusta
-para projetos embarcados que exigem captura de áudio de forma precisa
-e eficiente.
+[Imagem DS18B20]
+
+O SHT30 é um sensor digital de temperatura e umidade relativa do ar
+desenvolvido pela Sensirion, projetado para oferecer alta precisão,
+estabilidade a longo prazo e resposta rápida em aplicações ambientais
+e industriais. Baseado na tecnologia CMOSens, o dispositivo integra em
+um único chip o elemento sensor, o conversor analógico-digital e a
+lógica de processamento e calibração, garantindo medições precisas e
+linearizadas diretamente na saída digital. A comunicação com sistemas
+embarcados ocorre por meio da interface I2C, suportando endereços
+configuráveis e taxas de comunicação de até 1 MHz, o que facilita a
+integração com microcontroladores modernos. O SHT30 opera em uma faixa
+de tensão de 2,4 V a 5,5 V e mede temperaturas de -40 °C a +125 °C com
+precisão típica de ±0,3 °C, e umidades relativas de 0 a 100\% UR com
+precisão de ±2\% UR, apresentando tempo de resposta inferior a 8
+segundos. O encapsulamento padrão é o DFN de 2,5 × 2,5 × 0,9 mm, com
+membrana opcional de proteção contra condensação e contaminantes. O
+sensor conta com calibração de fábrica armazenada em memória OTP
+(One-Time Programmable), o que elimina a necessidade de ajustes
+externos e assegura repetibilidade entre lotes. Devido à estabilidade
+térmica, baixo consumo de energia e confiabilidade em ambientes com
+variação de umidade, o SHT30 é amplamente utilizado em dispositivos
+IoT, sistemas HVAC, automação industrial, estações meteorológicas e
+equipamentos médicos, sendo reconhecido como uma das soluções mais
+consistentes da sua categoria.
+
+[Imagem SHT30]
+
+O INMP441 é um microfone digital MEMS desenvolvido pela InvenSense,
+projetado para captura de áudio de alta qualidade com baixo ruído e
+saída digital direta. O dispositivo integra um elemento sensor de
+pressão acústica baseado em tecnologia MEMS e um conversor
+analógico-digital sigma-delta de 24 bits, fornecendo dados no formato
+digital I²S (Inter-IC Sound), o que elimina a necessidade de circuitos
+analógicos externos e simplifica a interface com microcontroladores e
+processadores de sinal. Opera com tensão de alimentação entre 1,8 V e
+3,3 V e consome tipicamente cerca de 1,4 mA em modo ativo, com
+possibilidade de operação em modo de baixo consumo. O encapsulamento é
+do tipo LGA, com dimensões de aproximadamente 4,72 × 3,76 × 1,0 mm, e
+possui a porta acústica localizada na parte superior, facilitando a
+montagem em aplicações portáteis e dispositivos com aberturas
+frontais. O sensor apresenta resposta em frequência de 60 Hz a 15 kHz,
+sensibilidade típica de -26 dBFS (referente a 94 dB SPL) e relação
+sinal-ruído de cerca de 61 dBA, proporcionando captação limpa e
+estável em aplicações de voz e detecção acústica. O INMP441 permite
+configuração de canal esquerdo ou direito através do pino L/R,
+possibilitando uso em sistemas estéreo ou arrays de microfones, e
+utiliza sincronização padrão I²S com pinos BCLK, WS e SD. Graças à sua
+precisão, baixo consumo e facilidade de integração digital, é
+amplamente empregado em sistemas IoT, assistentes de voz, dispositivos
+inteligentes, gravação de áudio embarcada e aplicações de
+reconhecimento acústico.
+
+[Imagem INMP441]
 
 \Section{I2C}
 
