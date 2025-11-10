@@ -31,6 +31,16 @@ que fazer backtracking.
 - [ ] Unificar tuas bibliotecas
 - [ ] Versionar e documentar tudo
 
+## Compilando o source LaTeX
+
+ - Instale o pacote todo texlive no teu linuxão da massa
+
+ - Rode com pdflatex
+
+```
+pdflatex -interaction=nonstopmode main.tex
+```
+
 ## Objetivos
 
     - Construção do banco de dados
