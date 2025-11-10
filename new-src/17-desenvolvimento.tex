@@ -216,23 +216,30 @@ infinito). A intervenção do usuário, então, sempre seria necessaria.
 
 \section{Soluções Propostas}
 
-Para contornar as limitações de registro e comunicação, foi
+Para contornar as limitações de geração de eventos, foi
 desenvolvida a biblioteca \textbf{HERMES}, concebida como um sistema
 de registro de eventos em tempo real, com foco em confiabilidade e
 isolamento de escrita. Cada interação entre o microcontrolador e os
-sensores gera um evento categorizado como inicialização, configuração,
-consulta ou desinicialização, permitindo rastrear as ações de forma
+sensores gera um ou mais eventos categorizados em "chains": inicialização, configuração,
+consulta ou desinicialização; Isso permite rastrear as ações de forma
 estruturada. A biblioteca implementa atomicidade de leitura e escrita
 e bloqueio mútuo de acesso aos arquivos de log, evitando corrupção de
 dados durante operações paralelas.
 
 Complementarmente, foi criada a biblioteca \textbf{Sparse-Buffer},
-projetada para lidar com restrições de memória. Essa ferramenta
-emprega filas do tipo \textit{First-In, First-Out} (FIFO) e técnicas
-de média móvel e compactação de dados, reduzindo a perda de amostras
-durante períodos de instabilidade.  Quando a mídia de gravação está
-indisponível, os dados são retidos temporariamente em memória até que
-a operação possa ser concluída de forma segura.
+projetada para lidar com restrições de memória, e possíveis
+concorrências de escrita. Essa ferramenta emprega filas do tipo
+\textit{First-In, First-Out} (FIFO) e técnicas de média móvel e
+compactação de dados, reduzindo a quantidade de escritas durante
+períodos de instabilidade.  Quando a mídia de gravação está
+indisponível, os dados são retidos temporariamente em memória, e
+compactados até que a operação possa ser concluída de forma segura.
+
+Por fim, a ultima sugestão deu origem à um hardware completamente
+novo, denominado Aristeu, que embarca todos os sensores num
+encapsulamento nativamente isolado do contato externo, e resistente ao
+contato com material orgânico. O mesmo, porém, não chegou à ser
+produzido.
 
 Essas soluções foram projetadas para fortalecer a resiliência do
 sistema e permitir a continuidade das medições mesmo sob falhas
