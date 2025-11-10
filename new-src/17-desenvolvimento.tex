@@ -9,9 +9,6 @@ Este capítulo apresenta as etapas de desenvolvimento, os testes
 realizados, os principais problemas observados e as soluções propostas
 durante o processo.
 
-
-
-
 \section{Arquitetura do Sistema}
 
 A arquitetura proposta para a plataforma de sensoriamento foi
@@ -92,7 +89,9 @@ AMS1117.
 [Imagem topologia]
 
 Num primeiro experimento, um total de 9 sensores foram conectados,
-inicialmente sem qualquer contato com material organico, sendo um microfone, e, dois de cada um dos sensores a seguir: DHT11, SHT30, BME280 e DS18B20.
+inicialmente sem qualquer contato com material organico, sendo um
+microfone, e, dois de cada um dos sensores a seguir: DHT11, SHT30,
+BME280 e DS18B20.
 
 Os sensores foram conectados em paralelo, permitindo que sejam
 consultados sob demanda. Graças à arquitetura I2C, mais de um sensor
@@ -188,77 +187,32 @@ a utilização de resinas ou outros produtos para impermeabilizar estes
 sensores interferem na sua precisão, e na saúde dos insetos, pois em
 sua grande parte, eles possuem solventes e outros materiais tóxicos.
 
-Para observação dos eventos de falha, a API padrão dos dispositivos
-ESP32 já possuem chamadas para geração de logs, capaz de apresentar
-mensagens conforme a demanda do usuário. Conforme explica [18], o
-sistema possui diversos níveis de log, onde, ao configurar os
-parâmetros Log Level e Maximum Log Level, podemos determinar quais
-mensagens aparecerão, variando, em ordem decrescente de verbosidade,
-Verbose, Debug e Info até Warning, Error e None. Caso alguma mensagem
-seja configurada com uma verbosidade maior que Maximum Log Level, a
-mesma não constará no binário final.
-
-A quantidade de eventos geradas era demasiada, e a manutenção das
-mensagens (seja em remover, adicionar, ou alterar) tornou impraticável
-o uso no mesmo modelo. Essas rotinas, aqui denominado diagnóstico
-preventivo (em contraponto a um diagnóstico remediativo, que alertaria
-após algum erro), apenas funciona com a capacidade de registro dos
-mesmos. Na maioria das vezes, os erros observados impediam também a
-devida escrita em armazenamento externo. Com o disparo das rotinas de
-watchdog, a informação então era perdida.
+Para observação dos eventos de falha, o uso da API padrão dos
+dispositivos ESP32 se torna exaustiva do ponto de vista de
+desenvolvimento. As APIs possuem chamadas para geração de logs, capaz
+de apresentar mensagens conforme a demanda do usuário. Conforme
+explica [18], existem diversos níveis de log, onde, ao configurar
+alguns parâmetros, podemos determinar quais mensagens aparecerão. Mas
+a quantidade de eventos gerados era tamanha que a manutenção (seja em
+remover, adicionar, ou alterar) torna o processo impraticável.
 
 Os eventos gerados também geravam concorrência no processo de escrita
 no cartão. Além do sistema prosseguir tentando capturar os dados em
 sensores com erros, mesmo a falha em escrever os dados provocavam mais
 eventos, e por consequência, as rotinas paravam por completo.
 
-Os erros no sistema, que por vezes disparavam watchdogs, drenavam a
-bateria completamente. Isso ocorre em decorrência do alto
+Por vezes ainda, watchdogs entravam em ação, e o processo de reset
+drenava a bateria completamente. Isso ocorre em decorrência do alto
 processamento inicial para inicializar o dispositivo e entrar em
 regime de funcionamento. Os sensores, mesmo com suas funcionalidades
-de economia de energia, quando precisavam ser inicializados
-a cada nova
+de economia de energia, quando precisavam ser inicializados a cada
+nova
 
-O diagnostico do sistema em campo é difícil, pela impossibilidade de
-debug em tempo real, uso de osciloscópio, ou observação dos eventos em
-tempo real.;
-
-De maneira mais clara e detalhada, as interferências nos sensores
-provocaram erros do tipo hard-fault, drenarando a bateria em minutos
-caso o sistema não reiniciasse (por padrão o hard-fault possui um loop
-infinito). Quando implementado um watchdog, era possível capturar o
-erro mesmo em estado de hard-fault, quando não envolvesse estouro de
-pilha, ou tentativa de acessar regiões de memórias não mais alocadas
-(como consultar dispositivos que já falharam). Mas eventualmente o sistema
-reiniciaria novamente até drenar a bateria por completo em algumas
-horas. A intervenção do usuário, então, sempre seria necessaria.
-
-Durante essa fase, foi observada uma interação inesperada entre os
-sensores e o comportamento natural das abelhas. Os insetos tendem a
-selar qualquer abertura com própolis e cera, prática defensiva contra
-fungos e formigas. Esse processo, embora beneficie a colônia, alterou
-a condutividade térmica dos sensores e interferiu na propagação do
-som, resultando em leituras imprecisas e falhas intermitentes de
-comunicação.
-
-Para minimizar a umidade e proteger os componentes eletrônicos, o uso
-de fita isolante líquida e resina epoxi foi testado. No entanto, o
-material se apresenta noscivo às abelhas, o que provocou ainda mais
-cobertura com material organico.
-
-Em muitos casos, as falhas estavam associadas a interferências
-capacitivas na linha de comunicação, potencializadas pela umidade e
-pela presença de material orgânico nas proximidades dos sensores.
-Também foram observadas falhas de escrita no cartão SD, ocasionadas
-por concorrência entre processos de registro e captura de dados.
-Quando isso ocorria, os logs eram perdidos, comprometendo a
-rastreabilidade dos eventos.
-
-A ausência de debug em tempo real, pela impossibilidade de conectar
-equipamentos como osciloscópios em campo, dificultou o diagnóstico
-preciso. As tentativas de utilização intensiva do sistema de logs
-nativo do ESP-IDF também se mostraram inviáveis, devido ao alto volume
-de eventos gerados e à limitação de armazenamento.
+Finalmente, o diagnostico do sistema em campo é difícil, pela
+impossibilidade de debug, uso de osciloscópio, ou
+observação dos eventos em tempo real. As interferências nos sensores
+provocaram erros do tipo hard-fault (por padrão esta rotina possui um loop
+infinito). A intervenção do usuário, então, sempre seria necessaria.
 
 \section{Soluções Propostas}
 
