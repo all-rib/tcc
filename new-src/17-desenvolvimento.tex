@@ -23,38 +23,6 @@ contínua de dados.
 O sistema é dividido em três camadas: \textbf{Periféricos},
 \textbf{Controle}, e \textbf{Energia}, conforme ilustrado na Figura \ref{fig:topologia}.
 
-\begin{itemize}
-	\item \textbf{Periféricos:} Composta por sensores de temperatura,
-	umidade, pressão e som. Essa configuração permite comparar
-	condições internas e externas, formando uma base para a análise do
-	comportamento térmico e sonoro da colônia. Sensores do tipo SHT30,
-	BME280 e DS18B20 foram utilizados devido à sua precisão e
-	confiabilidade. 
-
-	\item \textbf{Controle:} responsável pela leitura dos sensores e
-	registro dos dados em mídia de massa. Essa função é desempenhada
-	por um microcontrolador ESP32 LORA32 da LilyGO, escolhido por
-	integrar conectividade Wi-Fi, suporte a cartão SD e capacidade de
-	processamento suficiente para operar múltiplos sensores
-	simultaneamente. Os dados são armazenados em formato texto,
-	contendo identificador, carimbo de tempo e unidade de medida,
-	garantindo rastreabilidade e simplicidade na análise posterior.
-
-	\item \textbf{Camada de comunicação e energia:} a transmissão de
-	dados é realizada via rede sem fio, enquanto a energia é fornecida
-	por baterias LiPo de 7,4~V e 5000~mAh, reguladas para 5~V através
-	do circuito interno da placa. Essa configuração permite operação
-	autônoma por longos períodos, reduzindo a necessidade de
-	intervenção externa.  \end{itemize}
-
-A interligação entre os sensores é feita por meio de cabos CAT6, aproveitando sua boa blindagem e condutividade elétrica. O barramento I\textsuperscript{2}C foi adotado como principal meio de comunicação, possibilitando a conexão de múltiplos sensores do mesmo tipo em paralelo. Cada dispositivo é identificado por um endereço de 7 bits, sendo os seis mais significativos fixos e o bit menos significativo definido pelo estado lógico do pino \textit{SDO}. Dessa forma, é possível utilizar dois sensores idênticos no mesmo barramento, diferenciando-os pelos endereços \texttt{0x76} e \texttt{0x77}. 
-
-Para casos em que o número de sensores excede os endereços disponíveis, empregou-se uma adaptação baseada no protocolo SPI, utilizando o sinal \textit{chip select} (\textit{CS}) para alternar dinamicamente o dispositivo ativo. Essa solução permite que múltiplos sensores compartilhem a mesma linha de dados, preservando a integridade da comunicação.
-
-Fisicamente, o módulo sensor é encapsulado em um frasco de vidro vedado com resina epóxi, prevenindo a entrada de umidade e contato direto com os insetos. As passagens de cabos são seladas de forma que o material ceroso das abelhas possa se moldar naturalmente aos condutores, sem comprometer o isolamento. Essa característica é fundamental, pois reduz o estresse comportamental da colônia e aumenta a aceitação do sensor dentro da colmeia.
-
-A Figura~\ref{fig:arquitetura} ilustra o diagrama geral da arquitetura do sistema, apresentando as relações entre sensores, microcontrolador, armazenamento e interface de comunicação.
-
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.85\textwidth]{imagens/arquitetura_geral.png}
@@ -63,27 +31,28 @@ A Figura~\ref{fig:arquitetura} ilustra o diagrama geral da arquitetura do sistem
 	\fonte{Autoria própria (2025).}
 \end{figure}
 
-Essa organização modular permite que o sistema seja facilmente expandido ou adaptado a novas condições de medição. Além disso, a separação das camadas facilita o diagnóstico de falhas e o desenvolvimento de melhorias, como a substituição de sensores ou a alteração de protocolos de comunicação, sem a necessidade de modificar toda a estrutura do sistema.
 
+\begin{itemize}
+	\item \textbf{Periféricos:} Composta por sensores de temperatura,
+	umidade, pressão e som. Essa configuração permite comparar
+	condições internas e externas, formando uma base para a análise do
+	comportamento da colônia. . 
 
+	\item \textbf{Controle:} responsável pela leitura dos sensores e
+	registro dos dados em mídia de massa. Essa função é desempenhada
+	por um microcontrolador ESP32 LORA32 da LilyGO, escolhido por
+	integrar conectividade Bluetooth, suporte a cartão SD, e de operar
+	múltiplos sensores simultaneamente. Os dados são armazenados em
+	formato texto, contendo identificador, carimbo de tempo e unidade
+	de medida, garantindo rastreabilidade e simplicidade na análise
+	posterior.
 
+	\item \textbf{Energia:} A energia é fornecida
+	por baterias LiPo de 11.1V e 5000mAh, reguladas para 5V através de
+	regulador de tensão externo.
+\end{itemize}
 
-
-
-
-
-
-
-
-
-
-
-
-\section{Elaboração da arquitetura}
-
-Para o processo de sensoriamento, se determinou: é necessário
-
-
+\section{Implementação e Testes Iniciais}
 
 Dentre os sensores escolhidos, o DHT11 é o mais simples, e é comumente
 utilizado em projetos hobistas, que apesar de não confiável para
@@ -99,12 +68,7 @@ suporte a verificação de integridade CRC. O DS18B20 é especialmente
 interessante, pela possibilidade de contato direto com o mel por não
 posuir quaisquer ponto para entradas de material organico.
 
-Para gerenciamento, processamento e armazenamento das informacoes, a
-placa LORA32 da LILYGO foi utilizada, devida ao seu hardware integrado
-para uso de cartoes SD, o que permite a gravacao dos dados durante um
-grande periodo, bem como sua funcionalidade bluetooth nativa.
-
-O dispositivo possui recomendações de alimentação de 5V pela porta USB
+O controlador possui recomendações de alimentação de 5V pela porta USB
 [17]. As [baterias utilizadas](fonte) são do tipo LiPo, de 11.1V e
 5000mAh, comuns em projetos de robótica competitiva. Possui 3.7V por
 célula, de maneira que duas das células foram utilizadas, totaluzando
@@ -128,9 +92,7 @@ AMS1117.
 [Imagem topologia]
 
 Num primeiro experimento, um total de 9 sensores foram conectados,
-sendo um microfone, e, dois de cada um dos sensores a seguir: DHT11
-(mais tarde descartado, por sua baixa confiabilidade e
-incompatibilidade com I2C), SHT30, BME280 e DS18B20.
+inicialmente sem qualquer contato com material organico, sendo um microfone, e, dois de cada um dos sensores a seguir: DHT11, SHT30, BME280 e DS18B20.
 
 Os sensores foram conectados em paralelo, permitindo que sejam
 consultados sob demanda. Graças à arquitetura I2C, mais de um sensor
@@ -152,31 +114,9 @@ alterando o endereço para 0x77, destacando-o como tendo um endereço
 exclusivo, e portanto responderá individualmente. Ao final da
 operação, a linha deve novamente sofrer pull-down, liberando o canal.
 
-Os sensores, interligados entre si, em um primeiro teste foram
-posicionados fora do mel, no sobreninho mais superior, o mais distante
-do contato com os favos, prevendo possiveis problemas de funcionamento
-dos sensores devido exposição ao mel e a cera.
-
-% TODO: Falar sobre o teste de mergulhar o sensor no mel.
-
-Foi necessário selar quaisquer pontos de conexão e passagem de fios
-dentro e no limiar da colméia.  isso foi necessário devido à atividade
-das abelhas de selar quaisquer buracos, e esterelizar materiais
-internos, cobrindo-os com uma liga de cera e própolis. Esse processo
-acontece devido ao ataque de outros insetos, em especial formigas e
-fungos, que se aproveitam dos pontos de abertura que os cabos
-provocam.  Além disso, corpos estranhos também podem estar infectados,
-ou possuir material noscivo às abelhas. Essa prática não danifica os
-sensores, mas impediram a comunicação perfeita do sensor, além de
-interferir de maneira dinâmica na captura destes dados, alterando
-condutividade térmica, leitura absoluta dos dados, e alterando o meio
-de propagação de ondas sonoras. Poucos dados foram capturados, tendo
-em vista as interferências observadas.
-
-Para o ponto de passagem dos cabos, no entanto, a cera é capaz de
-selar a entrada dos fios, por se moldar naturalmente à passagem de
-cabos, criando um canal justo, e facilmente renovável, além de ser
-familiar para os indivíduos da colônia, e portanto benéfica.
+Os primeiros problemas se apresentaram no sensor DHT11, que
+apresentava leituras constantes e alternadas entre dois valores,
+aparenetemente aleatórios, após cada inicialização.
 
 A captura dos dados foram feitas através de consulta sob demanda de
 cada sensor, utilizando-se em sua grande maioria o código fonte
@@ -194,21 +134,52 @@ naturza desta aplicação.
 Finalmente, o microcontrolador, bem como uma bateria de alimentação,
 foram isolados entre sí, e inseridos em frascos de conserva, selando
 pontos de passagem de cabos com resina do tipo epoxi, evitando
-exposição à umidade. Os frascos foram dispostos de ponta cabeça,
-evitando que água acumulasse proximos aos conectores. Um conector foi
-deixado do lado de fora, para facilitar a troca de bateria, caso
-necessário.
+exposição à umidade. Um conector foi deixado do lado de fora, para
+facilitar a troca de bateria, caso necessário.
 
-Os primeiros testes foram realizados fora da colméia, apresentando
-problemas apenas no DHT11, que posteriormente foi deixado de lado. Os
-sensores foram testados mergulhando os mesmos por inteiro dentro do
-mel. Nenhum problema foi observado.
+Após isso, os sensores foram testados mergulhando os mesmos por
+inteiro dentro do mel. Os resultados podem ser observados na  [figura
+](figura comparativa dentro e fora do mel). Nos testes executados, o
+sistema rodou sem problema por três dias ininterruptos.
 
-[Graficos dentro do mel]
+\section{Integração em Campo}
 
-Nos testes executados, o sistema rodou sem problema por três dias
-ininterruptos. Posteriormente, em contato com as colméias, os seguintes problemas
-foram observados:
+Após os testes de bancada, o sistema foi instalado em colmeias de
+\textit{T. angustula}, com sensores posicionados tanto no
+interior quanto no exterior das caixas, de forma a permitir
+comparações entre as condições ambientais internas e externas.
+
+Para integração com a colméia, o controlador e bateria foram presos ao
+pilar de suporte da colméia, conforme [figura X](inserir foto da
+colmeia), e os sensores dispostos no sobreninho mais superior, distante
+do contato com os favos, prevendo possiveis problemas de funcionamento
+dos sensores devido exposição ao mel e a cera.
+
+Foi necessário selar quaisquer pontos de conexão e passagem de fios
+dentro e no limiar da colméia. Isso foi necessário devido à atividade
+das abelhas de selar quaisquer buracos, e esterelizar materiais
+internos, cobrindo-os com uma liga de cera e própolis. Esse processo
+acontece devido ao ataque de outros insetos, em especial formigas e
+fungos, que se aproveitam dos pontos de abertura que os cabos
+provocam. Além disso, corpos estranhos também podem estar infectados,
+ou possuir material noscivo às abelhas. Essa prática não danifica os
+sensores, mas impediram a comunicação perfeita do sensor, graças à
+alterações na radiação térmica, leitura absoluta dos dados, e
+alterando o meio de propagação de ondas sonoras. Poucos dados foram
+capturados, tendo em vista as interferências observadas.
+
+Para o ponto de passagem dos cabos, no entanto, as abelhas selaram a
+entrada dos fios, criando um canal justo, e facilmente renovável por
+elas, além de ser familiar para os indivíduos da colônia, e portanto
+benéfica.
+
+\section{Problemas Observados}
+
+Surgiram falhas recorrentes no barramento I²C, causando travamentos e
+reinicializações automáticas do sistema.  Tais eventos geravam
+acionamentos constantes do \textit{watchdog}, o que, embora evitasse
+travamentos permanentes, resultava em alto consumo energético e
+drenagem prematura da bateria.
 
 Os sensores sofriam de constantes falhas nos sinais e conexões. A
 suposição é de que o ambiente interno da colméia possui uma interação
@@ -217,23 +188,24 @@ a utilização de resinas ou outros produtos para impermeabilizar estes
 sensores interferem na sua precisão, e na saúde dos insetos, pois em
 sua grande parte, eles possuem solventes e outros materiais tóxicos.
 
-Para isso, a API padrão dos dispositivos ESP32 já possuem chamadas
-para geração de logs, capaz de apresentar mensagens conforme a demanda
-do usuário. Conforme explica [18], o sistema possui diversos níveis de
-log, onde, ao configurar os parâmetros Log Level e Maximum Log Level,
-podemos determinar quais mensagens aparecerão, variando, em ordem
-decrescente de verbosidade, Verbose, Debug e Info até Warning, Error e
-None. Caso alguma mensagem seja configurada com uma verbosidade maior
-que Maximum Log Level, a mesma não constará no binário final.
+Para observação dos eventos de falha, a API padrão dos dispositivos
+ESP32 já possuem chamadas para geração de logs, capaz de apresentar
+mensagens conforme a demanda do usuário. Conforme explica [18], o
+sistema possui diversos níveis de log, onde, ao configurar os
+parâmetros Log Level e Maximum Log Level, podemos determinar quais
+mensagens aparecerão, variando, em ordem decrescente de verbosidade,
+Verbose, Debug e Info até Warning, Error e None. Caso alguma mensagem
+seja configurada com uma verbosidade maior que Maximum Log Level, a
+mesma não constará no binário final.
 
 A quantidade de eventos geradas era demasiada, e a manutenção das
-mensagens (seja em remover, adicionar, ou alterar) tornou
-impraticável o uso no mesmo modelo. Essas rotinas, aqui denominado
-diagnóstico preventivo (em contraponto a um diagnóstico remediativo,
-que alertaria após algum erro), apenas funciona com a capacidade de registro
-dos mesmos. Na maioria das vezes, os erros observados impediam também
-a devida escrita em armazenamento externo. Com o disparo das rotinas
-de watchdog, a informação então era perdida.
+mensagens (seja em remover, adicionar, ou alterar) tornou impraticável
+o uso no mesmo modelo. Essas rotinas, aqui denominado diagnóstico
+preventivo (em contraponto a um diagnóstico remediativo, que alertaria
+após algum erro), apenas funciona com a capacidade de registro dos
+mesmos. Na maioria das vezes, os erros observados impediam também a
+devida escrita em armazenamento externo. Com o disparo das rotinas de
+watchdog, a informação então era perdida.
 
 Os eventos gerados também geravam concorrência no processo de escrita
 no cartão. Além do sistema prosseguir tentando capturar os dados em
@@ -261,64 +233,6 @@ pilha, ou tentativa de acessar regiões de memórias não mais alocadas
 reiniciaria novamente até drenar a bateria por completo em algumas
 horas. A intervenção do usuário, então, sempre seria necessaria.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-\section{Testes Iniciais}
-
-Os primeiros testes foram conduzidos fora das colmeias, com o objetivo
-de verificar o funcionamento dos sensores e a estabilidade do sistema.
-O protótipo permaneceu em operação contínua por três dias sem
-apresentar falhas significativas ([Talvez citar graficos aqui]), sendo
-observados apenas comportamentos inconsistentes do sensor DHT11,
-posteriormente substituído por dispositivos de maior precisão.
-
-Durante esta etapa, o sistema foi composto por sensores SHT30, DS18B20
-e BME280, conectados ao microcontrolador ESP32 LORA32 da LilyGO. A
-escolha desse módulo se deve à sua capacidade de armazenamento em
-cartão SD e à integração nativa de comunicação sem fio. A alimentação
-foi fornecida por baterias LiPo de 7,4 V, reguladas internamente para
-5 V, e o cabeamento empregado foi do tipo CAT6, visando reduzir
-interferências elétricas no barramento I²C.
-
-
-
-\section{Integração em Campo}
-
-Após os testes de bancada, o sistema foi instalado em colmeias de
-\textit{T. angustula}, com sensores posicionados tanto no
-interior quanto no exterior das caixas, de forma a permitir
-comparações entre as condições ambientais internas e externas.
-
 Durante essa fase, foi observada uma interação inesperada entre os
 sensores e o comportamento natural das abelhas. Os insetos tendem a
 selar qualquer abertura com própolis e cera, prática defensiva contra
@@ -331,14 +245,6 @@ Para minimizar a umidade e proteger os componentes eletrônicos, o uso
 de fita isolante líquida e resina epoxi foi testado. No entanto, o
 material se apresenta noscivo às abelhas, o que provocou ainda mais
 cobertura com material organico.
-
-\section{Problemas Observados}
-
-Durante a operação em campo, surgiram falhas recorrentes no barramento
-I²C, causando travamentos e reinicializações automáticas do sistema.
-Tais eventos geravam acionamentos constantes do \textit{watchdog}, o
-que, embora evitasse travamentos permanentes, resultava em alto
-consumo energético e drenagem prematura da bateria.
 
 Em muitos casos, as falhas estavam associadas a interferências
 capacitivas na linha de comunicação, potencializadas pela umidade e
@@ -367,13 +273,12 @@ e bloqueio mútuo de acesso aos arquivos de log, evitando corrupção de
 dados durante operações paralelas.
 
 Complementarmente, foi criada a biblioteca \textbf{Sparse-Buffer},
-projetada para lidar com restrições de memória e falhas de
-comunicação. Essa ferramenta emprega filas do tipo \textit{First-In,
-First-Out} (FIFO) e técnicas de média móvel e compactação de dados,
-reduzindo a perda de amostras durante períodos de instabilidade.
-Quando a mídia de gravação está indisponível, os dados são retidos
-temporariamente em memória até que a operação possa ser concluída de
-forma segura.
+projetada para lidar com restrições de memória. Essa ferramenta
+emprega filas do tipo \textit{First-In, First-Out} (FIFO) e técnicas
+de média móvel e compactação de dados, reduzindo a perda de amostras
+durante períodos de instabilidade.  Quando a mídia de gravação está
+indisponível, os dados são retidos temporariamente em memória até que
+a operação possa ser concluída de forma segura.
 
 Essas soluções foram projetadas para fortalecer a resiliência do
 sistema e permitir a continuidade das medições mesmo sob falhas
@@ -403,11 +308,6 @@ em contextos naturais complexos. As bibliotecas e soluções propostas
 representam avanços significativos na robustez e autonomia de
 plataformas de monitoramento ambiental, servindo de base para futuras
 iterações com novos sensores, protocolos e estratégias de energia.
-
-
-
-
-
 
 
 
