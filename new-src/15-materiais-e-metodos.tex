@@ -27,21 +27,17 @@ comandos remotamente. O módulo coleta informações ambientais e as
 escreve em armazenamento externo para posterior análise.
 
 A segunda etapa consistiu na integração dos sensores com o
-microcontrolador. Foram realizados testes de leitura e calibração,
-seguidos pela implementação do firmware recomendado pelos fabricantes,
-para a coleta e registro periódico de dados. Para mitigar falhas de
-comunicação, foram incluídas rotinas de reinicialização automática e
-verificação de conectividade.
+microcontrolador, bem como os testes de bancada. Implementou-se o
+firmware recomendado pelos fabricantes, para a coleta e registro
+periódico de dados. Para mitigar falhas de comunicação, foram
+incluídas rotinas de reinicialização automática e verificação de
+conectividade.
 
-Os sensores foram conectados em pares, sendo um interno e outro
-externo à colmeia, com o objetivo de capturar o contraste térmico
-entre os ambientes. A arquitetura adotada utilizou endereçamento I²C
-para múltiplos dispositivos de mesmo tipo, conforme
-configuração de endereço 0x76/0x77.  Os dados coletados foram
-armazenados localmente em arquivo texto com formatação para posterior análise.
+Na terceira etapa, os sensores foram conectados em pares, sendo um interno e outro
+externo à colmeia, com o objetivo de capturar o contraste entre os
+ambientes. Poucos dados foram coletados, em arquivo texto com
+formatação para posterior análise, devido à diversos problemas.
 
-A terceira etapa concentrou-se nos testes de bancada, com foco na
-estabilidade elétrica, consumo de energia e resposta dos sensores.
 Embora não tenha sido possível realizar testes prolongados em campo,
 os resultados preliminares permitiram identificar limitações e propor
 soluções que são discutidas no capítulo seguinte.
@@ -61,61 +57,7 @@ soluções que são discutidas no capítulo seguinte.
 
 
 
-Conforme explicado capitulo anterior, os seguintes problemas puderam
-ser observados:
 
-Falhas de conexão estável nas conexões entre o microcontrolador e os
-sensores, utilizadores da interface I2C;
-
-Falhas dos sensores devido ao contato com material orgânico;
-
-Drenagem de bateria devido à subsequente falhas do microcontrolador,
-mesmo após rotinas de reset por watchdog;
-
-Falta de memória para captura de eventos;
-
-Impermeabilização interna dos sensores;
-
-Captura de eventos/log mediante falhas, e impossibilidade de debug em
-tempo real;
-
-Custo de inserir chamadas para todo e qualquer evento do sistema;
-
-Cada problema ser[a 
-
-Considerando os objetivos do projeto, definiu-se as seguintes etapas:
-
-
-
-
-
-  0 Uma solução é o registro de alguns pontos para futura correção:
-  1 conjunto subsequente de chamadas que levou à execução até a instrução
-  2 fatal (stack), um snapshot de pontos importantes da memória,
-  3 memory-dump, eventos ocorridos, que possam ter provocado o erro,
-  4 event-log, e por fim, características físicas do dispositivo, como
-  5 temperatura, níveis de tensão e corrente, quando possível. Mas além de
-  6 tudo isso, a função original de hard-fault precisa ser reescrita, de
-  7 preferência a resetar o dispositivo.
-  8 
-  9 Para isso, a API padrão dos dispositivos ESP32 já possuem chamadas
- 10 para geração de logs, capaz de apresentar mensagens conforme a demanda
- 11 do usuário. Conforme explica [18], o sistema possui diversos níveis de
- 12 log, onde, ao configurar os parâmetros Log Level e Maximum Log Level,
- 13 podemos determinar quais mensagens aparecerão, variando, em ordem
- 14 decrescente de verbosidade, Verbose, Debug e Info até Warning, Error e
- 15 None.  Caso alguma mensagem seja configurada com uma verbosidade maior
- 16 que Maximum Log Level, a mesma não constará no binário final.
- 17 
- 18 Essa habilidade, no entanto, exige uma tomada de decisão. A escrita
- 19 dos eventos pode ser feita de duas maneiras: preditiva, isto é, nos possíveis
- 20 pontos de problemas, sempre exportar mensagens; Ou remediativa, que é
- 21 verificar o código por problemas, e caso encontrado, exportar a
- 22 respectiva mensagem. O primeiro método possui o malefício de gerar
- 23 mensagens desnecessárias e exigir muitos recursos dedicados ao log. A
- 24 segunda opção, no entanto, possui a possibilidade de que um erro fatal
- 25 impeça o dispositivo de continuar funcionando, e mensagem nenhuma ser
- 26 registrada.
 
 
 
