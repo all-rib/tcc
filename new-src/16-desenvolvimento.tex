@@ -1,0 +1,445 @@
+\chapter{Desenvolvimento e Resultados}
+
+O desenvolvimento da plataforma de sensoriamento para colmeias foi
+realizado de forma iterativa, em um primeiro momento numa bancada de
+trabalho, buscando integrar os sensores, as estratégias de
+armazenamento e registro dos dados, levando-se em conta condições
+próximas ao uso real, utilizando-se puro mel como material orgânico.
+Este capítulo apresenta as etapas de desenvolvimento, os testes
+realizados, os principais problemas observados e as soluções propostas
+durante o processo.
+
+\section{Arquitetura do Sistema}
+
+A arquitetura proposta para a plataforma de sensoriamento foi
+concebida de forma modular, priorizando a facilidade de integração
+entre sensores ambientais, unidades de processamento e mecanismos de
+armazenamento e comunicação. O objetivo principal é permitir a coleta
+contínua de dados.
+
+O sistema é dividido em três camadas: \textbf{Periféricos},
+\textbf{Controle}, e \textbf{Energia}, conforme ilustrado na Figura \ref{fig:topologia}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.85\textwidth]{imagens/arquitetura_geral.png}
+	\caption{Arquitetura geral do sistema de sensoriamento.}
+	\label{fig:arquitetura}
+	\fonte{Autoria própria (2025).}
+\end{figure}
+
+
+\begin{itemize}
+	\item \textbf{Periféricos:} Composta por sensores de temperatura,
+	umidade, pressão e som. Essa configuração permite comparar
+	condições internas e externas, formando uma base para a análise do
+	comportamento da colônia. . 
+
+	\item \textbf{Controle:} responsável pela leitura dos sensores e
+	registro dos dados em mídia de massa. Essa função é desempenhada
+	por um microcontrolador ESP32 LORA32 da LilyGO, escolhido por
+	integrar conectividade Bluetooth, suporte a cartão SD, e de operar
+	múltiplos sensores simultaneamente. Os dados são armazenados em
+	formato texto, contendo identificador, carimbo de tempo e unidade
+	de medida, garantindo rastreabilidade e simplicidade na análise
+	posterior.
+
+	\item \textbf{Energia:} A energia é fornecida
+	por baterias LiPo de 11.1V e 5000mAh, reguladas para 5V através de
+	regulador de tensão externo.
+\end{itemize}
+
+\section{Implementação e Testes Iniciais}
+
+Dentre os sensores escolhidos, o DHT11 é o mais simples, e é comumente
+utilizado em projetos hobistas, que apesar de não confiável para
+aplicações que exigem precisão e constância, são suficientes para
+medidas pontuais de temperatura e umidade. Mais tarde, esse sensor foi
+descartado, por sua baixa confiabilidade mesmo nos primeiros testes.
+
+O SHT30, o DS18B20 e o BME280 foram utilizados após problemas de
+amostragem com o DHT11, devido à frequência e interferências
+provocadas pela interação com matéria orgância. Além disso, o suporte
+(como datasheet, source-code do fabricante e notas de aplicação), dá
+suporte a verificação de integridade CRC. O DS18B20 é especialmente
+interessante, pela possibilidade de contato direto com o mel por não
+posuir quaisquer ponto para entradas de material organico.
+
+O controlador possui recomendações de alimentação de 5V pela porta USB
+[17]. As [baterias utilizadas](fonte) são do tipo LiPo, de 11.1V e
+5000mAh, comuns em projetos de robótica competitiva. Possui 3.7V por
+célula, de maneira que duas das células foram utilizadas, totaluzando
+7.4V. A sobretensão não apresentou quaisquer problemas no controlador,
+seja em testes de processamento ou de consulta de periféricos, com o
+único sintoma observado sendo o aquecimento do regulador de tensão
+presente na placa.
+
+[Imagem lora32]
+
+Para integração dos sensores, cabeamento de rede do tipo cat6 foi
+utilizado, por sua disponibilidade, excelente condutividade, e
+capacidade de redução de efeitos de interferencia, um problema comum
+na utilizacao de conectores para a interface I2C[15]. Foi necessario
+uma pequena topologia para interligar os sensores à placa.
+
+Outro ponto a ser citado é a incapacidade da placa em alimentar os
+sensores. Foi necessário a utlização de um regulador de tensão
+AMS1117.
+
+[Imagem topologia]
+
+Num primeiro experimento, um total de 9 sensores foram conectados,
+inicialmente sem qualquer contato com material organico, sendo um
+microfone, e, dois de cada um dos sensores a seguir: DHT11, SHT30,
+BME280 e DS18B20.
+
+Os sensores foram conectados em paralelo, permitindo que sejam
+consultados sob demanda. Graças à arquitetura I2C, mais de um sensor
+do mesmo tipo pode ser utilizado na mesma linha: Os dispositivos são
+endereçados de fábrica, e um ou mais bits podem ser alterados
+manualmente. O endereçamento é determinado por 7 bits (0b111011x),
+sendo os 6 MSB (most-significant-bits) constantes, e o menos
+significativo controlado pelo nivel lógico da porta SDO. A conexão
+entre SDO e GND força o endereço 0b1110110 (0x76), e a conexão com
+VDDIO resulta em 0b1110111 (0x77). O pino não pode flutuar.
+
+Se necessário, mais de dois dispositivos do mesmo tipo podem ser
+conectados, aproveitando um detalhe da arquitetura SPI, que utiliza um
+terceiro sinal (denominado CS, ou chip-select) para controlar a
+seleção de um dispositivo. Neste caso, o sinal SDO tem a mesma função
+do CS, mantendo todos os dispositivos com o mesmo endereço (0x76).
+Quando for necessário consulta, a linha SDO deve sofrer pull-up,
+alterando o endereço para 0x77, destacando-o como tendo um endereço
+exclusivo, e portanto responderá individualmente. Ao final da
+operação, a linha deve novamente sofrer pull-down, liberando o canal.
+
+Os primeiros problemas se apresentaram no sensor DHT11, que
+apresentava leituras constantes e alternadas entre dois valores,
+aparenetemente aleatórios, após cada inicialização.
+
+A captura dos dados foram feitas através de consulta sob demanda de
+cada sensor, utilizando-se em sua grande maioria o código fonte
+fornecido pelo fabriante, e gravação dos dados ocorreu em
+armazenamento utilizando uma função atômica de escrita, em um arquivo
+de texto, conforme o padrão a seguir
+
+[#n][Timestamp][Nome]([medida][unidade])\\+
+
+Esse padrão foi utilizado por fornecer contexto de origem do dado,
+instante no qual foi capturado, sequencia entre várias amostrasa, e
+respectiva medida de cada sensor, consideradas suficientes para a
+naturza desta aplicação.
+
+Finalmente, o microcontrolador, bem como uma bateria de alimentação,
+foram isolados entre sí, e inseridos em frascos de conserva, selando
+pontos de passagem de cabos com resina do tipo epoxi, evitando
+exposição à umidade. Um conector foi deixado do lado de fora, para
+facilitar a troca de bateria, caso necessário.
+
+Após isso, os sensores foram testados mergulhando os mesmos por
+inteiro dentro do mel. Os resultados podem ser observados na  [figura
+](figura comparativa dentro e fora do mel). Nos testes executados, o
+sistema rodou sem problema por três dias ininterruptos.
+
+\section{Integração em Campo}
+
+Após os testes de bancada, o sistema foi instalado em colmeias de
+\textit{T. angustula}, com sensores posicionados tanto no
+interior quanto no exterior das caixas, de forma a permitir
+comparações entre as condições ambientais internas e externas.
+
+Para integração com a colméia, o controlador e bateria foram presos ao
+pilar de suporte da colméia, conforme [figura X](inserir foto da
+colmeia), e os sensores dispostos no sobreninho mais superior, distante
+do contato com os favos, prevendo possiveis problemas de funcionamento
+dos sensores devido exposição ao mel e a cera.
+
+Foi necessário selar quaisquer pontos de conexão e passagem de fios
+dentro e no limiar da colméia. Isso foi necessário devido à atividade
+das abelhas de selar quaisquer buracos, e esterelizar materiais
+internos, cobrindo-os com uma liga de cera e própolis. Esse processo
+acontece devido ao ataque de outros insetos, em especial formigas e
+fungos, que se aproveitam dos pontos de abertura que os cabos
+provocam. Além disso, corpos estranhos também podem estar infectados,
+ou possuir material noscivo às abelhas. Essa prática não danifica os
+sensores, mas impediram a comunicação perfeita do sensor, graças à
+alterações na radiação térmica, leitura absoluta dos dados, e
+alterando o meio de propagação de ondas sonoras. Poucos dados foram
+capturados, tendo em vista as interferências observadas.
+
+Para o ponto de passagem dos cabos, no entanto, as abelhas selaram a
+entrada dos fios, criando um canal justo, e facilmente renovável por
+elas, além de ser familiar para os indivíduos da colônia, e portanto
+benéfica.
+
+\section{Problemas Observados}
+
+Surgiram falhas recorrentes no barramento I²C, causando travamentos e
+reinicializações automáticas do sistema.  Tais eventos geravam
+acionamentos constantes do \textit{watchdog}, o que, embora evitasse
+travamentos permanentes, resultava em alto consumo energético e
+drenagem prematura da bateria.
+
+Os sensores sofriam de constantes falhas nos sinais e conexões. A
+suposição é de que o ambiente interno da colméia possui uma interação
+distinta quando comparada ao sensor em contato com o mel. Além disso,
+a utilização de resinas ou outros produtos para impermeabilizar estes
+sensores interferem na sua precisão, e na saúde dos insetos, pois em
+sua grande parte, eles possuem solventes e outros materiais tóxicos.
+
+Para observação dos eventos de falha, o uso da API padrão dos
+dispositivos ESP32 se torna exaustiva do ponto de vista de
+desenvolvimento. As APIs possuem chamadas para geração de logs, capaz
+de apresentar mensagens conforme a demanda do usuário. Conforme
+explica [18], existem diversos níveis de log, onde, ao configurar
+alguns parâmetros, podemos determinar quais mensagens aparecerão. Mas
+a quantidade de eventos gerados era tamanha que a manutenção (seja em
+remover, adicionar, ou alterar) torna o processo impraticável.
+
+Os eventos gerados também geravam concorrência no processo de escrita
+no cartão. Além do sistema prosseguir tentando capturar os dados em
+sensores com erros, mesmo a falha em escrever os dados provocavam mais
+eventos, e por consequência, as rotinas paravam por completo.
+
+Por vezes ainda, watchdogs entravam em ação, e o processo de reset
+drenava a bateria completamente. Isso ocorre em decorrência do alto
+processamento inicial para inicializar o dispositivo e entrar em
+regime de funcionamento. Os sensores, mesmo com suas funcionalidades
+de economia de energia, quando precisavam ser inicializados a cada
+nova
+
+Finalmente, o diagnostico do sistema em campo é difícil, pela
+impossibilidade de debug, uso de osciloscópio, ou
+observação dos eventos em tempo real. As interferências nos sensores
+provocaram erros do tipo hard-fault (por padrão esta rotina possui um loop
+infinito). A intervenção do usuário, então, sempre seria necessaria.
+
+\section{Soluções Propostas}
+
+Para contornar as limitações de geração de eventos, foi
+desenvolvida a biblioteca \textbf{HERMES}, concebida como um sistema
+de registro de eventos em tempo real, com foco em confiabilidade e
+isolamento de escrita. Cada interação entre o microcontrolador e os
+sensores gera um ou mais eventos categorizados em "chains": inicialização, configuração,
+consulta ou desinicialização; Isso permite rastrear as ações de forma
+estruturada. A biblioteca implementa atomicidade de leitura e escrita
+e bloqueio mútuo de acesso aos arquivos de log, evitando corrupção de
+dados durante operações paralelas.
+
+Complementarmente, foi criada a biblioteca \textbf{Sparse-Buffer},
+projetada para lidar com restrições de memória, e possíveis
+concorrências de escrita. Essa ferramenta emprega filas do tipo
+\textit{First-In, First-Out} (FIFO) e técnicas de média móvel e
+compactação de dados, reduzindo a quantidade de escritas durante
+períodos de instabilidade.  Quando a mídia de gravação está
+indisponível, os dados são retidos temporariamente em memória, e
+compactados até que a operação possa ser concluída de forma segura.
+
+Por fim, a ultima sugestão deu origem à um hardware completamente
+novo, denominado Aristeu, que embarca todos os sensores num
+encapsulamento nativamente isolado do contato externo, e resistente ao
+contato com material orgânico. O mesmo, porém, não chegou à ser
+produzido.
+
+Essas soluções foram projetadas para fortalecer a resiliência do
+sistema e permitir a continuidade das medições mesmo sob falhas
+transitórias de hardware ou comunicação, ampliando o potencial de uso
+em aplicações de campo de longa duração.
+
+\section{Discussão}
+
+A aplicação prática do sistema em colmeias reais revelou desafios
+raramente documentados na literatura sobre apicultura de precisão. A
+maioria dos trabalhos correlatos foca em modelos teóricos de
+sensoriamento, mas não descreve as dificuldades inerentes à exposição
+dos sensores em ambientes biológicos ativos, sujeitos a variações
+térmicas, alta umidade e ação direta dos insetos.
+
+Os resultados indicam que sensores eletrônicos convencionais exigem
+adaptações específicas de encapsulamento e isolamento elétrico para
+operar de forma confiável dentro de colmeias. As falhas observadas
+reforçam a necessidade de pesquisas voltadas à durabilidade de
+componentes em ambientes orgânicos, bem como ao desenvolvimento de
+metodologias de calibração e filtragem que considerem interferências
+biológicas e físicas.
+
+Ainda que os testes tenham se limitado a períodos curtos, o estudo
+forneceu insights relevantes sobre a integração de sistemas embarcados
+em contextos naturais complexos. As bibliotecas e soluções propostas
+representam avanços significativos na robustez e autonomia de
+plataformas de monitoramento ambiental, servindo de base para futuras
+iterações com novos sensores, protocolos e estratégias de energia.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+% TODO: Deveria usar a ideia do Denardim, e criar uma região reservada
+% para registro de logs?
+
+% TODO: Ver como funciona o debug de um hard-fault dentro de um RTOS
+
+Para efeitos práticos, um wrapper foi criado para automatizar a
+geração das mensagens de log, dando origem à uma biblioteca denominada
+HERMES. Esse wrapper foi escrito de maneira que quaisquer ações
+direcionadas a um sensor gerasse eventos, e os registrasse em
+armazenamento de massa.
+
+A biblioteca possui o conceito de "object", ou "objeto", onde um objeto é
+capaz de realizar determinadas tarefas, classificadas em inicializar,
+configurar, consultar, e desinicializar. Essas tarefas são abstraídas
+no conceito de "taskchain", ou "corrente de tarefas", onde um ou mais
+métodos, ou funções, podem ser cadastradas na chain para realizar
+chamadas subsequentes na ordem em que foram cadastradas. E para cada
+nova chamada, um evento é gerado e armazenado.
+
+Além disso, a biblioteca foi implementada com uma análise de
+requisitos, a saber
+
+'''
+* - Only it can write. Other actors must rely on this to write.
+* 
+* - Must write, no matter what happens (i.e. write must always
+* succeed);
+* 
+* This means that if for any reason, the media fails to be written to,
+* the actor must be able to hold-on information for long enough, or
+* provide necessary means to easy the load of current write, until the
+* write media goes back to normal;
+* 
+* - Must, while writing, lock any actor from reading it;
+* 
+* This is to prevent incomplete/inaccurate info retrieval (i.e. atomic
+* write/read operations)
+* 
+* - Must, while reading, lock any actor from writing it;
+* 
+* - Must handle parallel writes/reads;
+* 
+* - Must generate its own events (be able to log itself in event-driven
+* manner);
+'''
+
+	Dentre os requisitos, destacam se dois importantes: "Must write,
+no matter what happens", essencial para a garantia de telemetria dos
+sensores, e "must handle parallel writes/reads", conveniente à
+implementação de diversos sensores para escrita e leitura simultânea.
+
+
+
+
+
+% NOTE: Acho que não precisa da biblioteca de compactação, mas seria
+% interessante falar que ela foi criada
+
+Para tratar do primeiro requisito, foi desenvolvida uma nova
+biblioteca, afim de lidar com o problema de pouca memória presente no
+micro, prevendo a possivel falha de todos os canais de comunicacoes do
+sistema, por diversas razões.
+
+Para métodos de lidar com dados seriais, pode-se citar fila como sendo
+a mais comum. A fila possui um modelo first-in, first out (FIFO) de
+consulta, permitindo que n séries s de dados sejam capturados, e para
+amostragem ser uniforme, os dados são amostrados numa frequencia f.
+
+No entanto, a lotação da memória por outros processos pode fazer com
+que dados sejam perdidos, de forma que alguma série pode não ser
+subsequente à outra. Para corrigir isso, uma opção é reduzir a
+frequência de captura, por consequência diminuindo sua resolução, em
+detrimento da garantia de captura de pelo menos um dado durante o
+período em que a memória ficou lotada.
+
+Além disso, também é possivel o agrupamento dos dados em séries, dado
+que os dados tem um intervalo bem definido de possilibdades, bastando
+apenas guardar os instantes de tempo no qual o mesmo ocorre.
+
+Outro auxílio é possivel através do uso de média movel, para
+garantia que os dados, ainda que esparços, sejam capazes de
+representar a média de valores de um intervalo.
+
+Por fim, pode-se ainda compactar os valores, procedendo para
+escrita numa mídia de armazenamento em massa, ou transmissão para
+posterior consulta.
+
+A biblioteca, nomeada de Sparse-Buffer, possui todas as
+funcionalidades citadas a cima, utilizada
+	
+Outro aspecto importante de pensar foi a forma de posicionar os
+sensores.
+
+Além disso, a exposicao de eletronicos no mel é um assunto sem
+publicações. No entanto, estende-se parte das implicações da presença
+de umidade nessas aplicações.
+
+Um problema comum em I2C é sua sensibilidade a efeitos capacitivos
+na linha
+
+% https://www.eevblog.com/forum/projects/i2c-pcb-design-trace-length-and-interference/
+
+% descobrir como a resistencia afeta o efeito de bordas na i2c
+
+% Possivel efeito capacitivo do contato de circuito i2c com umidade
+
+% falar sobre hard-fault que engole energia no esp
+
+% falar sobre a necessidade de um debug remoto
+
+
+
+
+
+[fotografia cabo de rede]
+
+	Para consulta dos sensores, 
+
+I2C
+
+
+
+\subsection{Estudos}
+
+\subsubsection{Temperatura}
+
+
+
+\subsection{Aplicação e registro}
+\subsection{Análise Comparativa}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
