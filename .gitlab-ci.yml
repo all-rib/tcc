@@ -5,8 +5,7 @@ compile_pdf:
     - cd "old-src"
     - pdflatex -interaction=nonstopmode main.tex
   after_script:
-    - cp main.pdf ..
-    - cd ..
+    - cp old-src/main.pdf tcc.pdf
   artifacts:
     paths:
       - tcc.pdf  # instruct GitLab to keep the main.pdf file
