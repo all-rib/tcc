@@ -216,8 +216,40 @@ infinito). A intervenção do usuário, então, sempre seria necessaria.
 
 \section{Soluções Propostas}
 
+Os problemas apresentados podem ser separados em 3 categorias:
+ - falhas de hardware, em que um sensor possui falhas intermitentes;
+ - Concorrência, onde a quantidade de eventos geradas preenche a memória;
+ - Resets, onde a perca de informações ocorre quando o sistema
+   reinicia;
+
+Para as falhas de hardware, mais testes em campo são necessários, uma
+vez que a interação entre eletrônicos, mel e materiais orgânicos não
+possui registros em literatura. Assim sendo, a exclusão do contato
+entre a colmeia e o sistema é essencial.
+
+Duas soluções são apresentadas:
+
+- Adaptar o circuito, de forma que os sensores sejam integrados à uma
+estruturas de encapsulamento e vedação, promovendo a exclusão do
+contato entre mel e circuito, sem o uso de substâncias noscivas. Essa
+opção tem a vantagem de que alguns sensores possuem mais de um
+encapsulamento, o que pode facilitar na confecção de containeres para
+os mesmos. Nesta obra, uma nova placa integrada de sensores foi
+elaborada, \textbf{Aristeu}, com a intenção de utilizar silicone
+alimentar para isolar os circuitos, mas não foi posta em produção,
+devido ao custo e tempo do projeto. O projeto encontra-se disponível
+repositório próprio e público;
+
+- Adaptar a caixa, permitindo um posicionamento planejado dos
+sensores de maneira independente, entalhando canais e sulcos para
+posicionamento. Essa solução é mais barata, com a desvantagem de
+lenta produção, uma vez que depende do cresimento da
+colméia. Além disso, por ser uma adaptação do
+padrão INPA, o novo modelo pode ser impraticável quando escalado,
+considerando as adaptações necessárias.
+
 Para contornar as limitações de geração de eventos, foi
-desenvolvida a biblioteca \textbf{HERMES}, concebida como um sistema
+desenvolvida a biblioteca \textbf{Hermes}, concebida como um sistema
 de registro de eventos em tempo real, com foco em confiabilidade e
 isolamento de escrita. Cada interação entre o microcontrolador e os
 sensores gera um ou mais eventos categorizados em "chains": inicialização, configuração,
@@ -226,25 +258,78 @@ estruturada. A biblioteca implementa atomicidade de leitura e escrita
 e bloqueio mútuo de acesso aos arquivos de log, evitando corrupção de
 dados durante operações paralelas.
 
-Complementarmente, foi criada a biblioteca \textbf{Sparse-Buffer},
-projetada para lidar com restrições de memória, e possíveis
-concorrências de escrita. Essa ferramenta emprega filas do tipo
+Em efeitos práticos, a biblioteca é um wrapper, que automatiza a
+geração das mensagens ao criar os conceicos de \textbf{object}, que
+executa \textbf{chains}. Um objeto pode ser representado por
+periférico, que possui diversas rotinas a serem executadas:
+inicializar, configurar, amostrar e desinicializar. Essas rotinas
+possuem uma cadeia interna de funções que executam, separadamente,
+passos para realizar uma determinada tarefa. Hermes abstrai a
+complexidade utilizando ponteiros de funções para abstrair as cadeias
+originais da função, e insere eventos informativos entre cada uma das
+chamadas. Os eventos então são gerados apenas por um ator, e escritos
+no cartão sem concorrência.
+
+Além disso, a biblioteca foi implementada com uma análise de
+requisitos, a saber
+
+'''
+* - Only it can write. Other actors must rely on this to write.
+* 
+* - Must write, no matter what happens (i.e. write must always
+* succeed);
+* 
+* This means that if for any reason, the media fails to be written to,
+* the actor must be able to hold-on information for long enough, or
+* provide necessary means to easy the load of current write, until the
+* write media goes back to normal;
+* 
+* - Must, while writing, lock any actor from reading it;
+* 
+* This is to prevent incomplete/inaccurate info retrieval (i.e. atomic
+* write/read operations)
+* 
+* - Must, while reading, lock any actor from writing it;
+* 
+* - Must handle parallel writes/reads;
+* 
+* - Must generate its own events (be able to log itself in event-driven
+* manner);
+'''
+
+	Dentre os requisitos, destacam se dois importantes: "Must write,
+no matter what happens", essencial para a garantia de telemetria dos
+sensores, e "must handle parallel writes/reads", conveniente à
+implementação de diversos sensores para escrita e leitura simultânea.
+
+A arquitetura da biblioteca é apresentada na [figura X]
+
+[Imagem arquitetura Hermes]()
+
+Complementarmente, e de encontro ao último problema, foi criada a
+biblioteca \textbf{Sparse-Buffer}. Esta foi projetada para lidar com
+restrições de memória, e possíveis concorrências de escrit para
+grandes amostras de dados. Essa ferramenta emprega filas do tipo
 \textit{First-In, First-Out} (FIFO) e técnicas de média móvel e
 compactação de dados, reduzindo a quantidade de escritas durante
-períodos de instabilidade.  Quando a mídia de gravação está
+períodos de instabilidade. Quando a mídia de gravação está
 indisponível, os dados são retidos temporariamente em memória, e
 compactados até que a operação possa ser concluída de forma segura.
 
-Por fim, a ultima sugestão deu origem à um hardware completamente
-novo, denominado Aristeu, que embarca todos os sensores num
-encapsulamento nativamente isolado do contato externo, e resistente ao
-contato com material orgânico. O mesmo, porém, não chegou à ser
-produzido.
+Enquanto isso, dois processos simples são aplicados:
 
-Essas soluções foram projetadas para fortalecer a resiliência do
-sistema e permitir a continuidade das medições mesmo sob falhas
-transitórias de hardware ou comunicação, ampliando o potencial de uso
-em aplicações de campo de longa duração.
+- Novas amostras são agrupadas em séries para evitar a repetição: Dado
+um dado que varie num intervalo determinado (como a temperatura), os
+dados podem ser agrupados em amostras que se repetem em diferentes
+medidas de tempo, e no melhor caso, reduzindo o espaço de 2N, sendo N
+o número de amostras, para N+1, de forma que a medida identifica a
+série, e os valores são os instantes de tempo no qual a medida
+ocorreu. 
+
+- A resolução de captura dos dados é reduzida: Ao preencher a fila de
+dados, um a cada N dados podem ser descartados, de forma que a
+resolução final da observação é reduzida, mas a média dos valores se
+mantém para grandes períodos de captura;
 
 \section{Discussão}
 
@@ -301,55 +386,6 @@ iterações com novos sensores, protocolos e estratégias de energia.
 % para registro de logs?
 
 % TODO: Ver como funciona o debug de um hard-fault dentro de um RTOS
-
-Para efeitos práticos, um wrapper foi criado para automatizar a
-geração das mensagens de log, dando origem à uma biblioteca denominada
-HERMES. Esse wrapper foi escrito de maneira que quaisquer ações
-direcionadas a um sensor gerasse eventos, e os registrasse em
-armazenamento de massa.
-
-A biblioteca possui o conceito de "object", ou "objeto", onde um objeto é
-capaz de realizar determinadas tarefas, classificadas em inicializar,
-configurar, consultar, e desinicializar. Essas tarefas são abstraídas
-no conceito de "taskchain", ou "corrente de tarefas", onde um ou mais
-métodos, ou funções, podem ser cadastradas na chain para realizar
-chamadas subsequentes na ordem em que foram cadastradas. E para cada
-nova chamada, um evento é gerado e armazenado.
-
-Além disso, a biblioteca foi implementada com uma análise de
-requisitos, a saber
-
-'''
-* - Only it can write. Other actors must rely on this to write.
-* 
-* - Must write, no matter what happens (i.e. write must always
-* succeed);
-* 
-* This means that if for any reason, the media fails to be written to,
-* the actor must be able to hold-on information for long enough, or
-* provide necessary means to easy the load of current write, until the
-* write media goes back to normal;
-* 
-* - Must, while writing, lock any actor from reading it;
-* 
-* This is to prevent incomplete/inaccurate info retrieval (i.e. atomic
-* write/read operations)
-* 
-* - Must, while reading, lock any actor from writing it;
-* 
-* - Must handle parallel writes/reads;
-* 
-* - Must generate its own events (be able to log itself in event-driven
-* manner);
-'''
-
-	Dentre os requisitos, destacam se dois importantes: "Must write,
-no matter what happens", essencial para a garantia de telemetria dos
-sensores, e "must handle parallel writes/reads", conveniente à
-implementação de diversos sensores para escrita e leitura simultânea.
-
-
-
 
 
 % NOTE: Acho que não precisa da biblioteca de compactação, mas seria
