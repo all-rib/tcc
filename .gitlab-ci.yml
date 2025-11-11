@@ -5,7 +5,7 @@ compile_pdf:
     - cd "old-src"
     - pdflatex -interaction=nonstopmode main.tex
   after_script:
-    - mv main.pdf ../tcc.pdf
+    - cp main.pdf ..
     - cd ..
   artifacts:
 	  paths:
