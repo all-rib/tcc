@@ -2,9 +2,11 @@ compile_pdf:
   stage: build
   image: registry.gitlab.com/islandoftex/images/texlive:latest
   script:
-    - pdflatex old-src/main.tex
+  	- cd old-src
+    - pdflatex -interaction=nonstopmode main.tex
   after_script:
-    - mv old-src/main.pdf tcc.pdf
+    - mv main.pdf ../tcc.pdf
+  	- cd ..
   artifacts:
     paths: 
       - tcc.pdf  # instruct GitLab to keep the main.pdf file
