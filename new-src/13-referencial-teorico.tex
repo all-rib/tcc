@@ -4,7 +4,7 @@ Este capítulo trata de explicar os conceitos base relacionados ao
 trabalho, em especial sobre abelhas, apicultura, os sensores
 utilizados e os respectivos métodos de comunicação.
 
-\section{Abelhas, apicultura e apicultura de precis\~ao}
+\section{Abelhas, apicultura e apicultura de precis\~ao}\label{abelhas}
 
 As abelhas são insetos alados (clado Anthophila) responsáveis pelo processo da
 polinização e produção de mel. As mais de 20 mil espécies, presentes em
@@ -62,7 +62,7 @@ apicultura, se tornando então um processo de aquisição, processamento
 e análise de dados afim de otimizar o gerenciamento e a tomada de
 decisões no processo apícola.
 
-\subsection{Tetragonisca angustula}
+\subsection{Tetragonisca angustula}\label{subsec:angustula}
 
 A Tetragonisca angustula, popularmente conhecida como jataí, é uma
 abelha social da tribo Meliponini, amplamente distribuída nas regiões
@@ -79,7 +79,15 @@ da tribo Meliponini, o que a torna incapaz de ferroar. Suas asas
 possuem venação reduzida, e as operárias apresentam cerdas nas pernas
 posteriores, adaptadas para o transporte de pólen .
 
-[imagem jatai]
+\begin{figure}[!htb]%% Ambiente figure
+    %\captionsetup{width=0.55\textwidth}%% Largura da legenda
+    \caption{\textit{Tetragonisca angustula.}}%% Legenda
+    \label{fig:jatai}%% Rótulo
+    \includegraphics[scale=0.6]{jatai}%% Dimensões e localização
+    \fonte{Domínio público}%% Fonte
+    %\addcontentsline{loge}{}{\protect\numberline{\thephotograph}Arquitetura da biblioteca \textbf{HERMES}.} % Adiciona à lista de ilustrações
+\end{figure}
+
 
 Apesar de sua ampla distribuição e relevância ecológica, T. angustula
 ainda carece de uma base técnica consolidada na literatura científica,
@@ -91,7 +99,7 @@ A organização social da colônia é altamente complexa, composta por
 várias castas, incluindo rainha, operárias e zangões. As colônias são perenes, podendo conter de
 20 a 80 mil indivíduos, abrigadas geralmente em cavidades protegidas.
 
-\subsection {Colmeias jata\'i}
+\subsection{Colmeias jata\'i}\label{subsec:colmeia}
 
 A criação de ambas abelhas exigem a utilização de caixas pré-montadas
 que permitem a modularização da coleta de mel. Com modelos diferentes
@@ -115,26 +123,24 @@ sustentável sem desorganizar o ninho.
 
 Esta é composta por módulos empilháveis, cada um com função distinta e
 dimensões adaptadas ao porte da espécie criada. A estrutura básica
-inclui:
+possui a medida padrão, de cada módulo, de 15cm de largura, por 15cm
+de profundidade, por 10cm de altura.
 
-Módulo de ninho: Onde são depositados os ovos e construídos os discos
-de cria. Costuma medir cerca de 15x15x9, considerando-se as paredes
-internas, com cerca de 3cm de espessura. O espaço interno é fixo, sem
-divisórias móveis, permitindo que as abelhas organizem o ninho de
-forma natural.
+Módulo de ninho: Parte inferior, onde são depositados os ovos e
+construídos os discos de cria. Costuma medir cerca de 15x15x10,
+considerando-se as paredes internas, com cerca de 3cm de espessura. O
+espaço interno é fixo, sem divisórias móveis, permitindo que as
+abelhas organizem o ninho de forma natural.
 
 Sobreninho (ou extensão do ninho): Módulo adicional posicionado acima
-do ninho. Permite o crescimento da área de postura e armazenamento,
-acomodando a expansão natural da colônia com o tempo.
+do ninho, para fomentar o crescimento. Permite o crescimento da área
+de postura e armazenamento, acomodando a expansão natural da colônia
+com o tempo.
 
-Melgueira: Espaço dedicado ao armazenamento de mel. Nela as abelhas
-constroem pequenos potes de cera onde depositam o mel. A extração é
-feita manualmente, com seringas ou espátulas, respeitando a
-integridade da colônia.
-
-Fundo (com ou sem lixeira): Parte inferior da caixa. Pode ter um
-espaço adicional para acumular resíduos (a chamada "lixeira"), que
-facilita a limpeza periódica e o controle de pragas.
+Melgueira: Espaço dedicado ao armazenamento de mel. Quando presente,
+são os módulos superiores. Nela as abelhas constroem pequenos potes de
+cera onde depositam o mel. A extração é feita manualmente, com
+seringas ou espátulas, respeitando a integridade da colônia.
 
 Tampa e cobertura externa: Fecham a caixa superiormente, ajudando a
 manter o microclima interno, protegendo contra luz, calor excessivo e
@@ -190,6 +196,15 @@ A compensação interna de temperatura e a calibração de fábrica
 garantem a precisão das medições, que tipicamente alcançam ±1\% UR para
 umidade absoluta, ±1 Pa para pressão absoluta e ±0,5 °C para temperatura.
 
+
+  1 \begin{figure}[!htb]%% Ambiente figure
+  0     %\captionsetup{width=0.55\textwidth}%% Largura da legenda
+  1     \caption{Arquitetura da biblioteca \textbf{HERMES}.}%% Legenda
+  2     \label{fig:hermes}%% Rótulo
+  3     \includegraphics[scale=0.6]{hermes}%% Dimensões e localização
+  4     \fonte{Autoria Própria}%% Fonte
+  5     %\addcontentsline{loge}{}{\protect\numberline{\thephotograph}Arquitetura da biblioteca \textbf{HERMES}.} % Adiciona à lista de ilustrações
+  6 \end{figure}
 [Imagem BME280]
 
 O DHT11 é um sensor digital amplamente utilizado para medições básicas

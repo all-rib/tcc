@@ -20,14 +20,15 @@ contínua de dados.
 O sistema é dividido em três camadas: \textbf{Periféricos},
 \textbf{Controle}, e \textbf{Energia}, conforme ilustrado na Figura \ref{fig:topologia}.
 
-\begin{photograph}[!htb]%% Ambiente figure
+\begin{figure}[htb]%% Ambiente figure
     %\captionsetup{width=0.55\textwidth}%% Largura da legenda
-	\caption{Arquitetura proposta.}%% Legenda
+    \caption{Arquitetura sugerida}%% Legenda
 	\label{fig:arquitetura}%% Rótulo
     \includegraphics[scale=2]{arquitetura}%% Dimensões e localização
     \fonte{Autoria Própria}%% Fonte
-    \addcontentsline{loge}{photograph}{\protect\numberline{\thephotograph}Arquitetura Proposta.} % Adiciona à lista de ilustrações
-\end{photograph}
+    \addcontentsline{loge}{figure}{\protect\numberline{\thefigure}Arquitetura Proposta.}
+\end{figure}
+
 
 \begin{itemize}
 	\item \textbf{Periféricos:} Composta por sensores de temperatura,
@@ -96,26 +97,14 @@ Outro ponto a ser citado é a incapacidade da placa em alimentar os
 sensores. Foi necessário a utlização de um regulador de tensão
 AMS1117.
 
-\begin{photograph}[!htb]%% Ambiente figure
+\begin{figure}[!htb]%% Ambiente figure
     %\captionsetup{width=0.55\textwidth}%% Largura da legenda
 	\caption{Topologia do sistema.}%% Legenda
 	\label{fig:topologia}%% Rótulo
     \includegraphics[scale=1.5]{topologia}%% Dimensões e localização
     \fonte{Autoria Própria}%% Fonte
-    \addcontentsline{loge}{photograph}{\protect\numberline{\thephotograph}Topologia do sistema.} % Adiciona à lista de ilustrações
-\end{photograph}
-
-
-\begin{photograph}[!htb]%% Ambiente figure
-    %\captionsetup{width=0.55\textwidth}%% Largura da legenda
-	\caption{Microcontrolador LORA32.}%% Legenda
-	\label{fig:lora32}%% Rótulo
-    \includegraphics[scale=0.25]{lora32}%% Dimensões e localização
-    \fonte{Autoria Própria}%% Fonte
-    \addcontentsline{loge}{lora32}{\protect\numberline{\thephotograph}Microcontrolador LORA32.} % Adiciona à lista de ilustrações
-\end{photograph}
-
-
+    \addcontentsline{loge}{}{\protect\numberline{\thephotograph}Topologia do sistema.} % Adiciona à lista de ilustrações
+\end{figure}
 
 Num primeiro experimento, um total de 9 sensores foram conectados,
 inicialmente sem qualquer contato com material organico, sendo um
@@ -124,7 +113,7 @@ BME280 e DS18B20.
 
 
 \begin{figure}[htb]
-    \caption{Sensores utilizados: (a) DHT11, (b) SHT30, (c) BME280, (d) DS18B20} 
+    \caption{Sensores utilizados: (a) BME280, (b) DHT11, (c) DS18B20, (d) SHT30} 
 	\label{fig:sensores}
 	\centering
 	\subfloat[DHT11]{
@@ -133,28 +122,16 @@ BME280 e DS18B20.
 	\subfloat[SHT30]{
 		\includegraphics[scale=0.2]{sht30}
 	}
+	\newline
 	\subfloat[BME280]{
 		\includegraphics[scale=0.22]{bme280}
 	}
 	\subfloat[DS18B20]{
 		\includegraphics[scale=0.2]{ds18b20}
 	}
-	\fonte{}
+	\fonte{Autoria Própria}
     %\addcontentsline{loge}{figure}{\protect\numberline{\thefigure}Telas de cadastro de Paciente: (a) Cadastro Paciente, (b) Cadastro Paciente 2.}
 \end{figure}
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 Os sensores foram conectados em paralelo, permitindo que sejam
 consultados sob demanda. Graças à arquitetura I2C, mais de um sensor
@@ -336,29 +313,30 @@ no cartão sem concorrência.
 Além disso, a biblioteca foi implementada com uma análise de
 requisitos, a saber
 
-'''
-* - Only it can write. Other actors must rely on this to write.
-* 
-* - Must write, no matter what happens (i.e. write must always
-* succeed);
-* 
-* This means that if for any reason, the media fails to be written to,
-* the actor must be able to hold-on information for long enough, or
-* provide necessary means to easy the load of current write, until the
-* write media goes back to normal;
-* 
-* - Must, while writing, lock any actor from reading it;
-* 
-* This is to prevent incomplete/inaccurate info retrieval (i.e. atomic
-* write/read operations)
-* 
-* - Must, while reading, lock any actor from writing it;
-* 
-* - Must handle parallel writes/reads;
-* 
-* - Must generate its own events (be able to log itself in event-driven
-* manner);
-'''
+\begin{verbatim}
+
+- Only it can write. Other actors must rely on this to write.
+
+- Must write, no matter what happens (i.e. write must always succeed);
+
+This means that if for any reason, the media fails to be written to,
+the actor must be able to hold-on information for long enough, or
+provide necessary means to easy the load of current write, until the
+write media goes back to normal;
+
+- Must, while writing, lock any actor from reading it;
+
+This is to prevent incomplete/inaccurate info retrieval (i.e. atomic
+write/read operations)
+
+- Must, while reading, lock any actor from writing it;
+
+- Must handle parallel writes/reads;
+
+- Must generate its own events (be able to log itself in event-driven
+manner);
+
+\end{verbatim}
 
 	Dentre os requisitos, destacam se dois importantes: "Must write,
 no matter what happens", essencial para a garantia de telemetria dos
@@ -367,7 +345,14 @@ implementação de diversos sensores para escrita e leitura simultânea.
 
 A arquitetura da biblioteca é apresentada na [figura X]
 
-[Imagem arquitetura Hermes]()
+\begin{figure}[!htb]%% Ambiente figure
+    %\captionsetup{width=0.55\textwidth}%% Largura da legenda
+	\caption{Arquitetura da biblioteca \textbf{HERMES}.}%% Legenda
+	\label{fig:hermes}%% Rótulo
+    \includegraphics[scale=0.6]{hermes}%% Dimensões e localização
+    \fonte{Autoria Própria}%% Fonte
+    %\addcontentsline{loge}{}{\protect\numberline{\thephotograph}Arquitetura da biblioteca \textbf{HERMES}.} % Adiciona à lista de ilustrações
+\end{figure}
 
 Complementarmente, e de encontro ao último problema, foi criada a
 biblioteca \textbf{Sparse-Buffer}. Esta foi projetada para lidar com
@@ -485,127 +470,127 @@ representam avanços significativos na robustez e autonomia de
 plataformas de monitoramento ambiental, servindo de base para futuras
 iterações com novos sensores, protocolos e estratégias de energia.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-% TODO: Deveria usar a ideia do Denardim, e criar uma região reservada
-% para registro de logs?
-
-% TODO: Ver como funciona o debug de um hard-fault dentro de um RTOS
-
-
-% NOTE: Acho que não precisa da biblioteca de compactação, mas seria
-% interessante falar que ela foi criada
-
-Para tratar do primeiro requisito, foi desenvolvida uma nova
-biblioteca, afim de lidar com o problema de pouca memória presente no
-micro, prevendo a possivel falha de todos os canais de comunicacoes do
-sistema, por diversas razões.
-
-Para métodos de lidar com dados seriais, pode-se citar fila como sendo
-a mais comum. A fila possui um modelo first-in, first out (FIFO) de
-consulta, permitindo que n séries s de dados sejam capturados, e para
-amostragem ser uniforme, os dados são amostrados numa frequencia f.
-
-No entanto, a lotação da memória por outros processos pode fazer com
-que dados sejam perdidos, de forma que alguma série pode não ser
-subsequente à outra. Para corrigir isso, uma opção é reduzir a
-frequência de captura, por consequência diminuindo sua resolução, em
-detrimento da garantia de captura de pelo menos um dado durante o
-período em que a memória ficou lotada.
-
-Além disso, também é possivel o agrupamento dos dados em séries, dado
-que os dados tem um intervalo bem definido de possilibdades, bastando
-apenas guardar os instantes de tempo no qual o mesmo ocorre.
-
-Outro auxílio é possivel através do uso de média movel, para
-garantia que os dados, ainda que esparços, sejam capazes de
-representar a média de valores de um intervalo.
-
-Por fim, pode-se ainda compactar os valores, procedendo para
-escrita numa mídia de armazenamento em massa, ou transmissão para
-posterior consulta.
-
-A biblioteca, nomeada de Sparse-Buffer, possui todas as
-funcionalidades citadas a cima, utilizada
-	
-Outro aspecto importante de pensar foi a forma de posicionar os
-sensores.
-
-Além disso, a exposicao de eletronicos no mel é um assunto sem
-publicações. No entanto, estende-se parte das implicações da presença
-de umidade nessas aplicações.
-
-Um problema comum em I2C é sua sensibilidade a efeitos capacitivos
-na linha
-
-% https://www.eevblog.com/forum/projects/i2c-pcb-design-trace-length-and-interference/
-
-% descobrir como a resistencia afeta o efeito de bordas na i2c
-
-% Possivel efeito capacitivo do contato de circuito i2c com umidade
-
-% falar sobre hard-fault que engole energia no esp
-
-% falar sobre a necessidade de um debug remoto
-
-
-
-
-
-[fotografia cabo de rede]
-
-	Para consulta dos sensores, 
-
-I2C
-
-
-
-\subsection{Estudos}
-
-\subsubsection{Temperatura}
-
-
-
-\subsection{Aplicação e registro}
-\subsection{Análise Comparativa}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%% TODO: Deveria usar a ideia do Denardim, e criar uma região reservada
+%% para registro de logs?
+%
+%% TODO: Ver como funciona o debug de um hard-fault dentro de um RTOS
+%
+%
+%% NOTE: Acho que não precisa da biblioteca de compactação, mas seria
+%% interessante falar que ela foi criada
+%
+%Para tratar do primeiro requisito, foi desenvolvida uma nova
+%biblioteca, afim de lidar com o problema de pouca memória presente no
+%micro, prevendo a possivel falha de todos os canais de comunicacoes do
+%sistema, por diversas razões.
+%
+%Para métodos de lidar com dados seriais, pode-se citar fila como sendo
+%a mais comum. A fila possui um modelo first-in, first out (FIFO) de
+%consulta, permitindo que n séries s de dados sejam capturados, e para
+%amostragem ser uniforme, os dados são amostrados numa frequencia f.
+%
+%No entanto, a lotação da memória por outros processos pode fazer com
+%que dados sejam perdidos, de forma que alguma série pode não ser
+%subsequente à outra. Para corrigir isso, uma opção é reduzir a
+%frequência de captura, por consequência diminuindo sua resolução, em
+%detrimento da garantia de captura de pelo menos um dado durante o
+%período em que a memória ficou lotada.
+%
+%Além disso, também é possivel o agrupamento dos dados em séries, dado
+%que os dados tem um intervalo bem definido de possilibdades, bastando
+%apenas guardar os instantes de tempo no qual o mesmo ocorre.
+%
+%Outro auxílio é possivel através do uso de média movel, para
+%garantia que os dados, ainda que esparços, sejam capazes de
+%representar a média de valores de um intervalo.
+%
+%Por fim, pode-se ainda compactar os valores, procedendo para
+%escrita numa mídia de armazenamento em massa, ou transmissão para
+%posterior consulta.
+%
+%A biblioteca, nomeada de Sparse-Buffer, possui todas as
+%funcionalidades citadas a cima, utilizada
+%	
+%Outro aspecto importante de pensar foi a forma de posicionar os
+%sensores.
+%
+%Além disso, a exposicao de eletronicos no mel é um assunto sem
+%publicações. No entanto, estende-se parte das implicações da presença
+%de umidade nessas aplicações.
+%
+%Um problema comum em I2C é sua sensibilidade a efeitos capacitivos
+%na linha
+%
+%% https://www.eevblog.com/forum/projects/i2c-pcb-design-trace-length-and-interference/
+%
+%% descobrir como a resistencia afeta o efeito de bordas na i2c
+%
+%% Possivel efeito capacitivo do contato de circuito i2c com umidade
+%
+%% falar sobre hard-fault que engole energia no esp
+%
+%% falar sobre a necessidade de um debug remoto
+%
+%
+%
+%
+%
+%[fotografia cabo de rede]
+%
+%	Para consulta dos sensores, 
+%
+%I2C
+%
+%
+%
+%\subsection{Estudos}
+%
+%\subsubsection{Temperatura}
+%
+%
+%
+%\subsection{Aplicação e registro}
+%\subsection{Análise Comparativa}
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
