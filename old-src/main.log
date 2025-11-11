@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.11.9)  11 NOV 2025 00:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.11.9)  11 NOV 2025 13:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2124,22 +2124,127 @@ Now handling font encoding PU ...
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
    defining Unicode char U+FEFF (decimal 65279)
-) (./configuracoes.tex
-(/usr/share/texmf-dist/tex/latex/multirow/bigdelim.sty
+)
+(/usr/share/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+LaTeX Font Info:    Trying to load font information for T1+ptm on input line 11
+6.
+
+(/usr/share/texmf-dist/tex/latex/psnfss/t1ptm.fd
+File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
+))
+
+! LaTeX Error: Option clash for package babel.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.91 \usepackage
+                [margin=2.5cm]{geometry}
+The package babel has already been loaded with options:
+  [brazil]
+There has now been an attempt to load it with options
+  [portuguese]
+Adding the global options:
+  brazil,portuguese
+to your \documentclass declaration may fix this.
+Try typing  <return>  to proceed.
+
+
+! LaTeX Error: Option clash for package geometry.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.92 \usepackage
+                {algorithm}
+The package geometry has already been loaded with options:
+  []
+There has now been an attempt to load it with options
+  [margin=2.5cm]
+Adding the global options:
+  ,margin=2.5cm
+to your \documentclass declaration may fix this.
+Try typing  <return>  to proceed.
+
+(/usr/share/texmf-dist/tex/latex/algorithms/algorithm.sty
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
+nment
+
+(/usr/share/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count445
+\float@exts=\toks56
+\float@box=\box78
+\@float@everytoks=\toks57
+\@floatcapt=\box79
+)
+\@float@every@algorithm=\toks58
+
+
+! LaTeX Error: Command \listofalgorithms already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.97 ...s}{\listof{algorithm}{\listalgorithmname}}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+) (/usr/share/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
+Package: algpseudocode 
+
+(/usr/share/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
+Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
+
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+\c@ALG@line=\count446
+\c@ALG@rem=\count447
+\c@ALG@nested=\count448
+\ALG@tlm=\skip304
+\ALG@thistlm=\skip305
+\c@ALG@Lnr=\count449
+\c@ALG@blocknr=\count450
+\c@ALG@storecount=\count451
+\c@ALG@tmpcounter=\count452
+\ALG@tmplength=\skip306
+
+! LaTeX Error: Command \algorithmic already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.112    }
+          %
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+)
+Document Style - pseudocode environments for use with the `algorithmicx' style
+) (./configuracoes.tex (/usr/share/texmf-dist/tex/latex/multirow/bigdelim.sty
 Package: bigdelim 2024/11/12 v2.9 Create big delimiters in tabular or array
 
 (/usr/share/texmf-dist/tex/latex/multirow/multirow.sty
 Package: multirow 2024/11/12 v2.9 Span multiple rows of a table
-\multirow@colwidth=\skip304
-\multirow@cntb=\count445
-\multirow@dima=\skip305
+\multirow@colwidth=\skip307
+\multirow@cntb=\count453
+\multirow@dima=\skip308
 \bigstrutjot=\dimen316
 ))
 (/usr/share/texmf-dist/tex/latex/colortbl/colortbl.sty
 Package: colortbl 2024/07/06 v1.0i Color table columns (DPC)
-\everycr=\toks56
-\minrowclearance=\skip306
-\rownum=\count446
+\everycr=\toks59
+\minrowclearance=\skip309
+\rownum=\count454
 )
 (/usr/share/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
@@ -2154,15 +2259,15 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 ))
 (/usr/share/texmf-dist/tex/latex/amscls/amsthm.sty
 Package: amsthm 2020/05/29 v2.20.6
-\thm@style=\toks57
-\thm@bodyfont=\toks58
-\thm@headfont=\toks59
-\thm@notefont=\toks60
-\thm@headpunct=\toks61
-\thm@preskip=\skip307
-\thm@postskip=\skip308
-\thm@headsep=\skip309
-\dth@everypar=\toks62
+\thm@style=\toks60
+\thm@bodyfont=\toks61
+\thm@headfont=\toks62
+\thm@notefont=\toks63
+\thm@headpunct=\toks64
+\thm@preskip=\skip310
+\thm@postskip=\skip311
+\thm@headsep=\skip312
+\dth@everypar=\toks65
 )
 (/usr/share/texmf-dist/tex/latex/was/icomma.sty
 Package: icomma 2002/03/10 v2.0 (WaS)
@@ -2195,24 +2300,24 @@ LaTeX Font Info:    Overwriting symbol font `wasy' in version `bold'
 Package: l3keys2e 2024-08-16 LaTeX2e option processing using LaTeX3 keys
 )
 Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
-\g__lipsum_par_int=\count447
-\l__lipsum_a_int=\count448
-\l__lipsum_b_int=\count449
+\g__lipsum_par_int=\count455
+\l__lipsum_a_int=\count456
+\l__lipsum_b_int=\count457
 
 (/usr/share/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex))
 (/usr/share/texmf-dist/tex/latex/subfig/subfig.sty
 Package: subfig 2005/06/28 ver: 1.3 subfig package
-\c@KVtest=\count450
-\sf@farskip=\skip310
+\c@KVtest=\count458
+\sf@farskip=\skip313
 \sf@captopadj=\dimen317
-\sf@capskip=\skip311
-\sf@nearskip=\skip312
-\c@subfigure=\count451
-\c@subfigure@save=\count452
-\c@subtable=\count453
-\c@subtable@save=\count454
-\sf@top=\skip313
-\sf@bottom=\skip314
+\sf@capskip=\skip314
+\sf@nearskip=\skip315
+\c@subfigure=\count459
+\c@subfigure@save=\count460
+\c@subtable=\count461
+\c@subtable@save=\count462
+\sf@top=\skip316
+\sf@bottom=\skip317
 )
 (/usr/share/texmf-dist/tex/latex/tools/xspace.sty
 Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
@@ -2242,12 +2347,12 @@ Package: tcolorbox 2024/10/22 version 6.4.1 text color boxes
 (/usr/share/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
 (/usr/share/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
 (/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
-\pgfutil@everybye=\toks63
+\pgfutil@everybye=\toks66
 \pgfutil@tempdima=\dimen318
 \pgfutil@tempdimb=\dimen319
 )
 (/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
-\pgfutil@abb=\box78
+\pgfutil@abb=\box80
 )
 (/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
 (/usr/share/texmf-dist/tex/generic/pgf/pgf.revision.tex)
@@ -2261,12 +2366,12 @@ Package: pgf 2023-01-15 v3.1.10 (3.1.10)
 Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
 
 (/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
-\pgfkeys@pathtoks=\toks64
-\pgfkeys@temptoks=\toks65
+\pgfkeys@pathtoks=\toks67
+\pgfkeys@temptoks=\toks68
 
 (/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfiltered.code.te
 x
-\pgfkeys@tmptoks=\toks66
+\pgfkeys@tmptoks=\toks69
 ))
 \pgf@x=\dimen320
 \pgf@y=\dimen321
@@ -2280,14 +2385,14 @@ x
 \pgf@yd=\dimen329
 \w@pgf@writea=\write135
 \r@pgf@reada=\read6
-\c@pgf@counta=\count455
-\c@pgf@countb=\count456
-\c@pgf@countc=\count457
-\c@pgf@countd=\count458
-\t@pgf@toka=\toks67
-\t@pgf@tokb=\toks68
-\t@pgf@tokc=\toks69
-\pgf@sys@id@count=\count459
+\c@pgf@counta=\count463
+\c@pgf@countb=\count464
+\c@pgf@countc=\count465
+\c@pgf@countd=\count466
+\t@pgf@toka=\toks70
+\t@pgf@tokb=\toks71
+\t@pgf@tokc=\toks72
+\pgf@sys@id@count=\count467
  (/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2023-01-15 v3.1.10 (3.1.10)
 )
@@ -2301,8 +2406,8 @@ File: pgfsys-common-pdf.def 2023-01-15 v3.1.10 (3.1.10)
 )))
 (/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfsyssoftpath@smallbuffer@items=\count460
-\pgfsyssoftpath@bigbuffer@items=\count461
+\pgfsyssoftpath@smallbuffer@items=\count468
+\pgfsyssoftpath@bigbuffer@items=\count469
 )
 (/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
 File: pgfsysprotocol.code.tex 2023-01-15 v3.1.10 (3.1.10)
@@ -2314,11 +2419,11 @@ Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
 (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
 (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
 \pgfmath@dimen=\dimen330
-\pgfmath@count=\count462
-\pgfmath@box=\box79
-\pgfmath@toks=\toks70
-\pgfmath@stack@operand=\toks71
-\pgfmath@stack@operation=\toks72
+\pgfmath@count=\count470
+\pgfmath@box=\box81
+\pgfmath@toks=\toks73
+\pgfmath@stack@operand=\toks74
+\pgfmath@stack@operation=\toks75
 )
 (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex)
 (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex)
@@ -2332,7 +2437,7 @@ x) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex)
 (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics
 .code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex)
 (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count463
+\c@pgfmathroundto@lastzeros=\count471
 ))
 (/usr/share/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
 (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
@@ -2363,10 +2468,10 @@ File: pgfcorepathusage.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )
 (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
 File: pgfcorescopes.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfpic=\box80
-\pgf@hbox=\box81
-\pgf@layerbox@main=\box82
-\pgf@picture@serial@count=\count464
+\pgfpic=\box82
+\pgf@hbox=\box83
+\pgf@layerbox@main=\box84
+\pgf@picture@serial@count=\count472
 )
 (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
 File: pgfcoregraphicstate.code.tex 2023-01-15 v3.1.10 (3.1.10)
@@ -2394,15 +2499,15 @@ File: pgfcorearrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
 (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgf@max=\dimen354
-\pgf@sys@shading@range@num=\count465
-\pgf@shadingcount=\count466
+\pgf@sys@shading@range@num=\count473
+\pgf@shadingcount=\count474
 )
 (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )
 (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
 File: pgfcoreexternal.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfexternal@startupbox=\box83
+\pgfexternal@startupbox=\box85
 )
 (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
 File: pgfcorelayers.code.tex 2023-01-15 v3.1.10 (3.1.10)
@@ -2417,7 +2522,7 @@ File: pgfcorerdf.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )))
 (/usr/share/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
 File: pgfmoduleshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfnodeparttextbox=\box84
+\pgfnodeparttextbox=\box86
 )
 (/usr/share/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
 File: pgfmoduleplot.code.tex 2023-01-15 v3.1.10 (3.1.10)
@@ -2439,8 +2544,8 @@ Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
 Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
 \pgffor@iter=\dimen357
 \pgffor@skip=\dimen358
-\pgffor@stack=\toks73
-\pgffor@toks=\toks74
+\pgffor@stack=\toks76
+\pgffor@toks=\toks77
 ))
 (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
 Package: tikz 2023-01-15 v3.1.10 (3.1.10)
@@ -2448,7 +2553,7 @@ Package: tikz 2023-01-15 v3.1.10 (3.1.10)
 (/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.te
 x
 File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@plot@mark@count=\count467
+\pgf@plot@mark@count=\count475
 \pgfplotmarksize=\dimen359
 )
 \tikz@lastx=\dimen360
@@ -2459,21 +2564,21 @@ File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \tikz@lastmovetoy=\dimen365
 \tikzleveldistance=\dimen366
 \tikzsiblingdistance=\dimen367
-\tikz@figbox=\box85
-\tikz@figbox@bg=\box86
-\tikz@tempbox=\box87
-\tikz@tempbox@bg=\box88
-\tikztreelevel=\count468
-\tikznumberofchildren=\count469
-\tikznumberofcurrentchild=\count470
-\tikz@fig@count=\count471
+\tikz@figbox=\box87
+\tikz@figbox@bg=\box88
+\tikz@tempbox=\box89
+\tikz@tempbox@bg=\box90
+\tikztreelevel=\count476
+\tikznumberofchildren=\count477
+\tikznumberofcurrentchild=\count478
+\tikz@fig@count=\count479
  (/usr/share/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfmatrixcurrentrow=\count472
-\pgfmatrixcurrentcolumn=\count473
-\pgf@matrix@numberofcolumns=\count474
+\pgfmatrixcurrentrow=\count480
+\pgfmatrixcurrentcolumn=\count481
+\pgf@matrix@numberofcolumns=\count482
 )
-\tikz@expandcount=\count475
+\tikz@expandcount=\count483
 
 (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
 topaths.code.tex
@@ -2484,19 +2589,19 @@ Package: environ 2014/05/04 v0.3 A new way to define environments
 (/usr/share/texmf-dist/tex/latex/trimspaces/trimspaces.sty
 Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 ))
-\tcb@titlebox=\box89
-\tcb@upperbox=\box90
-\tcb@lowerbox=\box91
-\tcb@phantombox=\box92
-\c@tcbbreakpart=\count476
-\c@tcblayer=\count477
-\c@tcolorbox@number=\count478
-\l__tcobox_tmpa_box=\box93
+\tcb@titlebox=\box91
+\tcb@upperbox=\box92
+\tcb@lowerbox=\box93
+\tcb@phantombox=\box94
+\c@tcbbreakpart=\count484
+\c@tcblayer=\count485
+\c@tcolorbox@number=\count486
+\l__tcobox_tmpa_box=\box95
 \l__tcobox_tmpa_dim=\dimen368
-\tcb@temp=\box94
-\tcb@temp=\box95
 \tcb@temp=\box96
 \tcb@temp=\box97
+\tcb@temp=\box98
+\tcb@temp=\box99
 )) (./variaveis.tex)
 \main@idxfile=\write136
 \openout4 = `main.idx'.
@@ -2505,26 +2610,26 @@ Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 Writing index file main.idx 
 
 LaTeX Warning: \include should only be used after \begin{document} on input lin
-e 99.
+e 107.
 
 (./PreTexto/entradas-siglas.tex)
 
 LaTeX Warning: \include should only be used after \begin{document} on input lin
-e 100.
+e 108.
 
 (./PosTexto/entradas-glossario.tex)
 \@nomenclaturefile=\write137
 \openout4 = `main.nlo'.
 
-Package nomencl Info: Writing nomenclature file main.nlo on input line 103.
-LaTeX Font Info:    Trying to load font information for T1+phv on input line 10
-6.
+Package nomencl Info: Writing nomenclature file main.nlo on input line 111.
+LaTeX Font Info:    Trying to load font information for T1+phv on input line 11
+4.
 
 (/usr/share/texmf-dist/tex/latex/psnfss/t1phv.fd
 File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
 )
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 10.79993pt on input line 106.
+(Font)              scaled to size 10.79993pt on input line 114.
  (./main.aux
 (./PreTexto/dedicatoria.aux) (./PreTexto/agradecimentos.aux)
 (./PreTexto/epigrafe.aux) (./PreTexto/resumo.aux) (./PreTexto/abstract.aux)
@@ -2536,38 +2641,38 @@ LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (./PosTexto/anexob.aux))
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 114.
+LaTeX Font Info:    ... okay on input line 114.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 114.
+LaTeX Font Info:    ... okay on input line 114.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 114.
+LaTeX Font Info:    ... okay on input line 114.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 114.
+LaTeX Font Info:    ... okay on input line 114.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 114.
+LaTeX Font Info:    ... okay on input line 114.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 114.
+LaTeX Font Info:    ... okay on input line 114.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 114.
+LaTeX Font Info:    ... okay on input line 114.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 114.
+LaTeX Font Info:    ... okay on input line 114.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 114.
+LaTeX Font Info:    ... okay on input line 114.
 
 (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count479
+\scratchcounter=\count487
 \scratchdimen=\dimen369
-\scratchbox=\box98
-\nofMPsegments=\count480
-\nofMParguments=\count481
-\everyMPshowfont=\toks75
-\MPscratchCnt=\count482
+\scratchbox=\box100
+\nofMPsegments=\count488
+\nofMParguments=\count489
+\everyMPshowfont=\toks78
+\MPscratchCnt=\count490
 \MPscratchDim=\dimen370
-\MPnumerator=\count483
-\makeMPintoPDFobject=\count484
-\everyMPtoPDFconversion=\toks76
+\MPnumerator=\count491
+\makeMPintoPDFobject=\count492
+\everyMPtoPDFconversion=\toks79
 ) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -2577,9 +2682,9 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring ON on input line 106.
-\myptabbox=\box99
-\myptabboxwidth=\skip315
+Package hyperref Info: Link coloring ON on input line 114.
+\myptabbox=\box101
+\myptabboxwidth=\skip318
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -2616,29 +2721,45 @@ Package hyperref Info: Link coloring ON on input line 106.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 <<ot1.cmap>><<oml.cmap>><<oms.cmap>><<omx.cmap>>
-LaTeX Font Info:    Trying to load font information for U+msa on input line 106
+LaTeX Font Info:    Trying to load font information for U+msa on input line 114
 .
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 106
+LaTeX Font Info:    Trying to load font information for U+msb on input line 114
 .
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+wasy on input line 10
-6.
+LaTeX Font Info:    Trying to load font information for U+wasy on input line 11
+4.
 
 (/usr/share/texmf-dist/tex/latex/wasysym/uwasy.fd
 File: uwasy.fd 2020/01/19 v2.4 Wasy-2 symbol font definitions
 )<<ot1tt.cmap>>
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
+Package caption Info: float package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: xtab package is loaded.
 Package caption Info: End \AtBeginDocument code.
+
+
+! LaTeX Error: Command \listalgorithmname already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.114 \begin{document}
+                      %% Não comente esta linha
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: a4paper
@@ -2671,7 +2792,6 @@ Package caption Info: End \AtBeginDocument code.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-
 (/usr/share/texmf-dist/tex/latex/pdflscape/pdflscape.sty
 Package: pdflscape 2022-10-27 v0.13 Display of landscape pages in PDF
 
@@ -2684,12 +2804,12 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 ))
-\c@lstlisting=\count485
-Package tocbasic Info: setting babel extension for `lol' on input line 106.
+\c@lstlisting=\count493
+Package tocbasic Info: setting babel extension for `lol' on input line 114.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 12.9599pt on input line 115.
+(Font)              scaled to size 12.9599pt on input line 123.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 12.9599pt on input line 115.
+(Font)              scaled to size 12.9599pt on input line 123.
 
 
 \openout4 = `main.mw'.
@@ -2835,29 +2955,29 @@ LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 \openout4 = `main.mw'.
 
 
-Underfull \hbox (badness 3049) in paragraph at lines 119--119
+Underfull \hbox (badness 3049) in paragraph at lines 127--127
 \T1/phv/m/n/12 ap-re-sen-tado como req-ui-sito para obten��o
  []
 
 
-Underfull \hbox (badness 4120) in paragraph at lines 119--119
+Underfull \hbox (badness 4120) in paragraph at lines 127--127
 \T1/phv/m/n/12 do t�-tulo de Bacharel em En-gen-haria de
  []
 
 
-Underfull \hbox (badness 1668) in paragraph at lines 119--119
+Underfull \hbox (badness 1668) in paragraph at lines 127--127
 \T1/phv/m/n/12 Com-puta��o do Curso de Bachare-lado em
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 119--119
+Underfull \hbox (badness 10000) in paragraph at lines 127--127
 [][] \T1/phv/m/n/12 Prof. Dr. Gus-tavo We-ber
  []
 
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 10.79993pt on input line 119.
+(Font)              scaled to size 10.79993pt on input line 127.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 9.85492pt on input line 119.
+(Font)              scaled to size 9.85492pt on input line 127.
 Package epstopdf Info: Source file: <./PreTexto/arquivos/licencasCC/by.eps>
 (epstopdf)                    date: 2025-05-22 21:08:26
 (epstopdf)                    size: 36313 bytes
@@ -2867,7 +2987,7 @@ erted-to.pdf>
 (epstopdf)                    size: 4868 bytes
 (epstopdf)             Command: <repstopdf --outfile=./PreTexto/arquivos/licenc
 asCC/by-eps-converted-to.pdf ./PreTexto/arquivos/licencasCC/by.eps>
-(epstopdf)             \includegraphics on input line 119.
+(epstopdf)             \includegraphics on input line 127.
 Package epstopdf Info: Output file is already uptodate.
 <./PreTexto/arquivos/licencasCC/by-eps-converted-to.pdf, id=22, 120.45pt x 42.1
 575pt>
@@ -2875,10 +2995,10 @@ File: ./PreTexto/arquivos/licencasCC/by-eps-converted-to.pdf Graphic file (type
  pdf)
 <use ./PreTexto/arquivos/licencasCC/by-eps-converted-to.pdf>
 Package pdftex.def Info: ./PreTexto/arquivos/licencasCC/by-eps-converted-to.pdf
-  used on input line 119.
+  used on input line 127.
 (pdftex.def)             Requested size: 72.27054pt x 25.29468pt.
 
-Overfull \hbox (14.73956pt too wide) in paragraph at lines 119--119
+Overfull \hbox (14.73956pt too wide) in paragraph at lines 127--127
 []|[]| 
  []
 
@@ -2901,23 +3021,23 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.133 \approvalpage
+l.141 \approvalpage
                    
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-Underfull \hbox (badness 3049) in paragraph at lines 133--133
+Underfull \hbox (badness 3049) in paragraph at lines 141--141
 \T1/phv/m/n/12 ap-re-sen-tado como req-ui-sito para obten��o
  []
 
 
-Underfull \hbox (badness 4120) in paragraph at lines 133--133
+Underfull \hbox (badness 4120) in paragraph at lines 141--141
 \T1/phv/m/n/12 do t�-tulo de Bacharel em En-gen-haria de
  []
 
 
-Underfull \hbox (badness 1668) in paragraph at lines 133--133
+Underfull \hbox (badness 1668) in paragraph at lines 141--141
 \T1/phv/m/n/12 Com-puta��o do Curso de Bachare-lado em
  []
 
@@ -2928,7 +3048,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.138 \include{./PreTexto/dedicatoria}
+l.146 \include{./PreTexto/dedicatoria}
                                       %% Comente para remover este item
 \openout4 = `main.mw'.
 
@@ -3036,7 +3156,7 @@ LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 ! Undefined control sequence.
 \@glsstyle@myxtab ->\glossarystyle 
                                    {long}\renewcommand *{\glossaryheader }{}...
-l.189 \incluirlistadeacronimos{glossaries}
+l.197 \incluirlistadeacronimos{glossaries}
                                           %% Opções: "glossaries" (pacote)...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3048,7 +3168,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \@glsstyle@myxtab ->\glossarystyle 
                                    {long}\renewcommand *{\glossaryheader }{}...
-l.189 \incluirlistadeacronimos{glossaries}
+l.197 \incluirlistadeacronimos{glossaries}
                                           %% Opções: "glossaries" (pacote)...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3064,7 +3184,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.5 ...tentrycounter[]{page}\glsnumberformat{42}}}
+l.5 ...tentrycounter[]{page}\glsnumberformat{43}}}
                                                   %
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -3098,7 +3218,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--6
 ! Undefined control sequence.
 \@glsstyle@myxtab ->\glossarystyle 
                                    {long}\renewcommand *{\glossaryheader }{}...
-l.189 \incluirlistadeacronimos{glossaries}
+l.197 \incluirlistadeacronimos{glossaries}
                                           %% Opções: "glossaries" (pacote)...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3544,7 +3664,7 @@ I'm ignoring this, since I wasn't doing a \csname.
 ! Missing \endcsname inserted.
 <to be read again> 
                    \__kernel_tl_set:Nx 
-l.29 ...ação e Testes Iniciais}{25}{section.4.2}
+l.29 ...ação e Testes Iniciais}{27}{section.4.2}
                                                   %
 The control sequence marked <to be read again> should
 not appear between \csname and \endcsname.
@@ -3552,14 +3672,14 @@ not appear between \csname and \endcsname.
 ! Extra \endcsname.
 \@ifundefined #1->\ifcsname #1\endcsname 
                                          \@ifundefin@d@i \else \@ifundefin@d...
-l.29 ...ação e Testes Iniciais}{25}{section.4.2}
+l.29 ...ação e Testes Iniciais}{27}{section.4.2}
                                                   %
 I'm ignoring this, since I wasn't doing a \csname.
 
 ! Missing \endcsname inserted.
 <to be read again> 
                    \__kernel_tl_set:Nx 
-l.29 ...ação e Testes Iniciais}{25}{section.4.2}
+l.29 ...ação e Testes Iniciais}{27}{section.4.2}
                                                   %
 The control sequence marked <to be read again> should
 not appear between \csname and \endcsname.
@@ -3567,7 +3687,7 @@ not appear between \csname and \endcsname.
 ! Missing \endcsname inserted.
 <to be read again> 
                    \__kernel_tl_set:Nx 
-l.29 ...ação e Testes Iniciais}{25}{section.4.2}
+l.29 ...ação e Testes Iniciais}{27}{section.4.2}
                                                   %
 The control sequence marked <to be read again> should
 not appear between \csname and \endcsname.
@@ -3575,7 +3695,7 @@ not appear between \csname and \endcsname.
 ! Missing \endcsname inserted.
 <to be read again> 
                    \__kernel_tl_set:Nx 
-l.29 ...ação e Testes Iniciais}{25}{section.4.2}
+l.29 ...ação e Testes Iniciais}{27}{section.4.2}
                                                   %
 The control sequence marked <to be read again> should
 not appear between \csname and \endcsname.
@@ -3587,7 +3707,7 @@ See the xcolor package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.29 ...ação e Testes Iniciais}{25}{section.4.2}
+l.29 ...ação e Testes Iniciais}{27}{section.4.2}
                                                   %
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -3595,14 +3715,14 @@ If that doesn't work, type  X <return>  to quit.
 ! Extra \endcsname.
 \find@pdflink ...rlink \csname @#1color\endcsname 
                                                   
-l.29 ...ação e Testes Iniciais}{25}{section.4.2}
+l.29 ...ação e Testes Iniciais}{27}{section.4.2}
                                                   %
 I'm ignoring this, since I wasn't doing a \csname.
 
 ! Missing \endcsname inserted.
 <to be read again> 
                    \__kernel_tl_set:Nx 
-l.30 ....3}Integração em Campo}{27}{section.4.3}
+l.30 ....3}Integração em Campo}{28}{section.4.3}
                                                   %
 The control sequence marked <to be read again> should
 not appear between \csname and \endcsname.
@@ -3610,14 +3730,14 @@ not appear between \csname and \endcsname.
 ! Extra \endcsname.
 \@ifundefined #1->\ifcsname #1\endcsname 
                                          \@ifundefin@d@i \else \@ifundefin@d...
-l.30 ....3}Integração em Campo}{27}{section.4.3}
+l.30 ....3}Integração em Campo}{28}{section.4.3}
                                                   %
 I'm ignoring this, since I wasn't doing a \csname.
 
 ! Missing \endcsname inserted.
 <to be read again> 
                    \__kernel_tl_set:Nx 
-l.30 ....3}Integração em Campo}{27}{section.4.3}
+l.30 ....3}Integração em Campo}{28}{section.4.3}
                                                   %
 The control sequence marked <to be read again> should
 not appear between \csname and \endcsname.
@@ -3625,7 +3745,7 @@ not appear between \csname and \endcsname.
 ! Missing \endcsname inserted.
 <to be read again> 
                    \__kernel_tl_set:Nx 
-l.30 ....3}Integração em Campo}{27}{section.4.3}
+l.30 ....3}Integração em Campo}{28}{section.4.3}
                                                   %
 The control sequence marked <to be read again> should
 not appear between \csname and \endcsname.
@@ -3633,7 +3753,7 @@ not appear between \csname and \endcsname.
 ! Missing \endcsname inserted.
 <to be read again> 
                    \__kernel_tl_set:Nx 
-l.30 ....3}Integração em Campo}{27}{section.4.3}
+l.30 ....3}Integração em Campo}{28}{section.4.3}
                                                   %
 The control sequence marked <to be read again> should
 not appear between \csname and \endcsname.
@@ -3645,7 +3765,7 @@ See the xcolor package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.30 ....3}Integração em Campo}{27}{section.4.3}
+l.30 ....3}Integração em Campo}{28}{section.4.3}
                                                   %
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -3653,14 +3773,14 @@ If that doesn't work, type  X <return>  to quit.
 ! Extra \endcsname.
 \find@pdflink ...rlink \csname @#1color\endcsname 
                                                   
-l.30 ....3}Integração em Campo}{27}{section.4.3}
+l.30 ....3}Integração em Campo}{28}{section.4.3}
                                                   %
 I'm ignoring this, since I wasn't doing a \csname.
 
 ! Missing \endcsname inserted.
 <to be read again> 
                    \__kernel_tl_set:Nx 
-l.31 ...4.4}Problemas Observados}{27}{section.4.4}
+l.31 ...4.4}Problemas Observados}{29}{section.4.4}
                                                   %
 The control sequence marked <to be read again> should
 not appear between \csname and \endcsname.
@@ -3668,14 +3788,14 @@ not appear between \csname and \endcsname.
 ! Extra \endcsname.
 \@ifundefined #1->\ifcsname #1\endcsname 
                                          \@ifundefin@d@i \else \@ifundefin@d...
-l.31 ...4.4}Problemas Observados}{27}{section.4.4}
+l.31 ...4.4}Problemas Observados}{29}{section.4.4}
                                                   %
 I'm ignoring this, since I wasn't doing a \csname.
 
 ! Missing \endcsname inserted.
 <to be read again> 
                    \__kernel_tl_set:Nx 
-l.31 ...4.4}Problemas Observados}{27}{section.4.4}
+l.31 ...4.4}Problemas Observados}{29}{section.4.4}
                                                   %
 The control sequence marked <to be read again> should
 not appear between \csname and \endcsname.
@@ -3683,7 +3803,7 @@ not appear between \csname and \endcsname.
 ! Missing \endcsname inserted.
 <to be read again> 
                    \__kernel_tl_set:Nx 
-l.31 ...4.4}Problemas Observados}{27}{section.4.4}
+l.31 ...4.4}Problemas Observados}{29}{section.4.4}
                                                   %
 The control sequence marked <to be read again> should
 not appear between \csname and \endcsname.
@@ -3691,7 +3811,7 @@ not appear between \csname and \endcsname.
 ! Missing \endcsname inserted.
 <to be read again> 
                    \__kernel_tl_set:Nx 
-l.31 ...4.4}Problemas Observados}{27}{section.4.4}
+l.31 ...4.4}Problemas Observados}{29}{section.4.4}
                                                   %
 The control sequence marked <to be read again> should
 not appear between \csname and \endcsname.
@@ -3703,7 +3823,7 @@ See the xcolor package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.31 ...4.4}Problemas Observados}{27}{section.4.4}
+l.31 ...4.4}Problemas Observados}{29}{section.4.4}
                                                   %
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -3711,14 +3831,14 @@ If that doesn't work, type  X <return>  to quit.
 ! Extra \endcsname.
 \find@pdflink ...rlink \csname @#1color\endcsname 
                                                   
-l.31 ...4.4}Problemas Observados}{27}{section.4.4}
+l.31 ...4.4}Problemas Observados}{29}{section.4.4}
                                                   %
 I'm ignoring this, since I wasn't doing a \csname.
 
 ! Missing \endcsname inserted.
 <to be read again> 
                    \__kernel_tl_set:Nx 
-l.32 ...4.5}Soluções Propostas}{28}{section.4.5}
+l.32 ...4.5}Soluções Propostas}{29}{section.4.5}
                                                   %
 The control sequence marked <to be read again> should
 not appear between \csname and \endcsname.
@@ -3726,14 +3846,14 @@ not appear between \csname and \endcsname.
 ! Extra \endcsname.
 \@ifundefined #1->\ifcsname #1\endcsname 
                                          \@ifundefin@d@i \else \@ifundefin@d...
-l.32 ...4.5}Soluções Propostas}{28}{section.4.5}
+l.32 ...4.5}Soluções Propostas}{29}{section.4.5}
                                                   %
 I'm ignoring this, since I wasn't doing a \csname.
 
 ! Missing \endcsname inserted.
 <to be read again> 
                    \__kernel_tl_set:Nx 
-l.32 ...4.5}Soluções Propostas}{28}{section.4.5}
+l.32 ...4.5}Soluções Propostas}{29}{section.4.5}
                                                   %
 The control sequence marked <to be read again> should
 not appear between \csname and \endcsname.
@@ -3741,7 +3861,7 @@ not appear between \csname and \endcsname.
 ! Missing \endcsname inserted.
 <to be read again> 
                    \__kernel_tl_set:Nx 
-l.32 ...4.5}Soluções Propostas}{28}{section.4.5}
+l.32 ...4.5}Soluções Propostas}{29}{section.4.5}
                                                   %
 The control sequence marked <to be read again> should
 not appear between \csname and \endcsname.
@@ -3749,7 +3869,7 @@ not appear between \csname and \endcsname.
 ! Missing \endcsname inserted.
 <to be read again> 
                    \__kernel_tl_set:Nx 
-l.32 ...4.5}Soluções Propostas}{28}{section.4.5}
+l.32 ...4.5}Soluções Propostas}{29}{section.4.5}
                                                   %
 The control sequence marked <to be read again> should
 not appear between \csname and \endcsname.
@@ -3761,7 +3881,7 @@ See the xcolor package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.32 ...4.5}Soluções Propostas}{28}{section.4.5}
+l.32 ...4.5}Soluções Propostas}{29}{section.4.5}
                                                   %
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -3769,14 +3889,14 @@ If that doesn't work, type  X <return>  to quit.
 ! Extra \endcsname.
 \find@pdflink ...rlink \csname @#1color\endcsname 
                                                   
-l.32 ...4.5}Soluções Propostas}{28}{section.4.5}
+l.32 ...4.5}Soluções Propostas}{29}{section.4.5}
                                                   %
 I'm ignoring this, since I wasn't doing a \csname.
 
 ! Missing \endcsname inserted.
 <to be read again> 
                    \__kernel_tl_set:Nx 
-l.33 ...mberline {4.6}Discussão}{29}{section.4.6}
+l.33 ...mberline {4.6}Discussão}{32}{section.4.6}
                                                   %
 The control sequence marked <to be read again> should
 not appear between \csname and \endcsname.
@@ -3784,14 +3904,14 @@ not appear between \csname and \endcsname.
 ! Extra \endcsname.
 \@ifundefined #1->\ifcsname #1\endcsname 
                                          \@ifundefin@d@i \else \@ifundefin@d...
-l.33 ...mberline {4.6}Discussão}{29}{section.4.6}
+l.33 ...mberline {4.6}Discussão}{32}{section.4.6}
                                                   %
 I'm ignoring this, since I wasn't doing a \csname.
 
 ! Missing \endcsname inserted.
 <to be read again> 
                    \__kernel_tl_set:Nx 
-l.33 ...mberline {4.6}Discussão}{29}{section.4.6}
+l.33 ...mberline {4.6}Discussão}{32}{section.4.6}
                                                   %
 The control sequence marked <to be read again> should
 not appear between \csname and \endcsname.
@@ -3799,7 +3919,7 @@ not appear between \csname and \endcsname.
 ! Missing \endcsname inserted.
 <to be read again> 
                    \__kernel_tl_set:Nx 
-l.33 ...mberline {4.6}Discussão}{29}{section.4.6}
+l.33 ...mberline {4.6}Discussão}{32}{section.4.6}
                                                   %
 The control sequence marked <to be read again> should
 not appear between \csname and \endcsname.
@@ -3807,7 +3927,7 @@ not appear between \csname and \endcsname.
 ! Missing \endcsname inserted.
 <to be read again> 
                    \__kernel_tl_set:Nx 
-l.33 ...mberline {4.6}Discussão}{29}{section.4.6}
+l.33 ...mberline {4.6}Discussão}{32}{section.4.6}
                                                   %
 The control sequence marked <to be read again> should
 not appear between \csname and \endcsname.
@@ -3819,7 +3939,7 @@ See the xcolor package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.33 ...mberline {4.6}Discussão}{29}{section.4.6}
+l.33 ...mberline {4.6}Discussão}{32}{section.4.6}
                                                   %
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -3827,7 +3947,7 @@ If that doesn't work, type  X <return>  to quit.
 ! Extra \endcsname.
 \find@pdflink ...rlink \csname @#1color\endcsname 
                                                   
-l.33 ...mberline {4.6}Discussão}{29}{section.4.6}
+l.33 ...mberline {4.6}Discussão}{32}{section.4.6}
                                                   %
 I'm ignoring this, since I wasn't doing a \csname.
 
@@ -3995,11 +4115,36 @@ LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
 
 \openout2 = `./capitulos/cap-experimentos-resultados.aux'.
 
+ (./capitulos/cap-experimentos-resultados.tex
 
-No file ./capitulos/cap-experimentos-resultados.tex.
-\openout2 = `./capitulos/cap-conclusoes.aux'.
+LaTeX Warning: Reference `fig:topologia' on page 25 undefined on input line 21.
 
-(./capitulos/cap-conclusoes.tex)
+
+
+LaTeX Warning: File `imagens/arquitetura_geral.png' not found on input line 25.
+
+
+
+! Package pdftex.def Error: File `imagens/arquitetura_geral.png' not found: usi
+ng draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.25 ...\textwidth]{imagens/arquitetura_geral.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 25
+.
+(/usr/share/texmf-dist/tex/latex/psnfss/t1pcr.fd
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+)
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 9.85492pt on input line 26.
+
 
 \openout4 = `main.mw'.
 
@@ -4007,6 +4152,197 @@ No file ./capitulos/cap-experimentos-resultados.tex.
 
 
 
+
+] (./main.mw)
+\openout4 = `main.mw'.
+
+
+
+\openout4 = `main.mw'.
+
+[26] (./main.mw)
+\openout4 = `main.mw'.
+
+
+
+\openout4 = `main.mw'.
+
+[27] (./main.mw)
+\openout4 = `main.mw'.
+
+
+! You can't use `macro parameter character #' in horizontal mode.
+l.126 [#
+        n][Timestamp][Nome]([medida][unidade])\\+
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+
+\openout4 = `main.mw'.
+
+[28] (./main.mw)
+\openout4 = `main.mw'.
+
+
+
+\openout4 = `main.mw'.
+
+[29] (./main.mw)
+\openout4 = `main.mw'.
+
+
+
+\openout4 = `main.mw'.
+
+[30] (./main.mw)
+\openout4 = `main.mw'.
+
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \ALG@currentblock@0 
+l.374 \ForAll
+             {nova\_amostra \textbf{em} fluxo\_de\_dados}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Extra \endcsname.
+\ALG@makebeginrepeat ...\ALG@thisblock \endcsname 
+                                                  \relax \def \ALG@thisblock...
+l.374 \ForAll
+             {nova\_amostra \textbf{em} fluxo\_de\_dados}
+I'm ignoring this, since I wasn't doing a \csname.
+
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10.95> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 376.
+LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
+(Font)              scaled to size 9.85492pt on input line 376.
+! Missing number, treated as zero.
+<to be read again> 
+                   \ALG@currentblock@0 
+l.386 \end{algorithmic}
+                       
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Missing = inserted for \ifnum.
+<to be read again> 
+                   \ALG@currentblock@0 
+l.386 \end{algorithmic}
+                       
+I was expecting to see `<', `=', or `>'. Didn't.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \ALG@currentblock@0 
+l.386 \end{algorithmic}
+                       
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \ALG@currentblock@0 
+l.394 \State
+             contador $\gets 0$
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Extra \endcsname.
+\ALG@makebeginrepeat ...\ALG@thisblock \endcsname 
+                                                  \relax \def \ALG@thisblock...
+l.394 \State
+             contador $\gets 0$
+I'm ignoring this, since I wasn't doing a \csname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \ALG@currentblock@0 
+l.395 \State
+             fila\_reduzida $\gets$ lista\_vazia
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Extra \endcsname.
+\ALG@makebeginrepeat ...\ALG@thisblock \endcsname 
+                                                  \relax \def \ALG@thisblock...
+l.395 \State
+             fila\_reduzida $\gets$ lista\_vazia
+I'm ignoring this, since I wasn't doing a \csname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \ALG@currentblock@0 
+l.396 \ForAll
+             {dado \textbf{em} fila\_original}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Extra \endcsname.
+\ALG@makebeginrepeat ...\ALG@thisblock \endcsname 
+                                                  \relax \def \ALG@thisblock...
+l.396 \ForAll
+             {dado \textbf{em} fila\_original}
+I'm ignoring this, since I wasn't doing a \csname.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \ALG@currentblock@0 
+l.402 \end{algorithmic}
+                       
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Missing = inserted for \ifnum.
+<to be read again> 
+                   \ALG@currentblock@0 
+l.402 \end{algorithmic}
+                       
+I was expecting to see `<', `=', or `>'. Didn't.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \ALG@currentblock@0 
+l.402 \end{algorithmic}
+                       
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+
+
+\openout4 = `main.mw'.
+
+[31] (./main.mw)
+\openout4 = `main.mw'.
+
+
+
+\openout4 = `main.mw'.
+
+[32] (./main.mw)
+\openout4 = `main.mw'.
+
+)
+
+\openout4 = `main.mw'.
+
+[33] (./main.mw)
+\openout4 = `main.mw'.
+
+\openout2 = `./capitulos/cap-conclusoes.aux'.
+
+ (./capitulos/cap-conclusoes.tex)
+
+\openout4 = `main.mw'.
+
+[34
 
 
 
@@ -4022,7 +4358,7 @@ No file main.bbl.
 
 \openout4 = `main.mw'.
 
-[26
+[35
 
 
 
@@ -4032,11 +4368,7 @@ No file main.bbl.
 
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 7.19995pt on input line 10.
-LaTeX Font Info:    Trying to load font information for T1+pcr on input line 10
-.
- (/usr/share/texmf-dist/tex/latex/psnfss/t1pcr.fd
-File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-)
+
 Underfull \hbox (badness 1910) in paragraph at lines 14--15
 []\T1/phv/m/n/12 Ap�ndices usual-mente con-tem-plam provas de teo-re-mas, de-du
 ��es de f�r-mu-las
@@ -4046,7 +4378,7 @@ Underfull \hbox (badness 1910) in paragraph at lines 14--15
 
 \openout4 = `main.mw'.
 
-[27
+[36
 
 ] (./main.mw)
 \openout4 = `main.mw'.
@@ -4057,7 +4389,7 @@ Underfull \hbox (badness 1910) in paragraph at lines 14--15
 
 \openout4 = `main.mw'.
 
-[28
+[37
 
 
 
@@ -4065,13 +4397,11 @@ Underfull \hbox (badness 1910) in paragraph at lines 14--15
 ] (./main.mw)
 \openout4 = `main.mw'.
 
-LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 9.85492pt on input line 9.
 )
 
 \openout4 = `main.mw'.
 
-[29
+[38
 
 ] (./main.mw)
 \openout4 = `main.mw'.
@@ -4085,7 +4415,7 @@ LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 
 \openout4 = `main.mw'.
 
-[30
+[39
 
 
 
@@ -4093,13 +4423,13 @@ LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 ] (./main.mw)
 \openout4 = `main.mw'.
 
-<./PosTexto/Ilustracoes/lei-n9610-p1.pdf, id=247, 597.23125pt x 844.15375pt>
+<./PosTexto/Ilustracoes/lei-n9610-p1.pdf, id=291, 597.23125pt x 844.15375pt>
 File: ./PosTexto/Ilustracoes/lei-n9610-p1.pdf Graphic file (type pdf)
 <use ./PosTexto/Ilustracoes/lei-n9610-p1.pdf>
 Package pdftex.def Info: ./PosTexto/Ilustracoes/lei-n9610-p1.pdf  used on input
  line 9.
 (pdftex.def)             Requested size: 455.24411pt x 643.46986pt.
-<./PosTexto/Ilustracoes/lei-n9610-p2.pdf, id=248, 597.23125pt x 844.15375pt>
+<./PosTexto/Ilustracoes/lei-n9610-p2.pdf, id=292, 597.23125pt x 844.15375pt>
 File: ./PosTexto/Ilustracoes/lei-n9610-p2.pdf Graphic file (type pdf)
 <use ./PosTexto/Ilustracoes/lei-n9610-p2.pdf>
 Package pdftex.def Info: ./PosTexto/Ilustracoes/lei-n9610-p2.pdf  used on input
@@ -4109,7 +4439,7 @@ Package pdftex.def Info: ./PosTexto/Ilustracoes/lei-n9610-p2.pdf  used on input
 
 \openout4 = `main.mw'.
 
-[31
+[40
 
  <./PosTexto/Ilustracoes/lei-n9610-p1.pdf
 
@@ -4123,7 +4453,7 @@ clusion: invalid other resource which is no dict (key 'ProcSets', type <array>)
 
 \openout4 = `main.mw'.
 
-[32 <./PosTexto/Ilustracoes/lei-n9610-p2.pdf
+[41 <./PosTexto/Ilustracoes/lei-n9610-p2.pdf
 
 pdfTeX warning: pdflatex (file ./PosTexto/Ilustracoes/lei-n9610-p2.pdf): PDF in
 clusion: invalid other resource which is no dict (key 'ProcSets', type <array>)
@@ -4137,7 +4467,7 @@ clusion: invalid other resource which is no dict (key 'ProcSets', type <array>)
 
 \openout4 = `main.mw'.
 
-[33
+[42
 
 
 
@@ -4145,23 +4475,23 @@ clusion: invalid other resource which is no dict (key 'ProcSets', type <array>)
 ] (./main.mw)
 \openout4 = `main.mw'.
 
-<figuras/normas.jpg, id=289, 752.8125pt x 651.18282pt>
+<figuras/normas.jpg, id=333, 752.8125pt x 651.18282pt>
 File: figuras/normas.jpg Graphic file (type jpg)
 <use figuras/normas.jpg>
 Package pdftex.def Info: figuras/normas.jpg  used on input line 14.
 (pdftex.def)             Requested size: 409.71692pt x 354.41563pt.
 
 
-LaTeX Warning: Citation `UTFPR2008' on page 34 undefined on input line 15.
+LaTeX Warning: Citation `UTFPR2008' on page 43 undefined on input line 15.
 
 
-LaTeX Warning: Citation `UTFPR2008' on page 34 undefined on input line 15.
+LaTeX Warning: Citation `UTFPR2008' on page 43 undefined on input line 15.
 
 )
 
 \openout4 = `main.mw'.
 
-[34
+[43
 
  <./figuras/normas.jpg>] (./main.mw)
 \openout4 = `main.mw'.
@@ -4299,7 +4629,56 @@ enddocument/afterlastpage (AED): lastpage setting LastPage.
 \openout4 = `main.mw'.
 
 )
-(./capitulos/cap-experimentos-resultados.aux) (./capitulos/cap-conclusoes.aux
+(./capitulos/cap-experimentos-resultados.aux
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+) (./capitulos/cap-conclusoes.aux
 \openout4 = `main.mw'.
 
 \openout4 = `main.mw'.
@@ -4400,72 +4779,31 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 51144 strings out of 475171
- 954103 string characters out of 5767095
- 1555040 words of memory out of 5000000
- 72339 multiletter control sequences out of 15000+600000
- 602031 words of font info for 118 fonts, out of 8000000 for 9000
+ 51953 strings out of 475171
+ 966594 string characters out of 5767095
+ 1566419 words of memory out of 5000000
+ 73031 multiletter control sequences out of 15000+600000
+ 606691 words of font info for 121 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  125i,19n,131p,2419b,2501s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-pdfTeX warning (dest): name{figure.caption.20} has been referenced but does not
+pdfTeX warning (dest): name{figure.caption.19} has been referenced but does not
  exist, replaced by a fixed one
 
 
-pdfTeX warning (dest): name{chapter.5} has been referenced but does not exist, 
-replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsection.4.6.3} has been referenced but does not 
+pdfTeX warning (dest): name{table.caption.16} has been referenced but does not 
 exist, replaced by a fixed one
 
-
-pdfTeX warning (dest): name{subsection.4.6.2} has been referenced but does not 
-exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsubsection.4.6.1.1} has been referenced but does
- not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsection.4.6.1} has been referenced but does not 
-exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{section.4.6} has been referenced but does not exist
-, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{section.4.5} has been referenced but does not exist
-, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{section.4.4} has been referenced but does not exist
-, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{section.4.3} has been referenced but does not exist
-, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{section.4.2} has been referenced but does not exist
-, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{section.4.1} has been referenced but does not exist
-, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{table.caption.19} has been referenced but does not 
-exist, replaced by a fixed one
-
-</usr/share/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texmf-dis
-t/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/he
-lvetic/uhvr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on main.pdf (35 pages, 395883 bytes).
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/urw/cour
+ier/ucrr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr
+/share/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texmf-dist/fo
+nts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on main.pdf (44 pages, 445444 bytes).
 PDF statistics:
- 424 PDF objects out of 1000 (max. 8388607)
- 353 compressed objects within 4 object streams
- 96 named destinations out of 1000 (max. 500000)
- 293 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 516 PDF objects out of 1000 (max. 8388607)
+ 431 compressed objects within 5 object streams
+ 108 named destinations out of 1000 (max. 500000)
+ 381 words of extra memory for PDF output out of 10000 (max. 10000000)
 

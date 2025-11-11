@@ -24,14 +24,26 @@
 \contentsline {section}{\numberline {3.1}Materiais}{24}{section.3.1}%
 \contentsline {section}{\numberline {3.2}Métodos}{24}{section.3.2}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase []{Conclusão}}{25}{chapter.4}%
-\contentsline {appendix}{\chapternumberline {A}\MakeTextUppercase []{Questionário de pesquisa}}{27}{appendix.A}%
+\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase []{Desenvolvimento e Resultados}}{25}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Arquitetura do Sistema}{25}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Implementação e Testes Iniciais}{27}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Integração em Campo}{28}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Problemas Observados}{29}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Soluções Propostas}{29}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Discussão}{32}{section.4.6}%
+\contentsline {subsection}{\numberline {4.6.1}Estudos}{33}{subsection.4.6.1}%
+\contentsline {subsubsection}{\numberline {4.6.1.1}Temperatura}{33}{subsubsection.4.6.1.1}%
+\contentsline {subsection}{\numberline {4.6.2}Aplicação e registro}{33}{subsection.4.6.2}%
+\contentsline {subsection}{\numberline {4.6.3}Análise Comparativa}{33}{subsection.4.6.3}%
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase []{Conclusão}}{34}{chapter.5}%
+\contentsline {appendix}{\chapternumberline {A}\MakeTextUppercase []{Questionário de pesquisa}}{36}{appendix.A}%
 \vspace {\cftbeforechapterskip }
 \renewcommand *{\cftappendixname }{AP\^ENDICE \space }
-\contentsline {appendix}{\chapternumberline {B}\MakeTextUppercase []{Roteiro da entrevista}}{29}{appendix.B}%
+\contentsline {appendix}{\chapternumberline {B}\MakeTextUppercase []{Roteiro da entrevista}}{38}{appendix.B}%
 \cftinsert {AAA}
 \renewcommand *{\cftappendixname }{ANEXO \space }
-\contentsline {appendix}{\chapternumberline {A}\MakeTextUppercase []{Lei N.\textsuperscript {o} 9.610, de 19 de Fevereiro de 1998}}{31}{anexo.anexochapback.1}%
+\contentsline {appendix}{\chapternumberline {A}\MakeTextUppercase []{Lei N.\textsuperscript {o} 9.610, de 19 de Fevereiro de 1998}}{40}{anexo.anexochapback.1}%
 \cftinsert {AAA}
 \renewcommand *{\cftappendixname }{ANEXO \space }
-\contentsline {appendix}{\chapternumberline {B}\MakeTextUppercase []{Normas para elaboração de trabalhos acadêmicos}}{34}{anexo.anexochapback.2}%
+\contentsline {appendix}{\chapternumberline {B}\MakeTextUppercase []{Normas para elaboração de trabalhos acadêmicos}}{43}{anexo.anexochapback.2}%
