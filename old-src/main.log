@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.11.9)  11 NOV 2025 15:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.11.9)  11 NOV 2025 17:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -3103,6 +3103,19 @@ l.144 \include{./PreTexto/dedicatoria}
 \openout2 = `./PreTexto/resumo.aux'.
 
  (./PreTexto/resumo.tex
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <12> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 5.
+LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
+(Font)              scaled to size 10.79993pt on input line 5.
+LaTeX Font Info:    Trying to load font information for TS1+phv on input line 9
+.
+
+(/usr/share/texmf-dist/tex/latex/psnfss/ts1phv.fd
+File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
+)
+LaTeX Font Info:    Font shape `TS1/phv/m/n' will be
+(Font)              scaled to size 10.79993pt on input line 9.
+
 
 \openout4 = `main.mw'.
 
@@ -3194,7 +3207,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.5 ...tentrycounter[]{page}\glsnumberformat{44}}}
+l.5 ...tentrycounter[]{page}\glsnumberformat{43}}}
                                                   %
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -3975,15 +3988,6 @@ I'm ignoring this, since I wasn't doing a \csname.
 \openout2 = `./capitulos/cap-introducao.aux'.
 
  (./capitulos/cap-introducao.tex
-LaTeX Font Info:    Trying to load font information for TS1+phv on input line 1
-6.
-
-(/usr/share/texmf-dist/tex/latex/psnfss/ts1phv.fd
-File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
-)
-LaTeX Font Info:    Font shape `TS1/phv/m/n' will be
-(Font)              scaled to size 10.79993pt on input line 16.
-
 
 \openout4 = `main.mw'.
 
@@ -4022,6 +4026,27 @@ LaTeX Font Info:    Font shape `TS1/phv/m/n' will be
 ] (./main.mw)
 \openout4 = `main.mw'.
 
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 9.85492pt on input line 84.
+LaTeX Font Info:    Font shape `T1/phv/b/it' in size <10.95> not available
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 84.
+LaTeX Font Info:    Font shape `T1/phv/b/sl' will be
+(Font)              scaled to size 9.85492pt on input line 84.
+
+
+! LaTeX Error: File `jatai' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.86     \includegraphics[scale=0.6]{jatai}
+                                           %% Dimensões e localização
+I could not locate the file with any of these extensions:
+.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 
 
 \openout4 = `main.mw'.
@@ -4031,7 +4056,7 @@ LaTeX Font Info:    Font shape `TS1/phv/m/n' will be
 
 
 ! Undefined control sequence.
-l.145 \Section
+l.151 \Section
               {Sensores}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -4046,11 +4071,16 @@ and I'll forget about whatever was undefined.
 [18] (./main.mw)
 \openout4 = `main.mw'.
 
+<figuras/hermes.png, id=193, 721.69624pt x 502.87875pt>
+File: figuras/hermes.png Graphic file (type png)
+<use figuras/hermes.png>
+Package pdftex.def Info: figuras/hermes.png  used on input line 204.
+(pdftex.def)             Requested size: 433.02109pt x 301.72957pt.
 
 
 \openout4 = `main.mw'.
 
-[19] (./main.mw)
+[19 <./figuras/hermes.png>] (./main.mw)
 \openout4 = `main.mw'.
 
 
@@ -4062,7 +4092,7 @@ and I'll forget about whatever was undefined.
 
 
 ! Undefined control sequence.
-l.303 \Section
+l.318 \Section
               {I²C}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -4103,12 +4133,7 @@ and I'll forget about whatever was undefined.
 \openout2 = `./capitulos/cap-metodologia.aux'.
 
 
-(./capitulos/cap-metodologia.tex
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <12> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 14.
-LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 10.79993pt on input line 14.
-)
+(./capitulos/cap-metodologia.tex)
 
 \openout4 = `main.mw'.
 
@@ -4126,9 +4151,7 @@ LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
 \openout2 = `./capitulos/cap-experimentos-resultados.aux'.
 
  (./capitulos/cap-experimentos-resultados.tex
-LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 9.85492pt on input line 25.
-<figuras/arquitetura.png, id=226, 70.8246pt x 53.7207pt>
+<figuras/arquitetura.png, id=223, 70.8246pt x 53.7207pt>
 File: figuras/arquitetura.png Graphic file (type png)
 <use figuras/arquitetura.png>
 Package pdftex.def Info: figuras/arquitetura.png  used on input line 27.
@@ -4145,14 +4168,14 @@ Package pdftex.def Info: figuras/arquitetura.png  used on input line 27.
  <./figuras/arquitetura.png>] (./main.mw)
 \openout4 = `main.mw'.
 
-<figuras/lora32.png, id=233, 1003.75pt x 1003.75pt>
+<figuras/lora32.png, id=229, 1003.75pt x 1003.75pt>
 File: figuras/lora32.png Graphic file (type png)
 <use figuras/lora32.png>
 Package pdftex.def Info: figuras/lora32.png  used on input line 82.
 (pdftex.def)             Requested size: 250.93689pt x 250.93689pt.
 Package hyperref Info: bookmark level for unknown lora32 defaults to 0 on input
  line 84.
-<figuras/topologia.png, id=234, 140.4447pt x 141.1674pt>
+<figuras/topologia.png, id=230, 140.4447pt x 141.1674pt>
 File: figuras/topologia.png Graphic file (type png)
 <use figuras/topologia.png>
 Package pdftex.def Info: figuras/topologia.png  used on input line 104.
@@ -4166,22 +4189,22 @@ Package hyperref Info: bookmark level for unknown  defaults to 0 on input line
 [26 <./figuras/lora32.png>] (./main.mw)
 \openout4 = `main.mw'.
 
-<figuras/dht11.png, id=240, 176.0979pt x 172.0026pt>
+<figuras/dht11.png, id=237, 176.0979pt x 172.0026pt>
 File: figuras/dht11.png Graphic file (type png)
 <use figuras/dht11.png>
 Package pdftex.def Info: figuras/dht11.png  used on input line 121.
 (pdftex.def)             Requested size: 123.26768pt x 120.40099pt.
-<figuras/sht30.png, id=241, 353.32pt x 590.205pt>
+<figuras/sht30.png, id=238, 353.32pt x 590.205pt>
 File: figuras/sht30.png Graphic file (type png)
 <use figuras/sht30.png>
 Package pdftex.def Info: figuras/sht30.png  used on input line 124.
 (pdftex.def)             Requested size: 70.66273pt x 118.0389pt.
-<figuras/bme280.png, id=242, 339.51843pt x 539.76656pt>
+<figuras/bme280.png, id=239, 339.51843pt x 539.76656pt>
 File: figuras/bme280.png Graphic file (type png)
 <use figuras/bme280.png>
 Package pdftex.def Info: figuras/bme280.png  used on input line 128.
 (pdftex.def)             Requested size: 74.69427pt x 118.74901pt.
-<figuras/ds18b20.png, id=243, 441.65pt x 382.42876pt>
+<figuras/ds18b20.png, id=240, 441.65pt x 382.42876pt>
 File: figuras/ds18b20.png Graphic file (type png)
 <use figuras/ds18b20.png>
 Package pdftex.def Info: figuras/ds18b20.png  used on input line 131.
@@ -4267,7 +4290,6 @@ Overfull \hbox (41.55568pt too wide) in paragraph at lines 336--336
 -driven[] 
  []
 
-<figuras/hermes.png, id=272, 721.69624pt x 502.87875pt>
 File: figuras/hermes.png Graphic file (type png)
 <use figuras/hermes.png>
 Package pdftex.def Info: figuras/hermes.png  used on input line 352.
@@ -4398,7 +4420,7 @@ look up `weird error' in the index to The TeXbook.)
 
 \openout4 = `main.mw'.
 
-[32 <./figuras/hermes.png>] (./main.mw)
+[32] (./main.mw)
 \openout4 = `main.mw'.
 
 )
@@ -4495,13 +4517,13 @@ LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 ] (./main.mw)
 \openout4 = `main.mw'.
 
-<./PosTexto/Ilustracoes/lei-n9610-p1.pdf, id=323, 597.23125pt x 844.15375pt>
+<./PosTexto/Ilustracoes/lei-n9610-p1.pdf, id=321, 597.23125pt x 844.15375pt>
 File: ./PosTexto/Ilustracoes/lei-n9610-p1.pdf Graphic file (type pdf)
 <use ./PosTexto/Ilustracoes/lei-n9610-p1.pdf>
 Package pdftex.def Info: ./PosTexto/Ilustracoes/lei-n9610-p1.pdf  used on input
  line 9.
 (pdftex.def)             Requested size: 455.24411pt x 643.46986pt.
-<./PosTexto/Ilustracoes/lei-n9610-p2.pdf, id=324, 597.23125pt x 844.15375pt>
+<./PosTexto/Ilustracoes/lei-n9610-p2.pdf, id=322, 597.23125pt x 844.15375pt>
 File: ./PosTexto/Ilustracoes/lei-n9610-p2.pdf Graphic file (type pdf)
 <use ./PosTexto/Ilustracoes/lei-n9610-p2.pdf>
 Package pdftex.def Info: ./PosTexto/Ilustracoes/lei-n9610-p2.pdf  used on input
@@ -4547,7 +4569,7 @@ clusion: invalid other resource which is no dict (key 'ProcSets', type <array>)
 ] (./main.mw)
 \openout4 = `main.mw'.
 
-<figuras/normas.jpg, id=365, 752.8125pt x 651.18282pt>
+<figuras/normas.jpg, id=363, 752.8125pt x 651.18282pt>
 File: figuras/normas.jpg Graphic file (type jpg)
 <use figuras/normas.jpg>
 Package pdftex.def Info: figuras/normas.jpg  used on input line 14.
@@ -4847,39 +4869,40 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 52030 strings out of 475171
- 967808 string characters out of 5767095
- 1566846 words of memory out of 5000000
- 73105 multiletter control sequences out of 15000+600000
- 606691 words of font info for 121 fonts, out of 8000000 for 9000
+ 52069 strings out of 475171
+ 968383 string characters out of 5767095
+ 1566949 words of memory out of 5000000
+ 73139 multiletter control sequences out of 15000+600000
+ 609547 words of font info for 123 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  125i,19n,131p,2419b,2501s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-pdfTeX warning (dest): name{subsection.4.6.3} has been referenced but does not 
+pdfTeX warning (dest): name{figure.caption.24} has been referenced but does not
+ exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{table.caption.22} has been referenced but does not 
 exist, replaced by a fixed one
 
 
-pdfTeX warning (dest): name{subsection.4.6.2} has been referenced but does not 
+pdfTeX warning (dest): name{table.caption.21} has been referenced but does not 
 exist, replaced by a fixed one
 
 
-pdfTeX warning (dest): name{subsubsection.4.6.1.1} has been referenced but does
+pdfTeX warning (dest): name{photograph.caption.16} has been referenced but does
  not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsection.4.6.1} has been referenced but does not 
-exist, replaced by a fixed one
 
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/
 type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/urw/cour
 ier/ucrr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr
-/share/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texmf-dist/fo
-nts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on main.pdf (44 pages, 4259156 bytes).
+/share/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb></usr/share/texmf-dist/f
+onts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/helve
+tic/uhvro8a.pfb>
+Output written on main.pdf (44 pages, 4269059 bytes).
 PDF statistics:
- 537 PDF objects out of 1000 (max. 8388607)
- 436 compressed objects within 5 object streams
- 114 named destinations out of 1000 (max. 500000)
+ 541 PDF objects out of 1000 (max. 8388607)
+ 438 compressed objects within 5 object streams
+ 116 named destinations out of 1000 (max. 500000)
  389 words of extra memory for PDF output out of 10000 (max. 10000000)
 
