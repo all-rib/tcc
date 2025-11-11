@@ -8,5 +8,5 @@ compile_pdf:
     - cp main.pdf ..
     - cd ..
   artifacts:
-	  paths:
-	    - tcc.pdf  # instruct GitLab to keep the main.pdf file
+    paths:
+      - tcc.pdf  # instruct GitLab to keep the main.pdf file
