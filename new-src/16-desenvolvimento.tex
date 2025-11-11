@@ -20,14 +20,14 @@ contínua de dados.
 O sistema é dividido em três camadas: \textbf{Periféricos},
 \textbf{Controle}, e \textbf{Energia}, conforme ilustrado na Figura \ref{fig:topologia}.
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.85\textwidth]{imagens/arquitetura_geral.png}
-	\caption{Arquitetura geral do sistema de sensoriamento.}
-	\label{fig:arquitetura}
-	\fonte{Autoria própria (2025).}
-\end{figure}
-
+\begin{photograph}[!htb]%% Ambiente figure
+    %\captionsetup{width=0.55\textwidth}%% Largura da legenda
+	\caption{Arquitetura proposta.}%% Legenda
+	\label{fig:arquitetura}%% Rótulo
+    \includegraphics[scale=2]{arquitetura}%% Dimensões e localização
+    \fonte{Autoria Própria}%% Fonte
+    \addcontentsline{loge}{photograph}{\protect\numberline{\thephotograph}Arquitetura Proposta.} % Adiciona à lista de ilustrações
+\end{photograph}
 
 \begin{itemize}
 	\item \textbf{Periféricos:} Composta por sensores de temperatura,
@@ -74,24 +74,87 @@ seja em testes de processamento ou de consulta de periféricos, com o
 único sintoma observado sendo o aquecimento do regulador de tensão
 presente na placa.
 
-[Imagem lora32]
+\begin{photograph}[!htb]%% Ambiente figure
+    %\captionsetup{width=0.55\textwidth}%% Largura da legenda
+	\caption{Microcontrolador LORA32.}%% Legenda
+	\label{fig:lora32}%% Rótulo
+    \includegraphics[scale=0.25]{lora32}%% Dimensões e localização
+    \fonte{Autoria Própria}%% Fonte
+    \addcontentsline{loge}{lora32}{\protect\numberline{\thephotograph}Microcontrolador LORA32.} % Adiciona à lista de ilustrações
+\end{photograph}
+
+%[Imagem lora32]
 
 Para integração dos sensores, cabeamento de rede do tipo cat6 foi
 utilizado, por sua disponibilidade, excelente condutividade, e
 capacidade de redução de efeitos de interferencia, um problema comum
 na utilizacao de conectores para a interface I2C[15]. Foi necessario
-uma pequena topologia para interligar os sensores à placa.
+uma pequena topologia para interligar os sensores à placa, conforme
+[imagem X].
 
 Outro ponto a ser citado é a incapacidade da placa em alimentar os
 sensores. Foi necessário a utlização de um regulador de tensão
 AMS1117.
 
-[Imagem topologia]
+\begin{photograph}[!htb]%% Ambiente figure
+    %\captionsetup{width=0.55\textwidth}%% Largura da legenda
+	\caption{Topologia do sistema.}%% Legenda
+	\label{fig:topologia}%% Rótulo
+    \includegraphics[scale=1.5]{topologia}%% Dimensões e localização
+    \fonte{Autoria Própria}%% Fonte
+    \addcontentsline{loge}{photograph}{\protect\numberline{\thephotograph}Topologia do sistema.} % Adiciona à lista de ilustrações
+\end{photograph}
+
+
+\begin{photograph}[!htb]%% Ambiente figure
+    %\captionsetup{width=0.55\textwidth}%% Largura da legenda
+	\caption{Microcontrolador LORA32.}%% Legenda
+	\label{fig:lora32}%% Rótulo
+    \includegraphics[scale=0.25]{lora32}%% Dimensões e localização
+    \fonte{Autoria Própria}%% Fonte
+    \addcontentsline{loge}{lora32}{\protect\numberline{\thephotograph}Microcontrolador LORA32.} % Adiciona à lista de ilustrações
+\end{photograph}
+
+
 
 Num primeiro experimento, um total de 9 sensores foram conectados,
 inicialmente sem qualquer contato com material organico, sendo um
 microfone, e, dois de cada um dos sensores a seguir: DHT11, SHT30,
 BME280 e DS18B20.
+
+
+\begin{figure}[htb]
+    \caption{Sensores utilizados: (a) DHT11, (b) SHT30, (c) BME280, (d) DS18B20} 
+	\label{fig:sensores}
+	\centering
+	\subfloat[DHT11]{
+		\includegraphics[scale=0.7]{dht11}
+	}\hspace{0.15cm} 
+	\subfloat[SHT30]{
+		\includegraphics[scale=0.2]{sht30}
+	}
+	\subfloat[BME280]{
+		\includegraphics[scale=0.22]{bme280}
+	}
+	\subfloat[DS18B20]{
+		\includegraphics[scale=0.2]{ds18b20}
+	}
+	\fonte{}
+    %\addcontentsline{loge}{figure}{\protect\numberline{\thefigure}Telas de cadastro de Paciente: (a) Cadastro Paciente, (b) Cadastro Paciente 2.}
+\end{figure}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 Os sensores foram conectados em paralelo, permitindo que sejam
 consultados sob demanda. Graças à arquitetura I2C, mais de um sensor
@@ -123,7 +186,7 @@ fornecido pelo fabriante, e gravação dos dados ocorreu em
 armazenamento utilizando uma função atômica de escrita, em um arquivo
 de texto, conforme o padrão a seguir
 
-[#n][Timestamp][Nome]([medida][unidade])\\+
+\texttt{[#n][Timestamp][Nome]([medida][unidade]}
 
 Esse padrão foi utilizado por fornecer contexto de origem do dado,
 instante no qual foi capturado, sequencia entre várias amostrasa, e
@@ -330,6 +393,73 @@ ocorreu.
 dados, um a cada N dados podem ser descartados, de forma que a
 resolução final da observação é reduzida, mas a média dos valores se
 mantém para grandes períodos de captura;
+
+As rotinas podem ser observadas em \autoref{alg:alg1} e \autoref{alg:alg2}.
+
+
+%\begin{sourcecode}[htb]
+%\caption{\label{codigo:classeFoo}Classe Aluno}
+%\begin{lstlisting}[frame=single, language=Java]
+%@Entity
+%public class Foo {
+%
+%    @Id
+%    @GeneratedValue(strategy = GenerationType.IDENTITY)
+%    private Long id;
+%
+%    private String nome;
+%
+%    private Integer ra;
+%
+%    // constructor, getters and setters
+%}
+%\end{lstlisting}
+%\fonte{}
+%\end{sourcecode}
+
+\begin{algorithm}[htb]
+\caption{Agrupamento de novas amostras em séries}
+\label{alg:alg1}%% Rótulo
+\hrule
+\begin{algorithmic}[1]
+\Require Fluxo de (valor, tempo); intervalo\_determinado
+\Ensure Conjunto de séries com valor representativo e lista de tempos
+\ForAll{nova\_amostra \textbf{em} fluxo\_de\_dados}
+	\If{nova\_amostra.valor \textbf{em} intervalo\_determinado}
+		\State procurar \textit{série\_existente} com \textit{série.valor} $\approx$ nova\_amostra.valor
+		\If{\textit{série\_existente} encontrada}
+			\State adicionar nova\_amostra.tempo em \textit{série\_existente.lista\_tempos}
+		\Else
+			\State criar \textit{série} com \textit{valor} $\gets$ nova\_amostra.valor
+			\State \textit{série.lista\_tempos} $\gets$ [\,nova\_amostra.tempo\,]
+			\State adicionar \textit{série} ao \textit{conjunto\_de\_séries}
+		\EndIf
+	\EndIf
+\EndFor
+\end{algorithmic}
+\hrule
+\fonte{Autoria própria}%% Fonte
+\end{algorithm}
+
+\begin{algorithm}[htb]
+\caption{Redução da resolução (subamostragem 1 em N)}
+\label{alg:alg2}%% Rótulo
+\hrule
+\begin{algorithmic}[2]
+\Require fila\_original, fator $N \ge 2$
+\Ensure fila\_reduzida
+\State contador $\gets 0$
+\State fila\_reduzida $\gets$ lista\_vazia
+\ForAll{dado \textbf{em} fila\_original}
+	\State contador $\gets$ contador $+ 1$
+	\If{contador \% N $==$ 0}
+		\State adicionar dado à fila\_reduzida
+	\EndIf
+\EndFor
+\end{algorithmic}
+\hrule
+\fonte{Autoria própria}%% Fonte
+\end{algorithm}
 
 \section{Discussão}
 
