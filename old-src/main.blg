@@ -6,7 +6,6 @@ A level-1 auxiliary file: ./PreTexto/agradecimentos.aux
 A level-1 auxiliary file: ./PreTexto/epigrafe.aux
 A level-1 auxiliary file: ./PreTexto/resumo.aux
 A level-1 auxiliary file: ./PreTexto/abstract.aux
-A level-1 auxiliary file: ./PreTexto/lista-simbolos.aux
 A level-1 auxiliary file: ./capitulos/cap-introducao.aux
 A level-1 auxiliary file: ./capitulos/cap-conceitos.aux
 A level-1 auxiliary file: ./capitulos/cap-trabalhos-relacionados.aux
@@ -58,7 +57,6 @@ I was expecting a `,' or a `}'---line 231 of file main.bib
  :  urlaccessdate = {11 nov. 2025}
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for "Filho2021"
 Reallocated singl_function (elt_size=8) to 100 items from 50.
 Reallocated glb_str_ptr (elt_size=8) to 20 items from 10.
 Reallocated global_strs (elt_size=200001) to 20 items from 10.
@@ -66,6 +64,7 @@ Reallocated glb_str_end (elt_size=8) to 20 items from 10.
 Warning--campo year vazio ou faltando em AbelhaMapa
 Warning--campo year vazio ou faltando em AbelhaAtlas
 Warning--campo year vazio ou faltando em dht11
+Warning--campo note vazio em Filho2021
 Warning--campo year vazio ou faltando em FaoStat
 Warning--campo title vazio em INPA
 Warning--campo note vazio em INPA
@@ -78,45 +77,45 @@ Warning--campo year vazio ou faltando em lily
 | Em caso de dúvidas ou problemas com este estilo procure |
 | http://www.abntex.net.br/                               |
 +---------------------------------------------------------+
-You've used 27 entries,
+You've used 28 entries,
             7039 wiz_defined-function locations,
-            1386 strings with 13312 characters,
-and the built_in function-call counts, 31003 in all, are:
-= -- 3762
-> -- 384
-< -- 853
-+ -- 1038
-- -- 122
-* -- 1822
-:= -- 3794
-add.period$ -- 82
-call.type$ -- 29
-change.case$ -- 173
-chr.to.int$ -- 49
-cite$ -- 29
-duplicate$ -- 3094
-empty$ -- 1346
-format.name$ -- 561
-if$ -- 6283
+            1390 strings with 13417 characters,
+and the built_in function-call counts, 32325 in all, are:
+= -- 3934
+> -- 399
+< -- 897
++ -- 1087
+- -- 127
+* -- 1904
+:= -- 3970
+add.period$ -- 87
+call.type$ -- 30
+change.case$ -- 180
+chr.to.int$ -- 50
+cite$ -- 31
+duplicate$ -- 3239
+empty$ -- 1380
+format.name$ -- 584
+if$ -- 6527
 int.to.chr$ -- 8
 int.to.str$ -- 3
-missing$ -- 376
-newline$ -- 107
-num.names$ -- 90
-pop$ -- 385
+missing$ -- 388
+newline$ -- 111
+num.names$ -- 95
+pop$ -- 390
 preamble$ -- 1
-purify$ -- 88
+purify$ -- 91
 quote$ -- 0
-skip$ -- 3664
+skip$ -- 3816
 stack$ -- 1
-substring$ -- 1294
-swap$ -- 1087
-text.length$ -- 27
+substring$ -- 1356
+swap$ -- 1137
+text.length$ -- 28
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 10
-warning$ -- 10
-while$ -- 127
+warning$ -- 11
+while$ -- 134
 width$ -- 0
-write$ -- 304
+write$ -- 319
 (There were 15 error messages)

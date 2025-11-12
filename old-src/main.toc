@@ -4,44 +4,39 @@
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {1}\MakeTextUppercase []{Introdução}}{13}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Considerações iniciais}{13}{section.1.1}%
-\contentsline {section}{\numberline {1.2}Objetivos}{14}{section.1.2}%
-\contentsline {subsection}{\numberline {1.2.1}Objetivos espec\'ificos}{14}{subsection.1.2.1}%
-\contentsline {subsection}{\numberline {1.2.2}Justificativa}{14}{subsection.1.2.2}%
-\contentsline {section}{\numberline {1.3}Estrutura do Trabalho}{15}{section.1.3}%
+\contentsline {chapter}{\chapternumberline {1}\MakeTextUppercase []{Introdução}}{10}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Considerações iniciais}{10}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Objetivos}{11}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Objetivos espec\'ificos}{11}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Justificativa}{11}{subsection.1.2.2}%
+\contentsline {section}{\numberline {1.3}Estrutura do Trabalho}{12}{section.1.3}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {2}\MakeTextUppercase []{Referencial te\'orico}}{16}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Abelhas, apicultura e apicultura de precis\~ao}{16}{section.2.1}%
-\contentsline {subsection}{\numberline {2.1.1}Tetragonisca angustula}{17}{subsection.2.1.1}%
-\contentsline {subsection}{\numberline {2.1.2}Colmeias jata\'i}{18}{subsection.2.1.2}%
+\contentsline {chapter}{\chapternumberline {2}\MakeTextUppercase []{Referencial te\'orico}}{13}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Abelhas, apicultura e apicultura de precis\~ao}{13}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Tetragonisca angustula}{14}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Colmeias jata\'i}{15}{subsection.2.1.2}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {3}\MakeTextUppercase []{Materiais e Métodos}}{26}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Materiais}{26}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Métodos}{26}{section.3.2}%
+\contentsline {chapter}{\chapternumberline {3}\MakeTextUppercase []{Materiais e Métodos}}{23}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Materiais}{23}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Métodos}{23}{section.3.2}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase []{Desenvolvimento e Resultados}}{27}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Arquitetura do Sistema}{27}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Implementação e Testes Iniciais}{28}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Integração em Campo}{30}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Problemas Observados}{31}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Soluções Propostas}{33}{section.4.5}%
-\contentsline {section}{\numberline {4.6}Discussão}{36}{section.4.6}%
+\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase []{Desenvolvimento e Resultados}}{24}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Arquitetura do Sistema}{24}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Implementação e Testes Iniciais}{25}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Integração em Campo}{27}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Problemas Observados}{28}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Soluções Propostas}{30}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Discussão}{33}{section.4.6}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase []{Conclusão}}{37}{chapter.5}%
+\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase []{Conclusão}}{34}{chapter.5}%
 \vspace {\cftbeforechapterskip }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{\uppercase {Refer\^encias}}{38}{section*.31}%
+\contentsline {chapter}{\uppercase {Refer\^encias}}{35}{section*.25}%
 \renewcommand *{\cftappendixname }{AP\^ENDICE \space }
-\contentsline {appendix}{\chapternumberline {A}\MakeTextUppercase []{Questionário de pesquisa}}{41}{appendix.A}%
-\contentsline {appendix}{\chapternumberline {B}\MakeTextUppercase []{Roteiro da entrevista}}{43}{appendix.B}%
 \cftinsert {AAA}
 \renewcommand *{\cftappendixname }{ANEXO \space }
-\contentsline {appendix}{\chapternumberline {A}\MakeTextUppercase []{Lei N.\textsuperscript {o} 9.610, de 19 de Fevereiro de 1998}}{45}{anexo.anexochapback.1}%
+\contentsline {appendix}{\chapternumberline {A}\MakeTextUppercase []{Lei N.\textsuperscript {o} 9.610, de 19 de Fevereiro de 1998}}{38}{anexo.anexochapback.1}%
 \cftinsert {AAA}
 \renewcommand *{\cftappendixname }{ANEXO \space }
-\contentsline {appendix}{\chapternumberline {B}\MakeTextUppercase []{Normas para elaboração de trabalhos acadêmicos}}{48}{anexo.anexochapback.2}%
+\contentsline {appendix}{\chapternumberline {B}\MakeTextUppercase []{Normas para elaboração de trabalhos acadêmicos}}{41}{anexo.anexochapback.2}%
