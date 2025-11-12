@@ -1,4 +1,4 @@
-# Trabalho de Conclusão de Curso - Reloaded
+# Trabalho de Conclusão de Curso - Reloaded [PDF](old-src/main.pdf)
 
 ## [Notas gerais de escrita](notes)
 
