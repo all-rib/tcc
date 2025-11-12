@@ -29,7 +29,6 @@ O sistema é dividido em três camadas: \textbf{Periféricos},
     \addcontentsline{loge}{figure}{\protect\numberline{\thefigure}Arquitetura Proposta.}
 \end{figure}
 
-
 \begin{itemize}
 	\item \textbf{Periféricos:} Composta por sensores de temperatura,
 	umidade, pressão e som. Essa configuração permite comparar
@@ -67,7 +66,7 @@ interessante, pela possibilidade de contato direto com o mel por não
 posuir quaisquer ponto para entradas de material organico.
 
 O controlador possui recomendações de alimentação de 5V pela porta USB
-[17]. As [baterias utilizadas](fonte) são do tipo LiPo, de 11.1V e
+\cite{lily}. As [baterias utilizadas](fonte) são do tipo LiPo, de 11.1V e
 5000mAh, comuns em projetos de robótica competitiva. Possui 3.7V por
 célula, de maneira que duas das células foram utilizadas, totaluzando
 7.4V. A sobretensão não apresentou quaisquer problemas no controlador,
@@ -89,9 +88,9 @@ presente na placa.
 Para integração dos sensores, cabeamento de rede do tipo cat6 foi
 utilizado, por sua disponibilidade, excelente condutividade, e
 capacidade de redução de efeitos de interferencia, um problema comum
-na utilizacao de conectores para a interface I2C[15]. Foi necessario
+na utilizacao de conectores para a interface I2C \cite{i2c-com}. Foi necessario
 uma pequena topologia para interligar os sensores à placa, conforme
-[imagem X].
+\autoref{fig:topologia}.
 
 Outro ponto a ser citado é a incapacidade da placa em alimentar os
 sensores. Foi necessário a utlização de um regulador de tensão
@@ -110,28 +109,6 @@ Num primeiro experimento, um total de 9 sensores foram conectados,
 inicialmente sem qualquer contato com material organico, sendo um
 microfone, e, dois de cada um dos sensores a seguir: DHT11, SHT30,
 BME280 e DS18B20.
-
-
-\begin{figure}[htb]
-    \caption{Sensores utilizados: (a) BME280, (b) DHT11, (c) DS18B20, (d) SHT30} 
-	\label{fig:sensores}
-	\centering
-	\subfloat[DHT11]{
-		\includegraphics[scale=0.7]{dht11}
-	}\hspace{0.15cm} 
-	\subfloat[SHT30]{
-		\includegraphics[scale=0.2]{sht30}
-	}
-	\newline
-	\subfloat[BME280]{
-		\includegraphics[scale=0.22]{bme280}
-	}
-	\subfloat[DS18B20]{
-		\includegraphics[scale=0.2]{ds18b20}
-	}
-	\fonte{Autoria Própria}
-    %\addcontentsline{loge}{figure}{\protect\numberline{\thefigure}Telas de cadastro de Paciente: (a) Cadastro Paciente, (b) Cadastro Paciente 2.}
-\end{figure}
 
 Os sensores foram conectados em paralelo, permitindo que sejam
 consultados sob demanda. Graças à arquitetura I2C, mais de um sensor
@@ -188,11 +165,26 @@ Após os testes de bancada, o sistema foi instalado em colmeias de
 interior quanto no exterior das caixas, de forma a permitir
 comparações entre as condições ambientais internas e externas.
 
+\begin{photograph}[!htb]%% Ambiente figure
+    %\captionsetup{width=0.55\textwidth}%% Largura da legenda
+	\caption{Posicionamento dos sensores.}%% Legenda
+	\label{fig:sen-pos}%% Rótulo
+    \includegraphics[scale=0.1]{sen-pos}%% Dimensões e localização
+    \fonte{Autoria Própria}%% Fonte
+\end{photograph}
+
 Para integração com a colméia, o controlador e bateria foram presos ao
-pilar de suporte da colméia, conforme [figura X](inserir foto da
-colmeia), e os sensores dispostos no sobreninho mais superior, distante
+pilar de suporte da colméia, conforme \autoref{fig:sis-comp}, e os sensores dispostos no sobreninho mais superior, distante
 do contato com os favos, prevendo possiveis problemas de funcionamento
 dos sensores devido exposição ao mel e a cera.
+
+\begin{photograph}[!htb]%% Ambiente figure
+    %\captionsetup{width=0.55\textwidth}%% Largura da legenda
+	\caption{Sistema integrado à colmeia.}%% Legenda
+	\label{fig:sis-comp}%% Rótulo
+    \includegraphics[scale=0.1]{sis-comp}%% Dimensões e localização
+    \fonte{Autoria Própria}%% Fonte
+\end{photograph}
 
 Foi necessário selar quaisquer pontos de conexão e passagem de fios
 dentro e no limiar da colméia. Isso foi necessário devido à atividade
@@ -226,6 +218,14 @@ distinta quando comparada ao sensor em contato com o mel. Além disso,
 a utilização de resinas ou outros produtos para impermeabilizar estes
 sensores interferem na sua precisão, e na saúde dos insetos, pois em
 sua grande parte, eles possuem solventes e outros materiais tóxicos.
+
+\begin{photograph}[!htb]%% Ambiente figure
+    %\captionsetup{width=0.55\textwidth}%% Largura da legenda
+	\caption{Sensor com material organico.}%% Legenda
+	\label{fig:sen-cob}%% Rótulo
+    \includegraphics[scale=0.4]{sen-cob}%% Dimensões e localização
+    \fonte{Autoria Própria}%% Fonte
+\end{photograph}
 
 Para observação dos eventos de falha, o uso da API padrão dos
 dispositivos ESP32 se torna exaustiva do ponto de vista de
@@ -313,30 +313,29 @@ no cartão sem concorrência.
 Além disso, a biblioteca foi implementada com uma análise de
 requisitos, a saber
 
-\begin{verbatim}
+ - Somente ele pode escrever. Outros atores devem depender dele para
+ realizar escritas.
 
-- Only it can write. Other actors must rely on this to write.
+ - Deve escrever, não importa o que aconteça (ou seja, a escrita deve
+ sempre ter sucesso);
 
-- Must write, no matter what happens (i.e. write must always succeed);
+ - Isso significa que, se por qualquer motivo o meio de escrita falhar,
+ ator deve ser capaz de manter as informações por tempo suficiente, ou
+ rnecer os meios necessários para aliviar a carga da escrita atual, até que
+ o io de escrita volte ao normal;
 
-This means that if for any reason, the media fails to be written to,
-the actor must be able to hold-on information for long enough, or
-provide necessary means to easy the load of current write, until the
-write media goes back to normal;
+ - Deve, enquanto escreve, bloquear qualquer ator de realizar leitura;
 
-- Must, while writing, lock any actor from reading it;
+ - Isso serve para evitar a recuperação de informações incompletas ou
+ imprecisas (ou seja, garantir operações de leitura/escrita atômicas);
 
-This is to prevent incomplete/inaccurate info retrieval (i.e. atomic
-write/read operations)
+ - Deve, enquanto lê, bloquear qualquer ator de realizar escrita;
 
-- Must, while reading, lock any actor from writing it;
+ - Deve lidar com escritas/leitura paralelas;
 
-- Must handle parallel writes/reads;
+ - Deve gerar seus próprios eventos (ser capaz de registrar a si mesmo em
+ um modelo orientado a eventos).
 
-- Must generate its own events (be able to log itself in event-driven
-manner);
-
-\end{verbatim}
 
 	Dentre os requisitos, destacam se dois importantes: "Must write,
 no matter what happens", essencial para a garantia de telemetria dos

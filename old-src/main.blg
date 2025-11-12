@@ -1,0 +1,122 @@
+This is BibTeX, Version 0.99d (TeX Live 2026/dev/Arch Linux)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: main.aux
+A level-1 auxiliary file: ./PreTexto/dedicatoria.aux
+A level-1 auxiliary file: ./PreTexto/agradecimentos.aux
+A level-1 auxiliary file: ./PreTexto/epigrafe.aux
+A level-1 auxiliary file: ./PreTexto/resumo.aux
+A level-1 auxiliary file: ./PreTexto/abstract.aux
+A level-1 auxiliary file: ./PreTexto/lista-simbolos.aux
+A level-1 auxiliary file: ./capitulos/cap-introducao.aux
+A level-1 auxiliary file: ./capitulos/cap-conceitos.aux
+A level-1 auxiliary file: ./capitulos/cap-trabalhos-relacionados.aux
+A level-1 auxiliary file: ./capitulos/cap-proposta.aux
+A level-1 auxiliary file: ./capitulos/cap-metodologia.aux
+A level-1 auxiliary file: ./capitulos/cap-experimentos-resultados.aux
+A level-1 auxiliary file: ./capitulos/cap-conclusoes.aux
+A level-1 auxiliary file: ./PosTexto/apendicea.aux
+A level-1 auxiliary file: ./PosTexto/apendiceb.aux
+A level-1 auxiliary file: ./PosTexto/anexoa.aux
+A level-1 auxiliary file: ./PosTexto/anexob.aux
+The style file: abntex2-alf.bst
+Reallocated singl_function (elt_size=8) to 100 items from 50.
+Reallocated singl_function (elt_size=8) to 100 items from 50.
+Reallocated singl_function (elt_size=8) to 100 items from 50.
+Reallocated singl_function (elt_size=8) to 100 items from 50.
+Reallocated wiz_functions (elt_size=8) to 6000 items from 3000.
+Reallocated singl_function (elt_size=8) to 100 items from 50.
+Reallocated singl_function (elt_size=8) to 100 items from 50.
+write is an unknown function---line 1736 of file abntex2-alf.bst
+write is an unknown function---line 1744 of file abntex2-alf.bst
+write is an unknown function---line 1745 of file abntex2-alf.bst
+write is an unknown function---line 1746 of file abntex2-alf.bst
+Reallocated singl_function (elt_size=8) to 100 items from 50.
+write is an unknown function---line 1762 of file abntex2-alf.bst
+write is an unknown function---line 1811 of file abntex2-alf.bst
+write is an unknown function---line 1856 of file abntex2-alf.bst
+write is an unknown function---line 1861 of file abntex2-alf.bst
+write is an unknown function---line 1862 of file abntex2-alf.bst
+Reallocated wiz_functions (elt_size=8) to 9000 items from 6000.
+write is an unknown function---line 1907 of file abntex2-alf.bst
+write is an unknown function---line 1927 of file abntex2-alf.bst
+write is an unknown function---line 1930 of file abntex2-alf.bst
+Reallocated singl_function (elt_size=8) to 100 items from 50.
+Database file #1: abntex2-options.bib
+Database file #2: main.bib
+I was expecting a `,' or a `}'---line 214 of file main.bib
+ :  
+ :  urlaccessdate = {11 nov. 2025}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 219 of file main.bib
+ :  
+ :  month = {May},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 231 of file main.bib
+ :  
+ :  urlaccessdate = {11 nov. 2025}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "Filho2021"
+Reallocated singl_function (elt_size=8) to 100 items from 50.
+Reallocated glb_str_ptr (elt_size=8) to 20 items from 10.
+Reallocated global_strs (elt_size=200001) to 20 items from 10.
+Reallocated glb_str_end (elt_size=8) to 20 items from 10.
+Warning--campo year vazio ou faltando em AbelhaMapa
+Warning--campo year vazio ou faltando em AbelhaAtlas
+Warning--campo year vazio ou faltando em dht11
+Warning--campo year vazio ou faltando em FaoStat
+Warning--campo title vazio em INPA
+Warning--campo note vazio em INPA
+Warning--campo year vazio ou faltando em INPA
+Warning--campo year vazio ou faltando em i2c-com
+Warning--campo year vazio ou faltando em Allan2025
+Warning--campo year vazio ou faltando em lily
++---------------------------------------------------------+
+| Estilo bibliográfico abntex2-alf.bst versão v-1.9.7           |
+| Em caso de dúvidas ou problemas com este estilo procure |
+| http://www.abntex.net.br/                               |
++---------------------------------------------------------+
+You've used 27 entries,
+            7039 wiz_defined-function locations,
+            1386 strings with 13312 characters,
+and the built_in function-call counts, 31003 in all, are:
+= -- 3762
+> -- 384
+< -- 853
++ -- 1038
+- -- 122
+* -- 1822
+:= -- 3794
+add.period$ -- 82
+call.type$ -- 29
+change.case$ -- 173
+chr.to.int$ -- 49
+cite$ -- 29
+duplicate$ -- 3094
+empty$ -- 1346
+format.name$ -- 561
+if$ -- 6283
+int.to.chr$ -- 8
+int.to.str$ -- 3
+missing$ -- 376
+newline$ -- 107
+num.names$ -- 90
+pop$ -- 385
+preamble$ -- 1
+purify$ -- 88
+quote$ -- 0
+skip$ -- 3664
+stack$ -- 1
+substring$ -- 1294
+swap$ -- 1087
+text.length$ -- 27
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 10
+warning$ -- 10
+while$ -- 127
+width$ -- 0
+write$ -- 304
+(There were 15 error messages)

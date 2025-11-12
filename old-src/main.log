@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.11.9)  11 NOV 2025 17:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.11.9)  12 NOV 2025 01:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -3089,6 +3089,10 @@ l.144 \include{./PreTexto/dedicatoria}
 
  (./PreTexto/epigrafe.tex
 
+LaTeX Warning: Citation `Filho2021' on page 5 undefined on input line 5.
+
+
+
 \openout4 = `main.mw'.
 
 [5
@@ -3149,7 +3153,7 @@ Overfull \hbox (384.85985pt too wide) in paragraph at lines 2--167
 
 
 Overfull \hbox (371.43346pt too wide) in paragraph at lines 2--167
-\T1/phv/m/n/12 LORA32.[][]26[][][]Topologia
+\T1/phv/m/n/12 LORA32.[][]28[][][]Topologia
  []
 
 
@@ -3207,7 +3211,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.5 ...tentrycounter[]{page}\glsnumberformat{43}}}
+l.5 ...tentrycounter[]{page}\glsnumberformat{48}}}
                                                   %
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -3513,7 +3517,7 @@ I'm ignoring this, since I wasn't doing a \csname.
 ! Missing \endcsname inserted.
 <to be read again> 
                    \__kernel_tl_set:Nx 
-l.24 ...umberline {3.1}Materiais}{24}{section.3.1}
+l.24 ...umberline {3.1}Materiais}{26}{section.3.1}
                                                   %
 The control sequence marked <to be read again> should
 not appear between \csname and \endcsname.
@@ -3521,14 +3525,14 @@ not appear between \csname and \endcsname.
 ! Extra \endcsname.
 \@ifundefined #1->\ifcsname #1\endcsname 
                                          \@ifundefin@d@i \else \@ifundefin@d...
-l.24 ...umberline {3.1}Materiais}{24}{section.3.1}
+l.24 ...umberline {3.1}Materiais}{26}{section.3.1}
                                                   %
 I'm ignoring this, since I wasn't doing a \csname.
 
 ! Missing \endcsname inserted.
 <to be read again> 
                    \__kernel_tl_set:Nx 
-l.24 ...umberline {3.1}Materiais}{24}{section.3.1}
+l.24 ...umberline {3.1}Materiais}{26}{section.3.1}
                                                   %
 The control sequence marked <to be read again> should
 not appear between \csname and \endcsname.
@@ -3536,7 +3540,7 @@ not appear between \csname and \endcsname.
 ! Missing \endcsname inserted.
 <to be read again> 
                    \__kernel_tl_set:Nx 
-l.24 ...umberline {3.1}Materiais}{24}{section.3.1}
+l.24 ...umberline {3.1}Materiais}{26}{section.3.1}
                                                   %
 The control sequence marked <to be read again> should
 not appear between \csname and \endcsname.
@@ -3544,7 +3548,7 @@ not appear between \csname and \endcsname.
 ! Missing \endcsname inserted.
 <to be read again> 
                    \__kernel_tl_set:Nx 
-l.24 ...umberline {3.1}Materiais}{24}{section.3.1}
+l.24 ...umberline {3.1}Materiais}{26}{section.3.1}
                                                   %
 The control sequence marked <to be read again> should
 not appear between \csname and \endcsname.
@@ -3556,7 +3560,7 @@ See the xcolor package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.24 ...umberline {3.1}Materiais}{24}{section.3.1}
+l.24 ...umberline {3.1}Materiais}{26}{section.3.1}
                                                   %
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -3564,14 +3568,14 @@ If that doesn't work, type  X <return>  to quit.
 ! Extra \endcsname.
 \find@pdflink ...rlink \csname @#1color\endcsname 
                                                   
-l.24 ...umberline {3.1}Materiais}{24}{section.3.1}
+l.24 ...umberline {3.1}Materiais}{26}{section.3.1}
                                                   %
 I'm ignoring this, since I wasn't doing a \csname.
 
 ! Missing \endcsname inserted.
 <to be read again> 
                    \__kernel_tl_set:Nx 
-l.25 ...numberline {3.2}Métodos}{24}{section.3.2}
+l.25 ...numberline {3.2}Métodos}{26}{section.3.2}
                                                   %
 The control sequence marked <to be read again> should
 not appear between \csname and \endcsname.
@@ -3579,14 +3583,14 @@ not appear between \csname and \endcsname.
 ! Extra \endcsname.
 \@ifundefined #1->\ifcsname #1\endcsname 
                                          \@ifundefin@d@i \else \@ifundefin@d...
-l.25 ...numberline {3.2}Métodos}{24}{section.3.2}
+l.25 ...numberline {3.2}Métodos}{26}{section.3.2}
                                                   %
 I'm ignoring this, since I wasn't doing a \csname.
 
 ! Missing \endcsname inserted.
 <to be read again> 
                    \__kernel_tl_set:Nx 
-l.25 ...numberline {3.2}Métodos}{24}{section.3.2}
+l.25 ...numberline {3.2}Métodos}{26}{section.3.2}
                                                   %
 The control sequence marked <to be read again> should
 not appear between \csname and \endcsname.
@@ -3594,7 +3598,7 @@ not appear between \csname and \endcsname.
 ! Missing \endcsname inserted.
 <to be read again> 
                    \__kernel_tl_set:Nx 
-l.25 ...numberline {3.2}Métodos}{24}{section.3.2}
+l.25 ...numberline {3.2}Métodos}{26}{section.3.2}
                                                   %
 The control sequence marked <to be read again> should
 not appear between \csname and \endcsname.
@@ -3602,7 +3606,7 @@ not appear between \csname and \endcsname.
 ! Missing \endcsname inserted.
 <to be read again> 
                    \__kernel_tl_set:Nx 
-l.25 ...numberline {3.2}Métodos}{24}{section.3.2}
+l.25 ...numberline {3.2}Métodos}{26}{section.3.2}
                                                   %
 The control sequence marked <to be read again> should
 not appear between \csname and \endcsname.
@@ -3614,7 +3618,7 @@ See the xcolor package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.25 ...numberline {3.2}Métodos}{24}{section.3.2}
+l.25 ...numberline {3.2}Métodos}{26}{section.3.2}
                                                   %
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -3622,14 +3626,14 @@ If that doesn't work, type  X <return>  to quit.
 ! Extra \endcsname.
 \find@pdflink ...rlink \csname @#1color\endcsname 
                                                   
-l.25 ...numberline {3.2}Métodos}{24}{section.3.2}
+l.25 ...numberline {3.2}Métodos}{26}{section.3.2}
                                                   %
 I'm ignoring this, since I wasn't doing a \csname.
 
 ! Missing \endcsname inserted.
 <to be read again> 
                    \__kernel_tl_set:Nx 
-l.28 ...1}Arquitetura do Sistema}{25}{section.4.1}
+l.28 ...1}Arquitetura do Sistema}{27}{section.4.1}
                                                   %
 The control sequence marked <to be read again> should
 not appear between \csname and \endcsname.
@@ -3637,14 +3641,14 @@ not appear between \csname and \endcsname.
 ! Extra \endcsname.
 \@ifundefined #1->\ifcsname #1\endcsname 
                                          \@ifundefin@d@i \else \@ifundefin@d...
-l.28 ...1}Arquitetura do Sistema}{25}{section.4.1}
+l.28 ...1}Arquitetura do Sistema}{27}{section.4.1}
                                                   %
 I'm ignoring this, since I wasn't doing a \csname.
 
 ! Missing \endcsname inserted.
 <to be read again> 
                    \__kernel_tl_set:Nx 
-l.28 ...1}Arquitetura do Sistema}{25}{section.4.1}
+l.28 ...1}Arquitetura do Sistema}{27}{section.4.1}
                                                   %
 The control sequence marked <to be read again> should
 not appear between \csname and \endcsname.
@@ -3652,7 +3656,7 @@ not appear between \csname and \endcsname.
 ! Missing \endcsname inserted.
 <to be read again> 
                    \__kernel_tl_set:Nx 
-l.28 ...1}Arquitetura do Sistema}{25}{section.4.1}
+l.28 ...1}Arquitetura do Sistema}{27}{section.4.1}
                                                   %
 The control sequence marked <to be read again> should
 not appear between \csname and \endcsname.
@@ -3660,7 +3664,7 @@ not appear between \csname and \endcsname.
 ! Missing \endcsname inserted.
 <to be read again> 
                    \__kernel_tl_set:Nx 
-l.28 ...1}Arquitetura do Sistema}{25}{section.4.1}
+l.28 ...1}Arquitetura do Sistema}{27}{section.4.1}
                                                   %
 The control sequence marked <to be read again> should
 not appear between \csname and \endcsname.
@@ -3672,7 +3676,7 @@ See the xcolor package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.28 ...1}Arquitetura do Sistema}{25}{section.4.1}
+l.28 ...1}Arquitetura do Sistema}{27}{section.4.1}
                                                   %
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -3680,14 +3684,14 @@ If that doesn't work, type  X <return>  to quit.
 ! Extra \endcsname.
 \find@pdflink ...rlink \csname @#1color\endcsname 
                                                   
-l.28 ...1}Arquitetura do Sistema}{25}{section.4.1}
+l.28 ...1}Arquitetura do Sistema}{27}{section.4.1}
                                                   %
 I'm ignoring this, since I wasn't doing a \csname.
 
 ! Missing \endcsname inserted.
 <to be read again> 
                    \__kernel_tl_set:Nx 
-l.29 ...ação e Testes Iniciais}{26}{section.4.2}
+l.29 ...ação e Testes Iniciais}{28}{section.4.2}
                                                   %
 The control sequence marked <to be read again> should
 not appear between \csname and \endcsname.
@@ -3695,14 +3699,14 @@ not appear between \csname and \endcsname.
 ! Extra \endcsname.
 \@ifundefined #1->\ifcsname #1\endcsname 
                                          \@ifundefin@d@i \else \@ifundefin@d...
-l.29 ...ação e Testes Iniciais}{26}{section.4.2}
+l.29 ...ação e Testes Iniciais}{28}{section.4.2}
                                                   %
 I'm ignoring this, since I wasn't doing a \csname.
 
 ! Missing \endcsname inserted.
 <to be read again> 
                    \__kernel_tl_set:Nx 
-l.29 ...ação e Testes Iniciais}{26}{section.4.2}
+l.29 ...ação e Testes Iniciais}{28}{section.4.2}
                                                   %
 The control sequence marked <to be read again> should
 not appear between \csname and \endcsname.
@@ -3710,7 +3714,7 @@ not appear between \csname and \endcsname.
 ! Missing \endcsname inserted.
 <to be read again> 
                    \__kernel_tl_set:Nx 
-l.29 ...ação e Testes Iniciais}{26}{section.4.2}
+l.29 ...ação e Testes Iniciais}{28}{section.4.2}
                                                   %
 The control sequence marked <to be read again> should
 not appear between \csname and \endcsname.
@@ -3718,7 +3722,7 @@ not appear between \csname and \endcsname.
 ! Missing \endcsname inserted.
 <to be read again> 
                    \__kernel_tl_set:Nx 
-l.29 ...ação e Testes Iniciais}{26}{section.4.2}
+l.29 ...ação e Testes Iniciais}{28}{section.4.2}
                                                   %
 The control sequence marked <to be read again> should
 not appear between \csname and \endcsname.
@@ -3730,7 +3734,7 @@ See the xcolor package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.29 ...ação e Testes Iniciais}{26}{section.4.2}
+l.29 ...ação e Testes Iniciais}{28}{section.4.2}
                                                   %
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -3738,14 +3742,14 @@ If that doesn't work, type  X <return>  to quit.
 ! Extra \endcsname.
 \find@pdflink ...rlink \csname @#1color\endcsname 
                                                   
-l.29 ...ação e Testes Iniciais}{26}{section.4.2}
+l.29 ...ação e Testes Iniciais}{28}{section.4.2}
                                                   %
 I'm ignoring this, since I wasn't doing a \csname.
 
 ! Missing \endcsname inserted.
 <to be read again> 
                    \__kernel_tl_set:Nx 
-l.30 ....3}Integração em Campo}{28}{section.4.3}
+l.30 ....3}Integração em Campo}{30}{section.4.3}
                                                   %
 The control sequence marked <to be read again> should
 not appear between \csname and \endcsname.
@@ -3753,14 +3757,14 @@ not appear between \csname and \endcsname.
 ! Extra \endcsname.
 \@ifundefined #1->\ifcsname #1\endcsname 
                                          \@ifundefin@d@i \else \@ifundefin@d...
-l.30 ....3}Integração em Campo}{28}{section.4.3}
+l.30 ....3}Integração em Campo}{30}{section.4.3}
                                                   %
 I'm ignoring this, since I wasn't doing a \csname.
 
 ! Missing \endcsname inserted.
 <to be read again> 
                    \__kernel_tl_set:Nx 
-l.30 ....3}Integração em Campo}{28}{section.4.3}
+l.30 ....3}Integração em Campo}{30}{section.4.3}
                                                   %
 The control sequence marked <to be read again> should
 not appear between \csname and \endcsname.
@@ -3768,7 +3772,7 @@ not appear between \csname and \endcsname.
 ! Missing \endcsname inserted.
 <to be read again> 
                    \__kernel_tl_set:Nx 
-l.30 ....3}Integração em Campo}{28}{section.4.3}
+l.30 ....3}Integração em Campo}{30}{section.4.3}
                                                   %
 The control sequence marked <to be read again> should
 not appear between \csname and \endcsname.
@@ -3776,7 +3780,7 @@ not appear between \csname and \endcsname.
 ! Missing \endcsname inserted.
 <to be read again> 
                    \__kernel_tl_set:Nx 
-l.30 ....3}Integração em Campo}{28}{section.4.3}
+l.30 ....3}Integração em Campo}{30}{section.4.3}
                                                   %
 The control sequence marked <to be read again> should
 not appear between \csname and \endcsname.
@@ -3788,7 +3792,7 @@ See the xcolor package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.30 ....3}Integração em Campo}{28}{section.4.3}
+l.30 ....3}Integração em Campo}{30}{section.4.3}
                                                   %
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -3796,14 +3800,14 @@ If that doesn't work, type  X <return>  to quit.
 ! Extra \endcsname.
 \find@pdflink ...rlink \csname @#1color\endcsname 
                                                   
-l.30 ....3}Integração em Campo}{28}{section.4.3}
+l.30 ....3}Integração em Campo}{30}{section.4.3}
                                                   %
 I'm ignoring this, since I wasn't doing a \csname.
 
 ! Missing \endcsname inserted.
 <to be read again> 
                    \__kernel_tl_set:Nx 
-l.31 ...4.4}Problemas Observados}{29}{section.4.4}
+l.31 ...4.4}Problemas Observados}{31}{section.4.4}
                                                   %
 The control sequence marked <to be read again> should
 not appear between \csname and \endcsname.
@@ -3811,14 +3815,14 @@ not appear between \csname and \endcsname.
 ! Extra \endcsname.
 \@ifundefined #1->\ifcsname #1\endcsname 
                                          \@ifundefin@d@i \else \@ifundefin@d...
-l.31 ...4.4}Problemas Observados}{29}{section.4.4}
+l.31 ...4.4}Problemas Observados}{31}{section.4.4}
                                                   %
 I'm ignoring this, since I wasn't doing a \csname.
 
 ! Missing \endcsname inserted.
 <to be read again> 
                    \__kernel_tl_set:Nx 
-l.31 ...4.4}Problemas Observados}{29}{section.4.4}
+l.31 ...4.4}Problemas Observados}{31}{section.4.4}
                                                   %
 The control sequence marked <to be read again> should
 not appear between \csname and \endcsname.
@@ -3826,7 +3830,7 @@ not appear between \csname and \endcsname.
 ! Missing \endcsname inserted.
 <to be read again> 
                    \__kernel_tl_set:Nx 
-l.31 ...4.4}Problemas Observados}{29}{section.4.4}
+l.31 ...4.4}Problemas Observados}{31}{section.4.4}
                                                   %
 The control sequence marked <to be read again> should
 not appear between \csname and \endcsname.
@@ -3834,7 +3838,7 @@ not appear between \csname and \endcsname.
 ! Missing \endcsname inserted.
 <to be read again> 
                    \__kernel_tl_set:Nx 
-l.31 ...4.4}Problemas Observados}{29}{section.4.4}
+l.31 ...4.4}Problemas Observados}{31}{section.4.4}
                                                   %
 The control sequence marked <to be read again> should
 not appear between \csname and \endcsname.
@@ -3846,7 +3850,7 @@ See the xcolor package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.31 ...4.4}Problemas Observados}{29}{section.4.4}
+l.31 ...4.4}Problemas Observados}{31}{section.4.4}
                                                   %
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -3854,14 +3858,14 @@ If that doesn't work, type  X <return>  to quit.
 ! Extra \endcsname.
 \find@pdflink ...rlink \csname @#1color\endcsname 
                                                   
-l.31 ...4.4}Problemas Observados}{29}{section.4.4}
+l.31 ...4.4}Problemas Observados}{31}{section.4.4}
                                                   %
 I'm ignoring this, since I wasn't doing a \csname.
 
 ! Missing \endcsname inserted.
 <to be read again> 
                    \__kernel_tl_set:Nx 
-l.32 ...4.5}Soluções Propostas}{30}{section.4.5}
+l.32 ...4.5}Soluções Propostas}{33}{section.4.5}
                                                   %
 The control sequence marked <to be read again> should
 not appear between \csname and \endcsname.
@@ -3869,14 +3873,14 @@ not appear between \csname and \endcsname.
 ! Extra \endcsname.
 \@ifundefined #1->\ifcsname #1\endcsname 
                                          \@ifundefin@d@i \else \@ifundefin@d...
-l.32 ...4.5}Soluções Propostas}{30}{section.4.5}
+l.32 ...4.5}Soluções Propostas}{33}{section.4.5}
                                                   %
 I'm ignoring this, since I wasn't doing a \csname.
 
 ! Missing \endcsname inserted.
 <to be read again> 
                    \__kernel_tl_set:Nx 
-l.32 ...4.5}Soluções Propostas}{30}{section.4.5}
+l.32 ...4.5}Soluções Propostas}{33}{section.4.5}
                                                   %
 The control sequence marked <to be read again> should
 not appear between \csname and \endcsname.
@@ -3884,7 +3888,7 @@ not appear between \csname and \endcsname.
 ! Missing \endcsname inserted.
 <to be read again> 
                    \__kernel_tl_set:Nx 
-l.32 ...4.5}Soluções Propostas}{30}{section.4.5}
+l.32 ...4.5}Soluções Propostas}{33}{section.4.5}
                                                   %
 The control sequence marked <to be read again> should
 not appear between \csname and \endcsname.
@@ -3892,7 +3896,7 @@ not appear between \csname and \endcsname.
 ! Missing \endcsname inserted.
 <to be read again> 
                    \__kernel_tl_set:Nx 
-l.32 ...4.5}Soluções Propostas}{30}{section.4.5}
+l.32 ...4.5}Soluções Propostas}{33}{section.4.5}
                                                   %
 The control sequence marked <to be read again> should
 not appear between \csname and \endcsname.
@@ -3904,7 +3908,7 @@ See the xcolor package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.32 ...4.5}Soluções Propostas}{30}{section.4.5}
+l.32 ...4.5}Soluções Propostas}{33}{section.4.5}
                                                   %
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -3912,14 +3916,14 @@ If that doesn't work, type  X <return>  to quit.
 ! Extra \endcsname.
 \find@pdflink ...rlink \csname @#1color\endcsname 
                                                   
-l.32 ...4.5}Soluções Propostas}{30}{section.4.5}
+l.32 ...4.5}Soluções Propostas}{33}{section.4.5}
                                                   %
 I'm ignoring this, since I wasn't doing a \csname.
 
 ! Missing \endcsname inserted.
 <to be read again> 
                    \__kernel_tl_set:Nx 
-l.33 ...mberline {4.6}Discussão}{32}{section.4.6}
+l.33 ...mberline {4.6}Discussão}{36}{section.4.6}
                                                   %
 The control sequence marked <to be read again> should
 not appear between \csname and \endcsname.
@@ -3927,14 +3931,14 @@ not appear between \csname and \endcsname.
 ! Extra \endcsname.
 \@ifundefined #1->\ifcsname #1\endcsname 
                                          \@ifundefin@d@i \else \@ifundefin@d...
-l.33 ...mberline {4.6}Discussão}{32}{section.4.6}
+l.33 ...mberline {4.6}Discussão}{36}{section.4.6}
                                                   %
 I'm ignoring this, since I wasn't doing a \csname.
 
 ! Missing \endcsname inserted.
 <to be read again> 
                    \__kernel_tl_set:Nx 
-l.33 ...mberline {4.6}Discussão}{32}{section.4.6}
+l.33 ...mberline {4.6}Discussão}{36}{section.4.6}
                                                   %
 The control sequence marked <to be read again> should
 not appear between \csname and \endcsname.
@@ -3942,7 +3946,7 @@ not appear between \csname and \endcsname.
 ! Missing \endcsname inserted.
 <to be read again> 
                    \__kernel_tl_set:Nx 
-l.33 ...mberline {4.6}Discussão}{32}{section.4.6}
+l.33 ...mberline {4.6}Discussão}{36}{section.4.6}
                                                   %
 The control sequence marked <to be read again> should
 not appear between \csname and \endcsname.
@@ -3950,7 +3954,7 @@ not appear between \csname and \endcsname.
 ! Missing \endcsname inserted.
 <to be read again> 
                    \__kernel_tl_set:Nx 
-l.33 ...mberline {4.6}Discussão}{32}{section.4.6}
+l.33 ...mberline {4.6}Discussão}{36}{section.4.6}
                                                   %
 The control sequence marked <to be read again> should
 not appear between \csname and \endcsname.
@@ -3962,7 +3966,7 @@ See the xcolor package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.33 ...mberline {4.6}Discussão}{32}{section.4.6}
+l.33 ...mberline {4.6}Discussão}{36}{section.4.6}
                                                   %
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -3970,7 +3974,7 @@ If that doesn't work, type  X <return>  to quit.
 ! Extra \endcsname.
 \find@pdflink ...rlink \csname @#1color\endcsname 
                                                   
-l.33 ...mberline {4.6}Discussão}{32}{section.4.6}
+l.33 ...mberline {4.6}Discussão}{36}{section.4.6}
                                                   %
 I'm ignoring this, since I wasn't doing a \csname.
 
@@ -3988,6 +3992,10 @@ I'm ignoring this, since I wasn't doing a \csname.
 \openout2 = `./capitulos/cap-introducao.aux'.
 
  (./capitulos/cap-introducao.tex
+
+Package hyperref Warning: Suppressing empty link on input line 17.
+
+
 
 \openout4 = `main.mw'.
 
@@ -4026,37 +4034,39 @@ I'm ignoring this, since I wasn't doing a \csname.
 ] (./main.mw)
 \openout4 = `main.mw'.
 
+
+
+LaTeX Warning: Reference `fig:jatai' on page 17 undefined on input line 68.
+
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 9.85492pt on input line 84.
+(Font)              scaled to size 9.85492pt on input line 86.
 LaTeX Font Info:    Font shape `T1/phv/b/it' in size <10.95> not available
-(Font)              Font shape `T1/phv/b/sl' tried instead on input line 84.
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 86.
 LaTeX Font Info:    Font shape `T1/phv/b/sl' will be
-(Font)              scaled to size 9.85492pt on input line 84.
-
-
-! LaTeX Error: File `jatai' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.86     \includegraphics[scale=0.6]{jatai}
-                                           %% Dimensões e localização
-I could not locate the file with any of these extensions:
-.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
+(Font)              scaled to size 9.85492pt on input line 86.
+<figuras/jatai.png, id=216, 720.44156pt x 480.29437pt>
+File: figuras/jatai.png Graphic file (type png)
+<use figuras/jatai.png>
+Package pdftex.def Info: figuras/jatai.png  used on input line 88.
+(pdftex.def)             Requested size: 432.26826pt x 288.17883pt.
 
 
 \openout4 = `main.mw'.
 
-[17] (./main.mw)
+[17 <./figuras/jatai.png>] (./main.mw)
 \openout4 = `main.mw'.
 
 
+
+Package hyperref Warning: Suppressing empty link on input line 111.
+
+<figuras/colmeia.png, id=230, 3035.34pt x 4047.12pt>
+File: figuras/colmeia.png Graphic file (type png)
+<use figuras/colmeia.png>
+Package pdftex.def Info: figuras/colmeia.png  used on input line 156.
+(pdftex.def)             Requested size: 303.55179pt x 404.73572pt.
 ! Undefined control sequence.
-l.151 \Section
+l.161 \Section
               {Sensores}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -4071,28 +4081,66 @@ and I'll forget about whatever was undefined.
 [18] (./main.mw)
 \openout4 = `main.mw'.
 
-<figuras/hermes.png, id=193, 721.69624pt x 502.87875pt>
-File: figuras/hermes.png Graphic file (type png)
-<use figuras/hermes.png>
-Package pdftex.def Info: figuras/hermes.png  used on input line 204.
-(pdftex.def)             Requested size: 433.02109pt x 301.72957pt.
 
 
 \openout4 = `main.mw'.
 
-[19 <./figuras/hermes.png>] (./main.mw)
+[19 <./figuras/colmeia.png>] (./main.mw)
 \openout4 = `main.mw'.
 
+<figuras/bme280.png, id=244, 339.51843pt x 539.76656pt>
+File: figuras/bme280.png Graphic file (type png)
+<use figuras/bme280.png>
+Package pdftex.def Info: figuras/bme280.png  used on input line 214.
+(pdftex.def)             Requested size: 67.90248pt x 107.9514pt.
+
+
+Package hyperref Warning: Suppressing empty link on input line 224.
+
 
 
 \openout4 = `main.mw'.
 
-[20] (./main.mw)
+[20 <./figuras/bme280.png>] (./main.mw)
 \openout4 = `main.mw'.
 
+<figuras/dht11.png, id=255, 176.0979pt x 172.0026pt>
+File: figuras/dht11.png Graphic file (type png)
+<use figuras/dht11.png>
+Package pdftex.def Info: figuras/dht11.png  used on input line 249.
+(pdftex.def)             Requested size: 52.82977pt x 51.60117pt.
+<figuras/ds18b20.png, id=258, 441.65pt x 382.42876pt>
+File: figuras/ds18b20.png Graphic file (type png)
+<use figuras/ds18b20.png>
+Package pdftex.def Info: figuras/ds18b20.png  used on input line 284.
+(pdftex.def)             Requested size: 132.49602pt x 114.7295pt.
+
+
+\openout4 = `main.mw'.
+
+[21 <./figuras/dht11.png> <./figuras/ds18b20.png>] (./main.mw)
+\openout4 = `main.mw'.
+
+<figuras/sht30.png, id=268, 353.32pt x 590.205pt>
+File: figuras/sht30.png Graphic file (type png)
+<use figuras/sht30.png>
+Package pdftex.def Info: figuras/sht30.png  used on input line 317.
+(pdftex.def)             Requested size: 70.66273pt x 118.0389pt.
+
+
+\openout4 = `main.mw'.
+
+[22 <./figuras/sht30.png>] (./main.mw)
+\openout4 = `main.mw'.
+
+<figuras/inmp441.png, id=275, 426.09187pt x 441.14813pt>
+File: figuras/inmp441.png Graphic file (type png)
+<use figuras/inmp441.png>
+Package pdftex.def Info: figuras/inmp441.png  used on input line 352.
+(pdftex.def)             Requested size: 85.21686pt x 88.22806pt.
 
 ! Undefined control sequence.
-l.318 \Section
+l.357 \Section
               {I²C}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -4104,16 +4152,17 @@ and I'll forget about whatever was undefined.
 
 \openout4 = `main.mw'.
 
-[21] (./main.mw)
+[23 <./figuras/inmp441.png>] (./main.mw)
 \openout4 = `main.mw'.
 
 \openout2 = `./capitulos/cap-trabalhos-relacionados.aux'.
 
- (./capitulos/cap-trabalhos-relacionados.tex
+
+(./capitulos/cap-trabalhos-relacionados.tex
 
 \openout4 = `main.mw'.
 
-[22
+[24
 
 
 
@@ -4124,7 +4173,7 @@ and I'll forget about whatever was undefined.
 
 \openout4 = `main.mw'.
 
-[23] (./main.mw)
+[25] (./main.mw)
 \openout4 = `main.mw'.
 
 \openout2 = `./capitulos/cap-proposta.aux'.
@@ -4137,7 +4186,7 @@ and I'll forget about whatever was undefined.
 
 \openout4 = `main.mw'.
 
-[24
+[26
 
 
 
@@ -4151,7 +4200,7 @@ and I'll forget about whatever was undefined.
 \openout2 = `./capitulos/cap-experimentos-resultados.aux'.
 
  (./capitulos/cap-experimentos-resultados.tex
-<figuras/arquitetura.png, id=223, 70.8246pt x 53.7207pt>
+<figuras/arquitetura.png, id=305, 70.8246pt x 53.7207pt>
 File: figuras/arquitetura.png Graphic file (type png)
 <use figuras/arquitetura.png>
 Package pdftex.def Info: figuras/arquitetura.png  used on input line 27.
@@ -4160,7 +4209,7 @@ Package pdftex.def Info: figuras/arquitetura.png  used on input line 27.
 
 \openout4 = `main.mw'.
 
-[25
+[27
 
 
 
@@ -4168,57 +4217,36 @@ Package pdftex.def Info: figuras/arquitetura.png  used on input line 27.
  <./figuras/arquitetura.png>] (./main.mw)
 \openout4 = `main.mw'.
 
-<figuras/lora32.png, id=229, 1003.75pt x 1003.75pt>
+
+
+Package hyperref Warning: Suppressing empty link on input line 69.
+
+<figuras/lora32.png, id=312, 1003.75pt x 1003.75pt>
 File: figuras/lora32.png Graphic file (type png)
 <use figuras/lora32.png>
-Package pdftex.def Info: figuras/lora32.png  used on input line 82.
+Package pdftex.def Info: figuras/lora32.png  used on input line 81.
 (pdftex.def)             Requested size: 250.93689pt x 250.93689pt.
 Package hyperref Info: bookmark level for unknown lora32 defaults to 0 on input
- line 84.
-<figuras/topologia.png, id=230, 140.4447pt x 141.1674pt>
+ line 83.
+
+Package hyperref Warning: Suppressing empty link on input line 91.
+
+<figuras/topologia.png, id=315, 140.4447pt x 141.1674pt>
 File: figuras/topologia.png Graphic file (type png)
 <use figuras/topologia.png>
-Package pdftex.def Info: figuras/topologia.png  used on input line 104.
+Package pdftex.def Info: figuras/topologia.png  used on input line 103.
 (pdftex.def)             Requested size: 210.66652pt x 211.75055pt.
 Package hyperref Info: bookmark level for unknown  defaults to 0 on input line 
-106.
+105.
 
 
 \openout4 = `main.mw'.
 
-[26 <./figuras/lora32.png>] (./main.mw)
+[28 <./figuras/lora32.png>] (./main.mw)
 \openout4 = `main.mw'.
 
-<figuras/dht11.png, id=237, 176.0979pt x 172.0026pt>
-File: figuras/dht11.png Graphic file (type png)
-<use figuras/dht11.png>
-Package pdftex.def Info: figuras/dht11.png  used on input line 121.
-(pdftex.def)             Requested size: 123.26768pt x 120.40099pt.
-<figuras/sht30.png, id=238, 353.32pt x 590.205pt>
-File: figuras/sht30.png Graphic file (type png)
-<use figuras/sht30.png>
-Package pdftex.def Info: figuras/sht30.png  used on input line 124.
-(pdftex.def)             Requested size: 70.66273pt x 118.0389pt.
-<figuras/bme280.png, id=239, 339.51843pt x 539.76656pt>
-File: figuras/bme280.png Graphic file (type png)
-<use figuras/bme280.png>
-Package pdftex.def Info: figuras/bme280.png  used on input line 128.
-(pdftex.def)             Requested size: 74.69427pt x 118.74901pt.
-<figuras/ds18b20.png, id=240, 441.65pt x 382.42876pt>
-File: figuras/ds18b20.png Graphic file (type png)
-<use figuras/ds18b20.png>
-Package pdftex.def Info: figuras/ds18b20.png  used on input line 131.
-(pdftex.def)             Requested size: 88.32843pt x 76.48439pt.
-
-
-\openout4 = `main.mw'.
-
-[27 <./figuras/topologia.png> <./figuras/dht11.png> <./figuras/sht30.png> <./fi
-guras/bme280.png> <./figuras/ds18b20.png>] (./main.mw)
-\openout4 = `main.mw'.
-
-LaTeX Font Info:    Trying to load font information for T1+pcr on input line 16
-6.
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 14
+3.
 
 (/usr/share/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
@@ -4226,7 +4254,7 @@ File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 ! You can't use `macro parameter character #' in horizontal mode.
 <argument> [##
               n][Timestamp][Nome]([medida][unidade]
-l.166 ...{[#n][Timestamp][Nome]([medida][unidade]}
+l.143 ...{[#n][Timestamp][Nome]([medida][unidade]}
                                                   
 Sorry, but I'm not programmed to handle this case;
 I'll just pretend that you didn't ask for it.
@@ -4237,206 +4265,204 @@ return to the right one by typing `I}' or `I$' or `I\par'.
 
 \openout4 = `main.mw'.
 
-[28] (./main.mw)
+[29 <./figuras/topologia.png>] (./main.mw)
+\openout4 = `main.mw'.
+
+<figuras/sen-pos.png, id=329, 4047.12pt x 3035.34pt>
+File: figuras/sen-pos.png Graphic file (type png)
+<use figuras/sen-pos.png>
+Package pdftex.def Info: figuras/sen-pos.png  used on input line 172.
+(pdftex.def)             Requested size: 404.73572pt x 303.55179pt.
+<figuras/sis-comp.png, id=331, 2161.07375pt x 2815.51875pt>
+File: figuras/sis-comp.png Graphic file (type png)
+<use figuras/sis-comp.png>
+Package pdftex.def Info: figuras/sis-comp.png  used on input line 185.
+(pdftex.def)             Requested size: 216.12003pt x 281.56837pt.
+
+
+\openout4 = `main.mw'.
+
+[30 <./figuras/sen-pos.png>] (./main.mw)
 \openout4 = `main.mw'.
 
 
 
 \openout4 = `main.mw'.
 
-[29] (./main.mw)
+[31 <./figuras/sis-comp.png>] (./main.mw)
 \openout4 = `main.mw'.
 
-
-
-\openout4 = `main.mw'.
-
-[30] (./main.mw)
-\openout4 = `main.mw'.
-
-
-Overfull \hbox (48.75568pt too wide) in paragraph at lines 320--320
-[]\T1/pcr/m/n/12 - Must write, no matter what happens (i.e. write must always s
-ucceed);[] 
- []
-
-
-Overfull \hbox (34.35568pt too wide) in paragraph at lines 322--322
-[]\T1/pcr/m/n/12 This means that if for any reason, the media fails to be writt
-en to,[] 
- []
-
-
-Overfull \hbox (12.75569pt too wide) in paragraph at lines 323--323
-[]\T1/pcr/m/n/12 the actor must be able to hold-on information for long enough,
- or[] 
- []
-
-
-Overfull \hbox (34.35568pt too wide) in paragraph at lines 324--324
-[]\T1/pcr/m/n/12 provide necessary means to easy the load of current write, unt
-il the[] 
- []
-
-
-Overfull \hbox (34.35568pt too wide) in paragraph at lines 329--329
-[]\T1/pcr/m/n/12 This is to prevent incomplete/inaccurate info retrieval (i.e. 
-atomic[] 
- []
-
-
-Overfull \hbox (41.55568pt too wide) in paragraph at lines 336--336
-[]\T1/pcr/m/n/12 - Must generate its own events (be able to log itself in event
--driven[] 
- []
-
-File: figuras/hermes.png Graphic file (type png)
-<use figuras/hermes.png>
-Package pdftex.def Info: figuras/hermes.png  used on input line 352.
-(pdftex.def)             Requested size: 433.02109pt x 301.72957pt.
+<figuras/sen-cob.png, id=345, 822.07124pt x 459.96844pt>
+File: figuras/sen-cob.png Graphic file (type png)
+<use figuras/sen-cob.png>
+Package pdftex.def Info: figuras/sen-cob.png  used on input line 226.
+(pdftex.def)             Requested size: 328.82266pt x 183.98412pt.
 
 
 \openout4 = `main.mw'.
 
-[31] (./main.mw)
+[32 <./figuras/sen-cob.png>] (./main.mw)
 \openout4 = `main.mw'.
 
 
-! Missing \endcsname inserted.
-<to be read again> 
-                   \ALG@currentblock@0 
-l.412 \ForAll
-             {nova\_amostra \textbf{em} fluxo\_de\_dados}
-The control sequence marked <to be read again> should
-not appear between \csname and \endcsname.
-
-! Extra \endcsname.
-\ALG@makebeginrepeat ...\ALG@thisblock \endcsname 
-                                                  \relax \def \ALG@thisblock...
-l.412 \ForAll
-             {nova\_amostra \textbf{em} fluxo\_de\_dados}
-I'm ignoring this, since I wasn't doing a \csname.
-
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10.95> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 414.
-LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 9.85492pt on input line 414.
-! Missing number, treated as zero.
-<to be read again> 
-                   \ALG@currentblock@0 
-l.424 \end{algorithmic}
-                       
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Missing = inserted for \ifnum.
-<to be read again> 
-                   \ALG@currentblock@0 
-l.424 \end{algorithmic}
-                       
-I was expecting to see `<', `=', or `>'. Didn't.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   \ALG@currentblock@0 
-l.424 \end{algorithmic}
-                       
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \ALG@currentblock@0 
-l.436 \State
-             contador $\gets 0$
-The control sequence marked <to be read again> should
-not appear between \csname and \endcsname.
-
-! Extra \endcsname.
-\ALG@makebeginrepeat ...\ALG@thisblock \endcsname 
-                                                  \relax \def \ALG@thisblock...
-l.436 \State
-             contador $\gets 0$
-I'm ignoring this, since I wasn't doing a \csname.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \ALG@currentblock@0 
-l.437 \State
-             fila\_reduzida $\gets$ lista\_vazia
-The control sequence marked <to be read again> should
-not appear between \csname and \endcsname.
-
-! Extra \endcsname.
-\ALG@makebeginrepeat ...\ALG@thisblock \endcsname 
-                                                  \relax \def \ALG@thisblock...
-l.437 \State
-             fila\_reduzida $\gets$ lista\_vazia
-I'm ignoring this, since I wasn't doing a \csname.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \ALG@currentblock@0 
-l.438 \ForAll
-             {dado \textbf{em} fila\_original}
-The control sequence marked <to be read again> should
-not appear between \csname and \endcsname.
-
-! Extra \endcsname.
-\ALG@makebeginrepeat ...\ALG@thisblock \endcsname 
-                                                  \relax \def \ALG@thisblock...
-l.438 \ForAll
-             {dado \textbf{em} fila\_original}
-I'm ignoring this, since I wasn't doing a \csname.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   \ALG@currentblock@0 
-l.444 \end{algorithmic}
-                       
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Missing = inserted for \ifnum.
-<to be read again> 
-                   \ALG@currentblock@0 
-l.444 \end{algorithmic}
-                       
-I was expecting to see `<', `=', or `>'. Didn't.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   \ALG@currentblock@0 
-l.444 \end{algorithmic}
-                       
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-
-
-\openout4 = `main.mw'.
-
-[32] (./main.mw)
-\openout4 = `main.mw'.
-
-)
 
 \openout4 = `main.mw'.
 
 [33] (./main.mw)
 \openout4 = `main.mw'.
 
-\openout2 = `./capitulos/cap-conclusoes.aux'.
+<figuras/hermes.png, id=356, 721.69624pt x 502.87875pt>
+File: figuras/hermes.png Graphic file (type png)
+<use figuras/hermes.png>
+Package pdftex.def Info: figuras/hermes.png  used on input line 351.
+(pdftex.def)             Requested size: 433.02109pt x 301.72957pt.
 
- (./capitulos/cap-conclusoes.tex)
 
 \openout4 = `main.mw'.
 
-[34
+[34 <./figuras/hermes.png>] (./main.mw)
+\openout4 = `main.mw'.
+
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \ALG@currentblock@0 
+l.411 \ForAll
+             {nova\_amostra \textbf{em} fluxo\_de\_dados}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Extra \endcsname.
+\ALG@makebeginrepeat ...\ALG@thisblock \endcsname 
+                                                  \relax \def \ALG@thisblock...
+l.411 \ForAll
+             {nova\_amostra \textbf{em} fluxo\_de\_dados}
+I'm ignoring this, since I wasn't doing a \csname.
+
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10.95> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 413.
+LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
+(Font)              scaled to size 9.85492pt on input line 413.
+! Missing number, treated as zero.
+<to be read again> 
+                   \ALG@currentblock@0 
+l.423 \end{algorithmic}
+                       
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Missing = inserted for \ifnum.
+<to be read again> 
+                   \ALG@currentblock@0 
+l.423 \end{algorithmic}
+                       
+I was expecting to see `<', `=', or `>'. Didn't.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \ALG@currentblock@0 
+l.423 \end{algorithmic}
+                       
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \ALG@currentblock@0 
+l.435 \State
+             contador $\gets 0$
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Extra \endcsname.
+\ALG@makebeginrepeat ...\ALG@thisblock \endcsname 
+                                                  \relax \def \ALG@thisblock...
+l.435 \State
+             contador $\gets 0$
+I'm ignoring this, since I wasn't doing a \csname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \ALG@currentblock@0 
+l.436 \State
+             fila\_reduzida $\gets$ lista\_vazia
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Extra \endcsname.
+\ALG@makebeginrepeat ...\ALG@thisblock \endcsname 
+                                                  \relax \def \ALG@thisblock...
+l.436 \State
+             fila\_reduzida $\gets$ lista\_vazia
+I'm ignoring this, since I wasn't doing a \csname.
+
+! Missing \endcsname inserted.
+<to be read again> 
+                   \ALG@currentblock@0 
+l.437 \ForAll
+             {dado \textbf{em} fila\_original}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+! Extra \endcsname.
+\ALG@makebeginrepeat ...\ALG@thisblock \endcsname 
+                                                  \relax \def \ALG@thisblock...
+l.437 \ForAll
+             {dado \textbf{em} fila\_original}
+I'm ignoring this, since I wasn't doing a \csname.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \ALG@currentblock@0 
+l.443 \end{algorithmic}
+                       
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Missing = inserted for \ifnum.
+<to be read again> 
+                   \ALG@currentblock@0 
+l.443 \end{algorithmic}
+                       
+I was expecting to see `<', `=', or `>'. Didn't.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \ALG@currentblock@0 
+l.443 \end{algorithmic}
+                       
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+
+
+\openout4 = `main.mw'.
+
+[35] (./main.mw)
+\openout4 = `main.mw'.
+
+)
+
+\openout4 = `main.mw'.
+
+[36] (./main.mw)
+\openout4 = `main.mw'.
+
+\openout2 = `./capitulos/cap-conclusoes.aux'.
+
+ (./capitulos/cap-conclusoes.tex
+
+Package hyperref Warning: Suppressing empty link on input line 19.
+
+)
+
+\openout4 = `main.mw'.
+
+[37
 
 
 
@@ -4444,17 +4470,33 @@ look up `weird error' in the index to The TeXbook.)
 ] (./main.mw)
 \openout4 = `main.mw'.
 
+ (./main.bbl
+bibitemlist
 
-No file main.bbl.
-\openout2 = `./PosTexto/apendicea.aux'.
-
-(./PosTexto/apendicea.tex
 
 \openout4 = `main.mw'.
 
-[35
+[38
 
 
+
+] (./main.mw)
+\openout4 = `main.mw'.
+
+)
+
+\openout4 = `main.mw'.
+
+[39] (./main.mw)
+\openout4 = `main.mw'.
+
+\openout2 = `./PosTexto/apendicea.aux'.
+
+ (./PosTexto/apendicea.tex
+
+\openout4 = `main.mw'.
+
+[40
 
 
 ] (./main.mw)
@@ -4472,7 +4514,7 @@ Underfull \hbox (badness 1910) in paragraph at lines 14--15
 
 \openout4 = `main.mw'.
 
-[36
+[41
 
 ] (./main.mw)
 \openout4 = `main.mw'.
@@ -4483,7 +4525,7 @@ Underfull \hbox (badness 1910) in paragraph at lines 14--15
 
 \openout4 = `main.mw'.
 
-[37
+[42
 
 
 
@@ -4495,7 +4537,7 @@ Underfull \hbox (badness 1910) in paragraph at lines 14--15
 
 \openout4 = `main.mw'.
 
-[38
+[43
 
 ] (./main.mw)
 \openout4 = `main.mw'.
@@ -4509,7 +4551,7 @@ LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 
 \openout4 = `main.mw'.
 
-[39
+[44
 
 
 
@@ -4517,13 +4559,13 @@ LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 ] (./main.mw)
 \openout4 = `main.mw'.
 
-<./PosTexto/Ilustracoes/lei-n9610-p1.pdf, id=321, 597.23125pt x 844.15375pt>
+<./PosTexto/Ilustracoes/lei-n9610-p1.pdf, id=440, 597.23125pt x 844.15375pt>
 File: ./PosTexto/Ilustracoes/lei-n9610-p1.pdf Graphic file (type pdf)
 <use ./PosTexto/Ilustracoes/lei-n9610-p1.pdf>
 Package pdftex.def Info: ./PosTexto/Ilustracoes/lei-n9610-p1.pdf  used on input
  line 9.
 (pdftex.def)             Requested size: 455.24411pt x 643.46986pt.
-<./PosTexto/Ilustracoes/lei-n9610-p2.pdf, id=322, 597.23125pt x 844.15375pt>
+<./PosTexto/Ilustracoes/lei-n9610-p2.pdf, id=441, 597.23125pt x 844.15375pt>
 File: ./PosTexto/Ilustracoes/lei-n9610-p2.pdf Graphic file (type pdf)
 <use ./PosTexto/Ilustracoes/lei-n9610-p2.pdf>
 Package pdftex.def Info: ./PosTexto/Ilustracoes/lei-n9610-p2.pdf  used on input
@@ -4533,7 +4575,7 @@ Package pdftex.def Info: ./PosTexto/Ilustracoes/lei-n9610-p2.pdf  used on input
 
 \openout4 = `main.mw'.
 
-[40
+[45
 
  <./PosTexto/Ilustracoes/lei-n9610-p1.pdf
 
@@ -4547,7 +4589,7 @@ clusion: invalid other resource which is no dict (key 'ProcSets', type <array>)
 
 \openout4 = `main.mw'.
 
-[41 <./PosTexto/Ilustracoes/lei-n9610-p2.pdf
+[46 <./PosTexto/Ilustracoes/lei-n9610-p2.pdf
 
 pdfTeX warning: pdflatex (file ./PosTexto/Ilustracoes/lei-n9610-p2.pdf): PDF in
 clusion: invalid other resource which is no dict (key 'ProcSets', type <array>)
@@ -4561,7 +4603,7 @@ clusion: invalid other resource which is no dict (key 'ProcSets', type <array>)
 
 \openout4 = `main.mw'.
 
-[42
+[47
 
 
 
@@ -4569,23 +4611,16 @@ clusion: invalid other resource which is no dict (key 'ProcSets', type <array>)
 ] (./main.mw)
 \openout4 = `main.mw'.
 
-<figuras/normas.jpg, id=363, 752.8125pt x 651.18282pt>
+<figuras/normas.jpg, id=481, 752.8125pt x 651.18282pt>
 File: figuras/normas.jpg Graphic file (type jpg)
 <use figuras/normas.jpg>
 Package pdftex.def Info: figuras/normas.jpg  used on input line 14.
 (pdftex.def)             Requested size: 409.71692pt x 354.41563pt.
-
-
-LaTeX Warning: Citation `UTFPR2008' on page 43 undefined on input line 15.
-
-
-LaTeX Warning: Citation `UTFPR2008' on page 43 undefined on input line 15.
-
 )
 
 \openout4 = `main.mw'.
 
-[43
+[48
 
  <./figuras/normas.jpg>] (./main.mw)
 \openout4 = `main.mw'.
@@ -4778,21 +4813,29 @@ enddocument/afterlastpage (AED): lastpage setting LastPage.
 \openout4 = `main.mw'.
 
 )
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+\openout4 = `main.mw'.
+
+
 (./PosTexto/apendicea.aux
 \openout4 = `main.mw'.
 
 \openout4 = `main.mw'.
 
-)
-\openout4 = `main.mw'.
-
-\openout4 = `main.mw'.
-
-\openout4 = `main.mw'.
-
-\openout4 = `main.mw'.
-
- (./PosTexto/apendiceb.aux
+) (./PosTexto/apendiceb.aux
 \openout4 = `main.mw'.
 
 \openout4 = `main.mw'.
@@ -4846,9 +4889,6 @@ L3 programming layer <2020/03/25>
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 \openout4 = `main.glo'.
 
 \openout4 = `main.acn'.
@@ -4869,40 +4909,24 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 52069 strings out of 475171
- 968383 string characters out of 5767095
- 1566949 words of memory out of 5000000
- 73139 multiletter control sequences out of 15000+600000
+ 52260 strings out of 475171
+ 971467 string characters out of 5767095
+ 1572000 words of memory out of 5000000
+ 73271 multiletter control sequences out of 15000+600000
  609547 words of font info for 123 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  125i,19n,131p,2419b,2501s stack positions out of 10000i,1000n,20000p,200000b,200000s
-
-pdfTeX warning (dest): name{figure.caption.24} has been referenced but does not
- exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{table.caption.22} has been referenced but does not 
-exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{table.caption.21} has been referenced but does not 
-exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{photograph.caption.16} has been referenced but does
- not exist, replaced by a fixed one
-
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/urw/cour
-ier/ucrr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr
-/share/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb></usr/share/texmf-dist/f
-onts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/helve
-tic/uhvro8a.pfb>
-Output written on main.pdf (44 pages, 4269059 bytes).
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/font
+s/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/urw/co
+urier/ucrr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></u
+sr/share/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb></usr/share/texmf-dist
+/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/hel
+vetic/uhvro8a.pfb>
+Output written on main.pdf (49 pages, 75633453 bytes).
 PDF statistics:
- 541 PDF objects out of 1000 (max. 8388607)
- 438 compressed objects within 5 object streams
- 116 named destinations out of 1000 (max. 500000)
- 389 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 670 PDF objects out of 1000 (max. 8388607)
+ 548 compressed objects within 6 object streams
+ 141 named destinations out of 1000 (max. 500000)
+ 427 words of extra memory for PDF output out of 10000 (max. 10000000)
 

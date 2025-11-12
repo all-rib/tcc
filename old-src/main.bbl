@@ -1,0 +1,140 @@
+\providecommand{\abntreprintinfo}[1]{%
+ \citeonline{#1}}
+\setlength{\labelsep}{0pt}\begin{thebibliography}{}
+\providecommand{\abntrefinfo}[3]{}
+\providecommand{\abntbstabout}[1]{}
+\abntbstabout{v-1.9.7 }
+
+\bibitem[A.B.E.L.H.A]{AbelhaMapa}
+\abntrefinfo{A.B.E.L.H.A}{A.b.e.l.h.a}{a}
+{A.B.E.L.H.A, A.~B. de~Estudos~das A. \textbf{Abelhas e Produção de Alimentos
+  no Brasil}. [\textit{S.l.}]: , .
+Dispon{\'\i}vel em:
+  \url{https://abelha.org.br/abelhas-e-producao-de-alimentos-no-brasil}. Acesso
+  em: 11 nov. 2025.}
+
+\bibitem[A.B.E.L.H.A]{AbelhaAtlas}
+\abntrefinfo{A.B.E.L.H.A}{A.b.e.l.h.a}{b}
+{A.B.E.L.H.A, A.~B. de~Estudos~das A. \textbf{Atlas da Apicultura no Brasil}.
+  [\textit{S.l.}]: , .
+Dispon{\'\i}vel em: \url{https://abelha.org.br/atlas-da-apicultura-no-brasil}.
+  Acesso em: 11 nov. 2025.}
+
+\bibitem[Batista, Ramalho e Soares 2003]{Batista2003}
+\abntrefinfo{Batista, Ramalho e Soares}{Batista; Ramalho; Soares}{2003}
+{BATISTA, M.; RAMALHO, M.; SOARES, A. Nesting sites and abundance of meliponini
+  (hymenoptera: Apidae) in heterogeneous habitats of the atlantic rain forest,
+  bahia, brazil.
+\textbf{Lundiana: International Journal of Biodiversity},  v.~4,, p. 19--23, 06
+  2003.}
+
+\bibitem[Bosch 2022]{bme280}
+\abntrefinfo{Bosch}{Bosch}{2022}
+{BOSCH. \textbf{BME280 - Data sheet}.
+[\textit{S.l.}],  2022. Dispon{\'\i}vel em:
+  \url{https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bme280-ds002.pdf}.
+  Acesso em: 11 nov. 2025.}
+
+\bibitem[Brown 2001]{Brown2001}
+\abntrefinfo{Brown}{Brown}{2001}
+{BROWN, J.~C. Responding to deforestation: Productive conservation, the world
+  bank, and beekeeping in rondonia, brazil.
+\textbf{The Professional Geographer},  Routledge v.~53, n.~1, p. 106--118,
+  2001.
+Dispon{\'\i}vel em: \url{https://doi.org/10.1080/00330124.2001.9628442}.}
+
+\bibitem[Danforth \textit{et al.} 2006]{Danforth2006}
+\abntrefinfo{Danforth \textit{et al.}}{Danforth \textit{et al.}}{2006}
+{DANFORTH, B.~N. \textit{et al.} The history of early bee diversification based
+  on five genes plus morphology.
+\textbf{Proceedings of the National Academy of Sciences},  v.~103, n.~41, p.
+  15118--15123, 2006.
+Dispon{\'\i}vel em:
+  \url{https://www.pnas.org/doi/abs/10.1073/pnas.0604033103}.}
+
+\bibitem[Datasheet DHT11]{dht11}
+\abntrefinfo{Datasheet\ldots}{DATASHEET\ldots}{}
+{DATASHEET DHT11.
+[\textit{S.l.}], . Dispon{\'\i}vel em:
+  \url{https://www.mouser.com/datasheet/2/758/DHT11-Technical-Data-Sheet-Translated-Version-1143054.pdf}.}
+
+\bibitem[Demeter 2009]{Demeter2009}
+\abntrefinfo{Demeter}{Demeter}{2009}
+{DEMETER. \textbf{Abelha Jataí}. [\textit{S.l.}]: ,  2009. Wikipedia, Abelha
+  Jataí.
+Dispon{\'\i}vel em:
+  \url{https://commons.wikimedia.org/wiki/File:Abelha-jatai.jpg}. Acesso em: 11
+  nov. 2025.}
+
+\bibitem[Ferrari \textit{et al.} 2008]{Ferrari2008}
+\abntrefinfo{Ferrari \textit{et al.}}{Ferrari \textit{et al.}}{2008}
+{FERRARI, S. \textit{et al.} Monitoring of swarming sounds in bee hives for
+  early detection of the swarming period.
+\textbf{Computers and Electronics in Agriculture},  v.~64, n.~1, p. 72--77,
+  2008.
+ISSN 0168-1699.
+Smart Sensors in precision livestock farming.
+Dispon{\'\i}vel em:
+  \url{https://www.sciencedirect.com/science/article/pii/S0168169908001385}.}
+
+\bibitem[Food e Nations]{FaoStat}
+\abntrefinfo{Food e Nations}{Food; Nations}{}
+{FOOD; NATIONS, A.~O. of~the U. \textbf{FAOSTAT}. [\textit{S.l.}]: , .
+Dispon{\'\i}vel em: \url{https://www.fao.org/faostat/en/\#data/QCL}. Acesso em:
+  11 nov. 2025.}
+
+\bibitem[INPA]{INPA}
+\abntrefinfo{INPA}{Inpa}{}
+{INPA, I.~N. de~Pesquisas~da A.}
+
+\bibitem[Integrated 2019]{ds18b20}
+\abntrefinfo{Integrated}{Integrated}{2019}
+{INTEGRATED, M. \textbf{DS18B20}.
+[\textit{S.l.}],  2019. Dispon{\'\i}vel em:
+  \url{https://cdn.sparkfun.com/datasheets/Sensors/Temp/DS18B20.pdf}. Acesso
+  em: 11 nov. 2025.}
+
+\bibitem[Machado 2024]{Machado2024}
+\abntrefinfo{Machado}{Machado}{2024}
+{MACHADO, P.~A. Utiliza{\c{c}}{\~a}o de tecnologia de precis{\~a}o na
+  apicultura: uma revis{\~a}o sistematica, ,,,.
+2024.}
+
+\bibitem[Org]{i2c-com}
+\abntrefinfo{Org}{Org}{}
+{ORG, I. \textbf{Common Problems In Systems}. [\textit{S.l.}]: , .
+Dispon{\'\i}vel em: \url{https://www.i2c-bus.org/i2c-primer/common-problems}.
+  Acesso em: 11 nov. 2025.}
+
+\bibitem[Ribeiro]{Allan2025}
+\abntrefinfo{Ribeiro}{Ribeiro}{}
+{RIBEIRO, A. \textbf{Repositórios de Hermes, Sparse-Buffer e Aristeu}.
+  [\textit{S.l.}]: , .
+Dispon{\'\i}vel em: \url{https://github.com/all-rib}. Acesso em: 11 nov. 2025.}
+
+\bibitem[Sanford 2005]{Sanford2005}
+\abntrefinfo{Sanford}{Sanford}{2005}
+{SANFORD, M. Beekeeping in brazil: A slumbering giant awakens, part iv.
+\textbf{American Bee Journal},  v.~145,, p. 214--216, 03 2005.}
+
+\bibitem[Trindade 2018]{Trindade2018}
+\abntrefinfo{Trindade}{Trindade}{2018}
+{TRINDADE, N.~C. Análise temporal de dados de monitoramento de colmeias de
+  abelhas.
+\textbf{Universidade Federal de Santa Maria}, ,,, 08 2018.}
+
+\bibitem[{UTFPR} 2021]{UTFPR2008}
+\abntrefinfo{{UTFPR}}{{UTFPR}}{2021}
+{{UTFPR}. \textbf{Orientação para a entrega de trabalhos acadêmicos}.
+1a. ed. Curitiba: ,  2021. Dispon{\'\i}vel em:
+  \url{http://www.utfpr.edu.br/biblioteca/trabalhos-academicos/discentes}.
+  Acesso em: 08 nov. 2021.}
+
+\bibitem[Xinyuan-LilyGO]{lily}
+\abntrefinfo{Xinyuan-LilyGO}{Xinyuan-lilygo}{}
+{XINYUAN-LILYGO. \textbf{LilyGo-LoRa-Series}.
+[\textit{S.l.}], . Dispon{\'\i}vel em:
+  \url{https://github.com/Xinyuan-LilyGO/LilyGo-LoRa-Series}. Acesso em: 11
+  nov. 2025.}
+
+\end{thebibliography}
